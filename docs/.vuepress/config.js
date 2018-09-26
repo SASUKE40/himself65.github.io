@@ -5,6 +5,7 @@ module.exports = {
 
   themeConfig: {
     repo: 'Himself65/Himself65.github.io',
+    avatarImgUrl: 'avatar.jpg',
 
     nav: [
       { text: 'Me', link: 'https://github.com/Himself65', img: ''}

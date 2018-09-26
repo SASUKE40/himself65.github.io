@@ -1,5 +1,8 @@
 <template>
   <div class="b-side-nav">
+    <div class="logo">
+      <img>
+    </div>
     <div class="items-container">
       <router-link
         v-for="item in sideNavItems" :to="item.link" :key="item.text"
@@ -21,6 +24,9 @@ export default {
   computed: {
     sideNavItems () {
       return this.setting.sideNav
+    },
+    imgUrl() {
+      return `../img/${this.setting.avatarImgUrl}`
     }
   },
   mounted () {
@@ -30,7 +36,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  @import "../.vuepress/stylus/site.styl"
+  @import "../stylus/site.styl"
 
   #app-side-nav
     @media $display-breakpoints.sm-and-up

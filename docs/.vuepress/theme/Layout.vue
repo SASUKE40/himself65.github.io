@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import BFooter from "../../components/BFooter";
-import BBody from "../../components/BBody";
-import BHeader from "../../components/BHeader";
-import BSideNav from "../../components/BSideNav";
+import BFooter from "../components/BFooter";
+import BBody from "../components/BBody";
+import BHeader from "../components/BHeader";
+import BSideNav from "../components/BSideNav";
 
 export default {
   name: 'App',

@@ -31,7 +31,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  @import "../.vuepress/stylus/site.styl"
+  @import "../stylus/site.styl"
 
   #app-footer
     @media $display-breakpoints.sm-and-up
