@@ -114,11 +114,11 @@ friends: [
         href: "https://www.pixiv.net/member_illust.php?id=11619949"
     },
     {
-        titile: "DimensionTripper's blog",
+        title: "DimensionTripper's blog",
         herf: "https://dimensiontripper.github.io/"
     },
     {
-        titile: "yizr_cnyali's blog",
+        title: "yizr_cnyali's blog",
         herf: "http://yizr-cnyali.ac.cn/"
     }
 ]
