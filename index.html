@@ -1,42 +1,70 @@
----
-layout: page
-description: "一个有趣的无聊者"
----
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Himself65</title>
+  <meta name="keywords" content="Himself65, Blog">
+  <meta name="theme-color" content="#000000">
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:200 }}
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
+  <!-- header -->
+  <link rel="shortcut icon" href="img/avatar-himself65.jpg">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanssc.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--Fontawesome CSS -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+  <!-- Bootstrap 4.1.0 -->
+  <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+  <!--<script src="js/jquery.min.js"></script>-->
+  <!--<script src="js/bootstrap.min.js"></script>-->
+  <script src="js/main.js"></script>
+</head>
+<body ontouchstart="">
+<div class="main">
+  <div class="intro">
+    <h1 class="site-heading">Himself65</h1>
+    <div class="site-description">
+      <p>I'm a student. Trying to be a powerful <s>bread</s> person.</p>
+      <p>You can call me "<a href="javascript:;" id="en-name">xxx</a>" or "<a href="javascript:;" id="cn-name">xxx</a>".
+      </p>
+      <p>Now studying in culture and frontend development</p>
+    </div>
+  </div>
+  <div class="project">
+    <h1 class="title">Project</h1>
+    <ul class="list">
+      <li>
+        <a href="https://github.com/himself65/bff" target="_blank">
+          bff
+        </a>
+        - useful and beautiful library.
+      </li>
+      <li>
+        <a href="https://github.com/himself65/vscode-luogu" target="_blank">
+          vscode-luogu
+        </a>
+        - elxtremely convenient code plugin on vscode
+      </li>
+    </ul>
+  </div>
+  <div class="contact">
+    <h1 class="title">Contact me</h1>
+    <ul class="list">
+      <li class="contact-method">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+             class="feather feather-mail">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        <a href="javascript:;" id="email">Email</a>
+      </li>
+      <li><i class="fa fa-github" aria-hidden="true"></i> <a href="https://github.com/himself65">Github</a></li>
+    </ul>
+  </div>
 </div>
-<hr>
-{% endfor %}
+</body>
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+</html>
