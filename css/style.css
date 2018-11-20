@@ -56,3 +56,9 @@ a {
 .site-description a {
   font-weight: inherit;
 }
+
+@media screen and (max-width: 576px) {
+  .main {
+    padding-left: 10px;
+  }
+}
