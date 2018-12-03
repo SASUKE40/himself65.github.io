@@ -19,6 +19,7 @@
       }
     ],
     "no-unused-vars": "warn",
+    "no-console": "off",
     "vue/max-attributes-per-line": [
       "error",
       {
