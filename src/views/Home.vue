@@ -11,8 +11,8 @@
         title="成功搭建"
       />
       <BCardBody>
-        <p>本项目已经开始全部使用Vue框架</p>
-        <p>通过Kuen框架开发</p>
+        <p>本项目已经开始全部使用Vue.js开发</p>
+        <p>通过Kuen Framework开发</p>
         <p>敬请期待</p>
       </BCardBody>
     </BCard>

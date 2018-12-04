@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <div class="b-container">
+    <BContainer>
       <!-- todo: add nav bar -->
       <RouterView />
-    </div>
+    </BContainer>
     <footer class="b-footer">
       Code by <a
         target="_blank"
@@ -46,23 +46,6 @@
     font-family $font-size-default
     text-align center
     color #2c3e50
-  }
-
-  .b-container {
-    display block
-    margin-left 3rem
-    min-height 30rem
-    max-width 40rem
-    margin-top 2rem
-    margin-bottom 2rem
-
-    > * {
-      margin-top 1rem
-    }
-
-    @media $display-breakpoints.xs-only {
-      margin 0 .3rem
-    }
   }
 
   .b-footer {
