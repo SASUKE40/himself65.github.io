@@ -1,7 +1,12 @@
 {
-  "name": "Himself65",
+  "name": "Himself65's Website",
+  "manifest_version": 2,
+  "version": "0.0.1",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#4DBA87"
+  "background_color": "#eee",
+  "theme_color": "#",
+  "default_locale": "en",
+  "description": "Here is my web based on Vue.js",
+  "icons": "favicon.ico"
 }
