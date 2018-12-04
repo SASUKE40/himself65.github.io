@@ -5,8 +5,9 @@ import router from './router'
 import store from './store'
 import './registerServiceWorker'
 
-Vue.config.productionTip = false
 Vue.use(Kuen)
+
+Vue.config.productionTip = false
 
 const vm = new Vue({
   data: () => ({ isLoaded: document.readyState === 'complete' }),

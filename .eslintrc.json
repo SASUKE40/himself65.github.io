@@ -1,13 +1,10 @@
 {
   "root": true,
   "parserOptions": {
-    "parser": "babel-eslint",
-    "ecmaVersion": 2017,
-    "sourceType": "module"
+    "parser": "babel-eslint"
   },
   "extends": [
     "standard",
-    "eslint:recommended",
     "plugin:vue/recommended"
   ],
   "rules": {
@@ -19,24 +16,17 @@
       }
     ],
     "no-unused-vars": "warn",
-    "no-console": "off",
-    "vue/max-attributes-per-line": [
-      "error",
-      {
-        "singleline": 3,
-        "multiline": {
-          "max": 3,
-          "allowFirstLine": false
-        }
+    "vue/max-attributes-per-line": ["error", {
+      "singleline": 3,
+      "multiline": {
+        "max": 3,
+        "allowFirstLine": false
       }
-    ],
+    }],
     "vue/html-closing-bracket-spacing": "error",
-    "vue/html-closing-bracket-newline": [
-      "error",
-      {
-        "singleline": "never",
-        "multiline": "always"
-      }
-    ]
+    "vue/html-closing-bracket-newline": ["error", {
+      "singleline": "never",
+      "multiline": "always"
+    }]
   }
 }

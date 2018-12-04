@@ -36,14 +36,14 @@
 </template>
 
 <script>
-  export default {
-    name: "Home",
-    methods: {
-      click () {
+export default {
+  name: 'Home',
+  methods: {
+    click () {
 
-      }
     }
-  };
+  }
+}
 </script>
 
 <style lang="stylus" scoped>
