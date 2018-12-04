@@ -43,6 +43,9 @@
   #app {
     width 100%
     height 100%
+    font-family $font-size-default
+    text-align center
+    color #2c3e50
   }
 
   .b-container {
@@ -56,6 +59,10 @@
     > * {
       margin-top 1rem
     }
+
+    @media $display-breakpoints.xs-only {
+      margin 0 .3rem
+    }
   }
 
   .b-footer {
@@ -63,7 +70,8 @@
     margin-left auto
     margin-right auto
     box-sizing border-box
-    margin-bottom 10rem
+    margin-top 1rem
+    margin-bottom 7rem
     width 80%
     height 100%
 
