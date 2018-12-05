@@ -6,7 +6,7 @@ npm run build
 
 cd dist
 
-echo 'www.himself65.com' > CNAME
+echo 'home.himself65.com' > CNAME
 
 git config user.email "himself6565@gmail.com"
 git config user.name "himself65"
