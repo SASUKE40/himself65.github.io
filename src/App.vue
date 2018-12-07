@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!-- todo: add nav bar -->
+    <Header />
     <BContainer>
       <RouterView />
     </BContainer>
@@ -9,9 +9,11 @@
 </template>
 <script>
 import Footer from './components/Footer'
+import Header from './components/Header'
 
 export default {
   components: {
+    Header,
     Footer
   }
 }
