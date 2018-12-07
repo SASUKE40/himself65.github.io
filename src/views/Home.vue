@@ -1,5 +1,5 @@
 <template>
-  <div class="b-home">
+  <div class="page-home">
     <BCard
       dark
       background-color="teal light"
@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  .b-home {
+  .page-home {
     > div {
       margin-top 1rem
     }

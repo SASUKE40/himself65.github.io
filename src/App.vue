@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <BContainer>
+    <BContainer class="container">
       <RouterView />
     </BContainer>
     <Footer />
@@ -36,5 +36,15 @@ export default {
     font-family $font-size-default
     text-align center
     color #2c3e50
+  }
+
+  .container {
+    /* fixme: error color */
+    background: transparent !important
+  }
+
+  .b-router {
+    color: #fff
+    text-decoration none
   }
 </style>
