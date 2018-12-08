@@ -42,6 +42,8 @@ export default {
 
 <style lang="stylus" scoped>
   .page-home {
+    max-width: 500px
+
     > div {
       margin-top 1rem
     }

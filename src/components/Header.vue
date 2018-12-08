@@ -1,5 +1,5 @@
 <template>
-  <div class="b-header">
+  <BHeader>
     <div class="b-header--container">
       <div class="logo">
         <RouterLink class="b-router" to="/">
@@ -15,7 +15,7 @@
         </li>
       </ul>
     </div>
-  </div>
+  </BHeader>
 </template>
 
 <script>
@@ -35,43 +35,4 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-  @import "~@kuen/components/src/stylus/setting.styl"
-
-  .b-header {
-    top: 0
-    position: sticky
-    z-index: 1000
-    height: 3rem
-    background: #303030
-    color: $theme-dark.text.primary
-    display: flex
-    flex-direction: row
-    align-items center
-
-    &--container {
-      margin-left: 1rem
-      margin-right: 1rem
-      display: flex
-      flex-direction: row
-      width: 100%
-
-      .space {
-        flex-grow: 1
-      }
-
-      .logo {
-        font-weight bold
-      }
-
-      ul {
-        margin 0
-        list-style-type: none
-      }
-    }
-
-    @media $display-breakpoints.xs-only {
-      position: relative
-    }
-  }
-</style>
+<style lang="stylus" scoped></style>

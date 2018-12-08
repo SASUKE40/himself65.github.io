@@ -1,5 +1,5 @@
 <template>
-  <footer class="b-footer">
+  <BFooter>
     <template v-for="(item, idx) in meta">
       {{ item.desc }}
       <a
@@ -13,7 +13,7 @@
         |
       </template>
     </template>
-  </footer>
+  </BFooter>
 </template>
 
 <script>
@@ -32,29 +32,4 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-  @import "~@kuen/components/src/stylus/setting.styl"
-
-  .b-footer {
-    position relative
-    margin-left auto
-    margin-right auto
-    box-sizing border-box
-    margin-top 1rem
-    margin-bottom 7rem
-    width 80%
-    height 100%
-
-    text-align center
-    font-size 12px
-    color #99a2aa
-
-    a {
-      color: $blue['base']
-      outline none
-      text-decoration none
-      cursor pointer
-      white-space nowrap
-    }
-  }
-</style>
+<style lang="stylus" scoped></style>
