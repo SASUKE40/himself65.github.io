@@ -39,11 +39,4 @@ export default {
   .page-about {
     background transparent
   }
-
-  .markdown {
-    >>> a {
-      color: $blue.light
-      text-decoration none
-    }
-  }
 </style>

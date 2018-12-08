@@ -22,14 +22,13 @@
     >
       <BCardHeader
         src="img/header.png"
-        small
+        large
         title-shadow
-        title="Himself65"
+        title="扩散性百万甜面包的主页"
       />
       <BCardBody>
-        <p>I'm a student. Trying to be a powerful bread person.</p>
-        <p>You can call me "himself65" or "扩散性百万甜面包".</p>
-        <p>Now studying in culture and frontend development</p>
+        <p>前端采用Vue.js，后端采用Koa.js，数据库使用MongoDB，进行开发</p>
+        <p>正在开发中，敬请期待</p>
       </BCardBody>
     </BCard>
   </div>
@@ -37,12 +36,7 @@
 
 <script>
 export default {
-  name: 'Home',
-  methods: {
-    click () {
-
-    }
-  }
+  name: 'Home'
 }
 </script>
 

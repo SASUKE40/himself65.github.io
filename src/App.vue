@@ -47,4 +47,11 @@ export default {
     color: #fff
     text-decoration none
   }
+
+  .markdown {
+    >>> a {
+      color: $blue.light
+      text-decoration none
+    }
+  }
 </style>
