@@ -28,6 +28,7 @@ export default {
         href: '/'
       },
       items: [
+        { name: '积分榜', href: '/checkin' },
         { name: '关于', href: '/about' }
       ]
     }

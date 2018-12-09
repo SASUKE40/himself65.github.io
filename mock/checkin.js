@@ -1,5 +1,6 @@
 module.exports = (req, res) => {
-  if (req.query) {
+  const { id = undefined } = req.query
+  if (id) {
     res.json({
       '1': { 'rating': 51, 'times_all': 2, 'times_month': 2, 'date': '2018-12-08' },
       '2': { 'rating': 39, 'times_all': 2, 'times_month': 2, 'date': '2018-12-08' },
@@ -10,6 +11,6 @@ module.exports = (req, res) => {
       '7': { 'rating': 107, 'times_all': 5, 'times_month': 5, 'date': '2018-12-10' }
     })
   } else {
-    res.json(['1', '2', '3'])
+    res.json(['1', '2222', '333'])
   }
 }
