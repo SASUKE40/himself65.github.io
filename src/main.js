@@ -1,11 +1,13 @@
 import Vue from 'vue'
-import Kuen from '@kuen/components'
+import KuenComponents from '@kuen/components'
 import App from './App.vue'
 import router from './router'
 import store from './store'
 import './registerServiceWorker'
+// app css
+import '@kuen/components/dist/kuen.css'
 
-Vue.use(Kuen)
+Vue.use(KuenComponents)
 
 Vue.config.productionTip = false
 

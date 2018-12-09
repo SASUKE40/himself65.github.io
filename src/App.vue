@@ -20,7 +20,8 @@ export default {
 </script>
 
 <style lang="stylus">
-  @import "~@kuen/components/src/stylus/app.styl"
+  @import "~@kuen/components/src/stylus/setting.styl"
+
   html {
     background #eee
   }
