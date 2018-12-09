@@ -16,17 +16,23 @@
       }
     ],
     "no-unused-vars": "warn",
-    "vue/max-attributes-per-line": ["error", {
-      "singleline": 3,
-      "multiline": {
-        "max": 3,
-        "allowFirstLine": false
+    "vue/max-attributes-per-line": [
+      "error",
+      {
+        "singleline": 3,
+        "multiline": {
+          "max": 3,
+          "allowFirstLine": false
+        }
       }
-    }],
+    ],
     "vue/html-closing-bracket-spacing": "error",
-    "vue/html-closing-bracket-newline": ["error", {
-      "singleline": "never",
-      "multiline": "always"
-    }]
+    "vue/html-closing-bracket-newline": [
+      "error",
+      {
+        "singleline": "never",
+        "multiline": "always"
+      }
+    ]
   }
 }
