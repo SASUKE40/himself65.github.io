@@ -1,24 +1,12 @@
-import Vue from 'vue'
-import KuenComponents from '@kuen/components'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-import './registerServiceWorker'
-// app css
 import '@kuen/components/dist/kuen.css'
+import './registerServiceWorker'
+import routerConf from './router'
+import storeConf from './store'
+import App from './App.vue'
+import { startApp } from '@kuen/loader'
 
-Vue.use(KuenComponents)
-
-Vue.config.productionTip = false
-
-const vm = new Vue({
-  data: () => ({ isLoaded: document.readyState === 'complete' }),
-  render: h => h(App),
-  router,
-  store
-}).$mount('#app')
-
-vm.isLoaded || window.addEventListener('load', () => {
-  vm.isLoaded = true
-  console.log('Website LOADED')
+startApp({
+  routerConf: routerConf,
+  storeConf: storeConf,
+  appView: App
 })
