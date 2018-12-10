@@ -2,14 +2,13 @@
   <div class="page-about">
     <BCard>
       <BCardBody>
-        <div class="markdown" v-html="render" />
+        <BText :content="msg" />
       </BCardBody>
     </BCard>
   </div>
 </template>
 
 <script>
-import { defaultContentParser } from 'markdown-palettes'
 
 export default {
   name: 'About',
@@ -23,11 +22,6 @@ export default {
           '## Contact \n' +
           '- Email: himself6565@gmail.com \n\n' +
           '- Github: [himself65](https://github.com/himself65)'
-    }
-  },
-  computed: {
-    render () {
-      return defaultContentParser(this.msg)
     }
   }
 }
