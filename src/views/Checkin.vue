@@ -1,7 +1,7 @@
 <template>
-  <div class="width-wrap">
+  <BWidthWrap>
     <!-- fixme error on b-width-wrap -->
-    <div slot="main" class="fix-main">
+    <div slot="main">
       <BCard>
         <BCardHeader title="积分榜" />
         <BCardBody>
@@ -24,7 +24,7 @@
         </BCardBody>
       </BCard>
     </div>
-    <div slot="side" class="fix-side">
+    <div slot="side">
       <BCard>
         <BCardHeader title="所有群" />
         <BCardBody>
@@ -41,7 +41,7 @@
         </BCardBody>
       </BCard>
     </div>
-  </div>
+  </BWidthWrap>
 </template>
 
 <script>
@@ -79,33 +79,6 @@ export default {
 
 <style lang="stylus" scoped>
   @import "~@kuen/components/src/stylus/setting.styl"
-  .board {
-
-  }
-
-  .width-wrap {
-    display: flex
-
-    h1, h2, h3, h4, h5, h6, span {
-      color: #333
-    }
-
-    @media $display-breakpoints.sm-and-down {
-      margin-left .5rem
-      margin-right .5rem
-      flex-direction: column-reverse
-    }
-  }
-
-  .table {
-    margin-left: auto
-    margin-right: auto
-    text-align: center
-
-    th {
-      padding: .3rem .5rem
-    }
-  }
 
   .group {
     padding-top: 1rem
@@ -114,22 +87,6 @@ export default {
 
     &:first-child {
       padding-top: 0
-    }
-  }
-
-  .fix-main {
-    flex: 7 1 auto
-    @media $display-breakpoints.sm-and-down {
-      margin-top: 1.5rem
-    }
-  }
-
-  .fix-side {
-    flex: 3 0 auto
-    margin-left: 1.5rem
-    @media $display-breakpoints.sm-and-down {
-      margin-top 1rem
-      margin-left: 0
     }
   }
 </style>

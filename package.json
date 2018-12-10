@@ -9,7 +9,7 @@
     "test": "yarn lint"
   },
   "dependencies": {
-    "@kuen/components": "^0.1.1",
+    "@kuen/components": "^0.1.2-beta.4",
     "axios": "^0.18.0",
     "markdown-palettes": "^0.4.6-3",
     "register-service-worker": "^1.5.2",
