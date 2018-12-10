@@ -35,6 +35,8 @@
 </template>
 
 <script>
+
+
 export default {
   name: 'Home'
 }
@@ -47,5 +49,9 @@ export default {
     > div {
       margin-top 1rem
     }
+  }
+
+  .friend {
+    padding: 1rem 0
   }
 </style>

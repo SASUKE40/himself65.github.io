@@ -1,19 +1,35 @@
 <template>
-  <div class="page-about">
-    <BCard>
+  <BWidthWrap>
+    <BCard slot="side">
+      <BCardHeader title="友情链接" />
+      <BCardBody>
+        <div v-for="friend in friends" :key="friend.title" class="friend">
+          <a
+            target="_blank"
+            :href="friend.href"
+          >
+            {{ friend.title }}
+          </a>
+        </div>
+      </BCardBody>
+    </BCard>
+    <BCard slot="main">
       <BCardBody>
         <BText :content="msg" />
       </BCardBody>
     </BCard>
-  </div>
+  </BWidthWrap>
 </template>
 
 <script>
+import config from '../../config'
 
 export default {
   name: 'About',
   data () {
+    const { friends } = config
     return {
+      friends: friends,
       msg: '# Himself65 \n' +
           'I\'m a student, trying to master Javascript :) \n\n' +
           '## Project \n' +
@@ -32,5 +48,14 @@ export default {
 
   .page-about {
     background transparent
+  }
+
+  .friend {
+    padding: 1rem 0
+
+    a {
+      color: $blue.base
+      text-decoration: transparent
+    }
   }
 </style>
