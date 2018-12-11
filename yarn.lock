@@ -664,28 +664,20 @@
     cssnano-preset-default "^4.0.0"
     postcss "^7.0.0"
 
-"@kuen/components@^0.1.2-beta.4":
-  version "0.1.2-beta.4"
-  resolved "https://registry.npmjs.org/@kuen/components/-/components-0.1.2-beta.4.tgz#f40e9d48721d042f638ca844458be262b575e163"
-  integrity sha512-Nlnrfh6q5P+pC8QKD4fnumqtf8nfXuTdlTPzeX/Jo8HxWyDvshYtO5tGnWNxo7eoemnkKZe9UBheGph65x7k3w==
+"@kuen/components@^0.1.4-alpha.1":
+  version "0.1.4-alpha.1"
+  resolved "https://registry.npmjs.org/@kuen/components/-/components-0.1.4-alpha.1.tgz#107641c0fb7e282eb0ee589e8bec793978290796"
+  integrity sha512-hhQ9Ex5KFTj7UtnylxH6AKF1roFmIVDjggFWsRMB9L54PnjgyJvWXLd4WFGYotU/hmJ+5ZVL5dKxBqIyeNxpJA==
   dependencies:
     lodash "^4.17.11"
     markdown-palettes "^0.4.6-3"
 
-"@kuen/components@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.npmjs.org/@kuen/components/-/components-0.1.3.tgz#70f416c868435a3831da614a25c80f10c093d0c0"
-  integrity sha512-guVyyOChtZDceDZFfel3wADEdZwuv9eIBP6NinJr/OkGlvUGbjNJv1jslcaJ649JJbyDYek3CwiBzGAGE7iOzQ==
+"@kuen/loader@^0.1.4-alpha.1":
+  version "0.1.4-alpha.1"
+  resolved "https://registry.npmjs.org/@kuen/loader/-/loader-0.1.4-alpha.1.tgz#43f45a204275938864d03d1134a3e591dbeafbd7"
+  integrity sha512-BP1mdeNlF+Gqgl4uCQnitdjxzvRGzaItO09XYwPpacXdyGCurxHcURpf7IlrjNsyC4knd91g9BUWfEqXbSQ6Xg==
   dependencies:
-    lodash "^4.17.11"
-    markdown-palettes "^0.4.6-3"
-
-"@kuen/loader@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.npmjs.org/@kuen/loader/-/loader-0.1.3.tgz#8237c4d4874d92163e20bb769b25c0b86c952e63"
-  integrity sha512-DbsSRTzcC4b1HcN1XwoDDaJQaFFV8dnL9j9cvP3OHplBuMrw26hZrj51G3ewukWEZQsYANoVQhK7kzT+7HZ/yQ==
-  dependencies:
-    "@kuen/components" "^0.1.2-beta.4"
+    "@kuen/components" "^0.1.4-alpha.1"
     axios "^0.18.0"
     lodash "^4.17.11"
     vue "^2.5.17"
