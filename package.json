@@ -11,6 +11,7 @@
     "@kuen/components": "^0.1.3",
     "@kuen/loader": "^0.1.3",
     "axios": "^0.18.0",
+    "lodash": "^4.17.11",
     "markdown-palettes": "^0.4.6-3",
     "register-service-worker": "^1.5.2",
     "vue": "^2.5.17",

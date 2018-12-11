@@ -1,24 +1,26 @@
 <template>
-  <BWidthWrap>
-    <BCard slot="side">
-      <BCardHeader title="友情链接" />
-      <BCardBody>
-        <div v-for="friend in friends" :key="friend.title" class="friend">
-          <a
-            target="_blank"
-            :href="friend.href"
-          >
-            {{ friend.title }}
-          </a>
-        </div>
-      </BCardBody>
-    </BCard>
-    <BCard slot="main">
-      <BCardBody>
-        <BText :content="msg" />
-      </BCardBody>
-    </BCard>
-  </BWidthWrap>
+  <BContainer>
+    <BWidthWrap>
+      <BCard slot="side">
+        <BCardHeader title="友情链接" />
+        <BCardBody>
+          <div v-for="friend in friends" :key="friend.title" class="friend">
+            <a
+              target="_blank"
+              :href="friend.href"
+            >
+              {{ friend.title }}
+            </a>
+          </div>
+        </BCardBody>
+      </BCard>
+      <BCard slot="main">
+        <BCardBody>
+          <BText :content="msg" />
+        </BCardBody>
+      </BCard>
+    </BWidthWrap>
+  </BContainer>
 </template>
 
 <script>

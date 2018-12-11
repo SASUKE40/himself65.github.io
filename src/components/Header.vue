@@ -1,5 +1,5 @@
 <template>
-  <BHeader>
+  <BHeader class="b-header-fix">
     <div class="b-header--container">
       <div class="logo">
         <RouterLink class="b-router" to="/">
@@ -36,4 +36,15 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+  @import "~@kuen/components/src/stylus/setting.styl"
+
+  .b-header-fix {
+    elevationTransition()
+    elevation(1)
+
+    &:hover {
+      elevation(5)
+    }
+  }
+</style>
