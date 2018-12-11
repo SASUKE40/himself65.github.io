@@ -87,6 +87,7 @@ export default {
       color: #eee
       padding: 1rem 0
       margin-bottom: 2rem
+      border-radius: 15px
       text-align: center
 
       .avatar {
