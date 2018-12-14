@@ -672,10 +672,10 @@
     lodash "^4.17.11"
     markdown-palettes "^0.4.6-3"
 
-"@kuen/components@^0.1.4-alpha.4":
-  version "0.1.4-alpha.4"
-  resolved "https://registry.npmjs.org/@kuen/components/-/components-0.1.4-alpha.4.tgz#c2dfb47ac8650fe21d3bef72a5d7aae800edce48"
-  integrity sha512-9hPr3s1jaObpCVCfFSHua0A5NdbbvfrGRfr5/aeQMAhYI3esuqwLfdbZkY4XrMe7QrHwDc/v+V/93EdrJoGDPQ==
+"@kuen/components@^0.1.4-alpha.6":
+  version "0.1.4-alpha.6"
+  resolved "https://registry.npmjs.org/@kuen/components/-/components-0.1.4-alpha.6.tgz#b6098b849096e6083eb4cee59a3640a7744d2c90"
+  integrity sha512-f7I0wGymYv61qWqF9JQsv23lLJXACC9pPqBsWUjYctBoENmUQxgqH+AxOxFWL3MWLudV2CQUM4bpmXY+Abe4iQ==
   dependencies:
     lodash "^4.17.11"
     markdown-palettes "^0.4.6-3"
