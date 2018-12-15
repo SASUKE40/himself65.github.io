@@ -8,8 +8,8 @@
     "test": "yarn lint"
   },
   "dependencies": {
-    "@kuen/components": "^0.1.4-alpha.9",
-    "@kuen/loader": "^0.1.4-alpha.9",
+    "@kuen/components": "^0.1.4-alpha.10",
+    "@kuen/loader": "^0.1.4-alpha.10",
     "axios": "^0.18.0",
     "lodash": "^4.17.11",
     "markdown-palettes": "^0.4.6-3",
