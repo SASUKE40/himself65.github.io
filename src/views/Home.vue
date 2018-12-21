@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="background-image: url('img/header.png')" class="intro-header">
+    <div :style="headerStyle" class="intro-header">
       <div class="site-master">
         <img class="avatar" src="img/icons/ms-icon-144x144.png">
         <div class="description">
@@ -53,6 +53,12 @@ import random from 'lodash/random'
 export default {
   name: 'Home',
 
+  data () {
+    return {
+      titleUrl: 'img/header.png'
+    }
+  },
+
   computed: {
     description () {
       const wife = [
@@ -61,6 +67,11 @@ export default {
         '双叶里央'
       ]
       return wife[random(0, wife.length - 1)]
+    },
+    headerStyle () {
+      return {
+        'background-image': `url('${this.titleUrl}')`
+      }
     }
   }
 }

@@ -40,11 +40,6 @@ export default {
   @import "~@kuen/components/src/stylus/setting.styl"
 
   .b-header-fix {
-    elevationTransition()
     elevation(1)
-
-    &:hover {
-      elevation(5)
-    }
   }
 </style>
