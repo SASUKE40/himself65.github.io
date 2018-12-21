@@ -1,5 +1,5 @@
 <template>
-  <BFooter>
+  <b-footer>
     <template v-for="(item, idx) in meta">
       {{ item.desc }}
       <a
@@ -13,7 +13,7 @@
         |
       </template>
     </template>
-  </BFooter>
+  </b-footer>
 </template>
 
 <script>

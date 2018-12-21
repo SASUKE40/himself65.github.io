@@ -1,9 +1,9 @@
 <template>
-  <BContainer>
-    <BWidthWrap>
-      <BCard slot="side">
-        <BCardHeader title="友情链接" />
-        <BCardBody>
+  <b-container>
+    <b-width-wrap>
+      <b-card slot="side">
+        <b-card-header title="友情链接" />
+        <b-card-body>
           <div v-for="friend in friends" :key="friend.title" class="friend">
             <a
               target="_blank"
@@ -12,15 +12,15 @@
               {{ friend.title }}
             </a>
           </div>
-        </BCardBody>
-      </BCard>
-      <BCard slot="main">
-        <BCardBody>
-          <BText :content="msg" />
-        </BCardBody>
-      </BCard>
-    </BWidthWrap>
-  </BContainer>
+        </b-card-body>
+      </b-card>
+      <b-card slot="main">
+        <b-card-body>
+          <b-text :content="msg" />
+        </b-card-body>
+      </b-card>
+    </b-width-wrap>
+  </b-container>
 </template>
 
 <script>

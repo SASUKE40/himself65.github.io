@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- todo -->
-    <BButton />
+    <b-button />
   </div>
 </template>
 

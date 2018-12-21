@@ -1,11 +1,11 @@
 <template>
-  <BContainer>
-    <BWidthWrap>
+  <b-container>
+    <b-width-wrap>
       <!-- fixme error on b-width-wrap -->
       <div slot="main">
-        <BCard>
-          <BCardHeader title="积分榜" />
-          <BCardBody>
+        <b-card>
+          <b-card-header title="积分榜" />
+          <b-card-body>
             <table class="table">
               <tr>
                 <th>QQ ID</th>
@@ -22,13 +22,13 @@
                 <td>{{ member.date }}</td>
               </tr>
             </table>
-          </BCardBody>
-        </BCard>
+          </b-card-body>
+        </b-card>
       </div>
       <div slot="side">
-        <BCard>
-          <BCardHeader title="所有群" />
-          <BCardBody>
+        <b-card>
+          <b-card-header title="所有群" />
+          <b-card-body>
             <div class="board">
               <div
                 v-for="group in groups"
@@ -39,11 +39,11 @@
                 {{ group }}
               </div>
             </div>
-          </BCardBody>
-        </BCard>
+          </b-card-body>
+        </b-card>
       </div>
-    </BWidthWrap>
-  </BContainer>
+    </b-width-wrap>
+  </b-container>
 </template>
 
 <script>

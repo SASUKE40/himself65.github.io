@@ -1,5 +1,5 @@
 <template>
-  <BHeader class="b-header-fix">
+  <b-header class="b-header-fix">
     <div class="b-header--container">
       <div class="logo">
         <RouterLink class="b-router" to="/">
@@ -15,7 +15,7 @@
         </li>
       </ul>
     </div>
-  </BHeader>
+  </b-header>
 </template>
 
 <script>

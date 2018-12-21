@@ -33,6 +33,7 @@
         "singleline": "never",
         "multiline": "always"
       }
-    ]
+    ],
+    "vue/component-name-in-template-casing": "false"
   }
 }

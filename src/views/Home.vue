@@ -9,41 +9,41 @@
         </div>
       </div>
     </div>
-    <BContainer>
+    <b-container>
       <div class="page-home">
-        <BCard
+        <b-card
           dark
           background-color="teal light"
         >
-          <BCardHeader
+          <b-card-header
             src="img/title/16.jpg"
             small
             title-shadow
             title="成功搭建"
           />
-          <BCardBody>
+          <b-card-body>
             <p>本项目已经开始全部使用Vue.js开发</p>
             <p>通过Kuen Framework开发</p>
             <p>敬请期待</p>
-          </BCardBody>
-        </BCard>
-        <BCard
+          </b-card-body>
+        </b-card>
+        <b-card
           dark
           background-color="blue light"
         >
-          <BCardHeader
+          <b-card-header
             src="img/title/1.png"
             large
             title-shadow
             title="扩散性百万甜面包的主页"
           />
-          <BCardBody>
+          <b-card-body>
             <p>前端采用Vue.js，后端采用Koa.js，数据库使用MongoDB，进行开发</p>
             <p>正在开发中，敬请期待</p>
-          </BCardBody>
-        </BCard>
+          </b-card-body>
+        </b-card>
       </div>
-    </BContainer>
+    </b-container>
   </div>
 </template>
 
@@ -92,7 +92,7 @@ export default {
     align-items: center
 
     .site-master {
-      background: rgba($blue.light, .8)
+      background: $blue.lighten-2
       opacity: .95
       width: 80%
       color: #eee
