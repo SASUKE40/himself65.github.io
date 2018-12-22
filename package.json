@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \" vue-cli-service serve \" \" nodemon mock/index.js \" ",
-    "build": "vue-cli-service build --modern",
+    "build": "vue-cli-service build --name himself65-website --modern",
+    "inspect": "vue-cli-service inspect",
     "lint": "vue-cli-service lint",
     "test": "yarn lint"
   },
@@ -47,6 +48,7 @@
     "nodemon": "^1.18.7",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
+    "sw-precache-webpack-plugin": "^0.11.5",
     "vue-template-compiler": "^2.5.17"
   }
 }

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import '@kuen/components/dist/kuen.css'
 import Kuen from '@kuen/components'
-import './registerServiceWorker'
+import './sw-register'
 import routerConf from './router'
 import storeConf from './store'
 import App from './App.vue'
