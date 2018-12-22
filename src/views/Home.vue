@@ -22,9 +22,7 @@
             title="成功搭建"
           />
           <b-card-body>
-            <p>本项目已经开始全部使用Vue.js开发</p>
-            <p>通过Kuen Framework开发</p>
-            <p>敬请期待</p>
+            <b-text dark :content="msg" />
           </b-card-body>
         </b-card>
         <b-card
@@ -55,7 +53,11 @@ export default {
 
   data () {
     return {
-      titleUrl: 'img/header.png'
+      titleUrl: 'img/header.png',
+      msg: '因为没有写完数据库部分，也没有写markdown文件渲染部分，所以只能hack到前端里面 \n\n 最近开了三个项目 `Himself65`，`Astoria`，`Kuen`，闲暇之余都在迭代更新这几个东西 \n\n' +
+          '### Astoria \n\n 本网站的后端部分，基于Koa.js搭建，Mongodb作为后端 \n\n' +
+          '### Himself65 \n\n 前端部分，原项目名字是**Himself65.github.io**，然后现在被我搞成基于 `Vue` 开发，应该会一直是pwa的方式 \n\n' +
+          '### Kuen \n\n 框架部分，具体如何设计还没有定论，现在模仿的是 `Material Design` 和 `Luogu` 相关的设计和配色 \n\n 这个项目估计会一年多才能成型'
     }
   },
 
