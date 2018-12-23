@@ -25,7 +25,12 @@ module.exports = {
       new SwPrecacheWebpackPlugin({
         minify: false,
         cacheId: `kuen`,
-        filename: 'sw-register.js'
+        staticFileGlobs: [
+          'src/assets/**/*'
+        ],
+        filename: 'sw-register.js',
+        mergeStaticsConfig: true,
+        staticFileGlobsIgnorePatterns: [/\.map$/]
       })
     ]
   }
