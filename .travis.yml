@@ -14,17 +14,18 @@ install:
   - yarn --frozen-lockfile --non-interactive
 jobs:
   include:
-    #    - stage: test
-    #      name: 'Lint and test'
-    #      script:
-    #        - yarn run lint
-    - stage: deploy
-      name: 'Deploy'
-      deploy:
-        provider: script
-        script: bash deploy.sh
-        skip-cleanup: true
-        keep-history: false
-        on:
-          repo: Himself65/Himself65.github.io
-          branch: newWebsite
+    - stage: test
+      name: 'Lint and test'
+      script:
+        - yarn run lint
+        - yarn run test:unit
+#    - stage: deploy
+#      name: 'Deploy'
+#      deploy:
+#        provider: script
+#        script: bash deploy.sh
+#        skip-cleanup: true
+#        keep-history: false
+#        on:
+#          repo: Himself65/Himself65.github.io
+#          branch: newWebsite

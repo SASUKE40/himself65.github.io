@@ -2,11 +2,12 @@
   "name": "himself65-website",
   "private": true,
   "scripts": {
-    "dev": "concurrently \" vue-cli-service serve \" \" nodemon mock/index.js \" ",
     "build": "vue-cli-service build --name himself65-website --modern",
-    "inspect": "vue-cli-service inspect",
+    "test": "yarn lint",
     "lint": "vue-cli-service lint",
-    "test": "yarn lint"
+    "dev": "concurrently \" vue-cli-service serve \" \" nodemon mock/index.js \" ",
+    "inspect": "vue-cli-service inspect",
+    "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
     "@kuen/components": "^0.1.5-alpha.2",
@@ -29,10 +30,14 @@
     "@vue/cli-plugin-babel": "^3.2.0",
     "@vue/cli-plugin-eslint": "^3.2.0",
     "@vue/cli-plugin-pwa": "^3.2.0",
+    "@vue/cli-plugin-unit-jest": "^3.2.0",
     "@vue/cli-service": "^3.2.0",
     "@vue/eslint-config-standard": "^4.0.0",
+    "@vue/test-utils": "^1.0.0-beta.20",
     "autoprefixer": "^9.4.2",
+    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
     "concurrently": "^4.1.0",
     "css-mqpacker": "^7.0.0",
     "eslint": "^5.8.0",
