@@ -28,6 +28,7 @@ export default {
         href: '/'
       },
       items: [
+        { name: '洛谷绘板', href: '/luogu' },
         { name: '积分榜', href: '/checkin' },
         { name: '关于', href: '/about' }
       ]

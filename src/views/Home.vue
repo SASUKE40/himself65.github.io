@@ -80,7 +80,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  @import "~@kuen/components/src/stylus/setting.styl"
+  @import "~@kuen/ui/src/setting.styl"
 
   .intro-header {
     height: 650px

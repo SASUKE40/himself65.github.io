@@ -1,6 +1,7 @@
 import Home from './views/Home.vue'
 import About from './views/About.vue'
 import Checkin from './views/Checkin.vue'
+import Luogu from './views/Luogu.vue'
 
 export default {
   mode: 'history',
@@ -20,6 +21,11 @@ export default {
       path: '/checkin',
       name: 'checkin',
       component: Checkin
+    },
+    {
+      path: '/luogu',
+      name: 'luogu',
+      component: Luogu
     }
   ]
 }

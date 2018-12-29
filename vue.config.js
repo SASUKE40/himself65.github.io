@@ -13,6 +13,10 @@ module.exports = {
 
   devServer: {
     proxy: {
+      '/luogu': {
+        target: 'http://localhost:3001',
+        changeOrigin: false
+      },
       '/api': {
         target: 'http://localhost:3001',
         changeOrigin: false
