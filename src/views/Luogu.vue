@@ -13,7 +13,10 @@
             label="密码"
             required
           />
-          <v-text-field v-model="user.verify" />
+          <v-text-field
+            v-model="user.verify"
+            label="验证码"
+          />
           <v-img
             width="64"
             height="30"
@@ -46,7 +49,7 @@ export default {
         cookie: 3,
         verify: ''
       },
-      captchaUrl: '/api'
+      captchaUrl: 'https://www.luogu.org/download/captcha'
     }
   },
 
