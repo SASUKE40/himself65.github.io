@@ -92,7 +92,7 @@ export default {
 
   methods: {
     async submit () {
-      axios.post('luogu/login', this.user).then(res => {
+      axios.post('/luogu/login', this.user).then(res => {
         if (res.status === 200) {
           console.log(res.data)
         }
