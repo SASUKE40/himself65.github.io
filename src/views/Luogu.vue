@@ -44,12 +44,12 @@
             disabled
             required
           />
-          <v-img
-            width="64"
-            height="30"
-            :src="imgUrl"
-            @click="imgUrl = imgUrl + '?' + Math.random()"
-          />
+          <!--<v-img-->
+          <!--width="64"-->
+          <!--height="30"-->
+          <!--:src="imgUrl"-->
+          <!--@click="imgUrl = imgUrl + '?' + Math.random()"-->
+          <!--/>-->
           <v-btn
             disabled
             @click="submit"
@@ -79,8 +79,8 @@ export default {
         password: '',
         cookie: '',
         verify: ''
-      },
-      imgUrl: 'http://localhost:3011/https://www.luogu.org/download/captcha'
+      }
+      // imgUrl: 'http://localhost:3011/https://www.luogu.org/download/captcha'
     }
   },
 
