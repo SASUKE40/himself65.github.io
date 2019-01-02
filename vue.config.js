@@ -8,7 +8,7 @@ module.exports = {
 
   pwa: {
     name: 'Himself65',
-    themeColor: '#6cb2eb'
+    theme_color: '#6cb2eb'
   },
 
   devServer: {
@@ -18,20 +18,5 @@ module.exports = {
         changeOrigin: false
       }
     }
-  },
-
-  configureWebpack: {
-    plugins: [
-      new SwPrecacheWebpackPlugin({
-        minify: false,
-        cacheId: `kuen`,
-        staticFileGlobs: [
-          'src/assets/**/*'
-        ],
-        filename: 'sw-register.js',
-        mergeStaticsConfig: true,
-        staticFileGlobsIgnorePatterns: [/\.map$/]
-      })
-    ]
   }
 }
