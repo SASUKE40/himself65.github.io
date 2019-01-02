@@ -1,7 +1,4 @@
-const SwPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
-
-const OUTPUT_DIR = 'dist'
-const isPord = process.env.NODE_ENV === 'production'
+// const isPord = process.env.NODE_ENV === 'production'
 
 module.exports = {
   assetsDir: 'public',

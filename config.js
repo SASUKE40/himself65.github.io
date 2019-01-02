@@ -1,4 +1,5 @@
 module.exports = {
+  appName: 'himself65',
   friends: [
     {
       title: 'memset0的Blog',
