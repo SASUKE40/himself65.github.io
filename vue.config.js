@@ -1,4 +1,4 @@
-// const isPord = process.env.NODE_ENV === 'production'
+const isMock = process.env.TARGET === 'mock'
 
 module.exports = {
   assetsDir: 'public',
@@ -11,7 +11,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3001',
+        target: `http://localhost:300${isMock ? 1 : 0}`,
         changeOrigin: false
       }
     }
