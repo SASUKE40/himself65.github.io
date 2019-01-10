@@ -1,20 +1,23 @@
 <template>
-  <div id="app">
+  <v-app id="app" app>
     <v-app>
       <Header />
+      <SideNav />
       <v-content>
         <RouterView />
       </v-content>
       <Footer />
     </v-app>
-  </div>
+  </v-app>
 </template>
 <script>
 import Footer from './components/Footer'
 import Header from './components/Header'
+import SideNav from './components/SideNav'
 
 export default {
   components: {
+    SideNav,
     Header,
     Footer
   }

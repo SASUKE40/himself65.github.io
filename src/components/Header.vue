@@ -1,8 +1,9 @@
 <template>
   <v-toolbar
-    color="grey darken-2"
+    color="grey darken-3"
     dark
     flat
+    app
   >
     <v-toolbar-title>
       <v-btn
@@ -54,9 +55,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  @import "~@kuen/components/src/stylus/setting.styl"
-
-  .b-header-fix {
-    elevation(1)
+  .site-header {
   }
 </style>

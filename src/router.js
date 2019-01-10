@@ -1,7 +1,3 @@
-import Home from './views/Home.vue'
-import About from './views/About.vue'
-import Checkin from './views/Checkin.vue'
-
 export default {
   mode: 'history',
   base: process.env.BASE_URL,
@@ -9,17 +5,22 @@ export default {
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: () => import('./views/Home.vue')
     },
     {
       path: '/about',
       name: 'about',
-      component: About
+      component: () => import('./views/About.vue')
     },
     {
       path: '/checkin',
       name: 'checkin',
-      component: Checkin
+      component: () => import('./views/Checkin.vue')
+    },
+    {
+      path: '/login',
+      name: 'checkin',
+      component: () => import('./views/Login.vue')
     }
   ]
 }
