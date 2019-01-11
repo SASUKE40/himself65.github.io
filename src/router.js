@@ -19,7 +19,7 @@ export default {
     },
     {
       path: '/login',
-      name: 'checkin',
+      name: 'login',
       component: () => import('./views/Login.vue')
     }
   ]

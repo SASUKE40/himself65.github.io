@@ -2,10 +2,10 @@
   <div>
     <toolbar />
     <width-wrap>
-      <b-container slot="main">
-        <div class="page-home" />
-      </b-container>
-      <b-container slot="side" />
+      <v-container slot="main">
+        <v-img :src="titleIMGs[0].src" />
+      </v-container>
+      <v-container slot="side" />
     </width-wrap>
   </div>
 </template>
@@ -20,7 +20,9 @@ export default {
   components: { Toolbar, WidthWrap },
   data () {
     return {
-      titleUrl: 'img/header.png'
+      titleIMGs: [
+        { src: '/img/header.png' }
+      ]
     }
   },
 

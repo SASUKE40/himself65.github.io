@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import Vee from 'vee-validate'
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
+import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'vuetify/dist/vuetify.min.css'
 import '@kuen/components/dist/kuen.css'
 import Kuen from '@kuen/components'

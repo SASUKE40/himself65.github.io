@@ -15,7 +15,10 @@
         </v-badge>
       </v-btn>
 
-      <v-btn icon>
+      <v-btn
+        :to="userUrl"
+        icon
+      >
         <v-icon>fas fa-user</v-icon>
       </v-btn>
     </v-toolbar>
@@ -24,7 +27,13 @@
 
 <script>
 export default {
-  name: 'Toolbar'
+  name: 'Toolbar',
+  computed: {
+    userUrl () {
+      // fixme: 根据是否登陆返回地址
+      return '/login'
+    }
+  }
 }
 </script>
 
