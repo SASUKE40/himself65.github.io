@@ -1,26 +1,23 @@
 <template>
   <div>
-    <div :style="headerStyle" class="intro-header">
-      <div class="site-master">
-        <img class="avatar" src="img/icons/ms-icon-144x144.png">
-        <div class="description">
-          <span>本人永远喜欢</span>
-          <span>{{ description }}</span>
-        </div>
-      </div>
-    </div>
-    <b-container>
-      <div class="page-home" />
-    </b-container>
+    <toolbar />
+    <width-wrap>
+      <b-container slot="main">
+        <div class="page-home" />
+      </b-container>
+      <b-container slot="side" />
+    </width-wrap>
   </div>
 </template>
 
 <script>
 import random from 'lodash/random'
+import WidthWrap from '../layout/WidthWrap'
+import Toolbar from '../layout/Toolbar'
 
 export default {
   name: 'Home',
-
+  components: { Toolbar, WidthWrap },
   data () {
     return {
       titleUrl: 'img/header.png'

@@ -1,3 +1,4 @@
+<!-- removed -->
 <template>
   <b-container>
     <b-width-wrap>

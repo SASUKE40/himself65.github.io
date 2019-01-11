@@ -10,8 +10,8 @@
   </v-app>
 </template>
 <script>
-import Footer from './components/Footer'
-import SideNav from './components/SideNav'
+import Footer from './layout/Footer'
+import SideNav from './layout/SideNav'
 
 export default {
   components: {

@@ -62,7 +62,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  @import "~vuetify/src/stylus/settings/_variables.styl"
+  @import "../../node_modules/vuetify/src/stylus/settings/_variables.styl"
 
   .site-logo {
 
