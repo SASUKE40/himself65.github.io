@@ -1,7 +1,6 @@
 <template>
   <b-container>
     <v-form
-      ref="form"
       v-model="valid"
       lazy-validation
     >
@@ -17,17 +16,29 @@
         required
       />
 
+      <v-text-field
+        v-if="!loginPage"
+        v-model="githubID"
+        label="GitHubID"
+      />
+
       <v-btn
         :disabled="!valid"
         color="green lighten-1"
         dark
         @click="login"
       >
-        登陆
+        {{ loginPage ? '登陆' : '注册' }}
       </v-btn>
-      <v-btn href="/api/login/auth/github">
+      <v-btn
+        v-show="loginPage"
+        href="/api/login/auth/github"
+      >
         通过 GitHub 注册
-        <v-icon dark right>
+        <v-icon
+          dark
+          right
+        >
           fab fa-github
         </v-icon>
       </v-btn>
@@ -39,16 +50,27 @@
 export default {
   name: 'Login',
 
+  props: {
+    loginPage: {
+      type: Boolean,
+      required: true
+    }
+  },
+
   data () {
     return {
       username: undefined,
       password: undefined,
+      githubID: undefined,
       valid: false
     }
   },
 
   methods: {
     login () {
+
+    },
+    register () {
 
     }
   }

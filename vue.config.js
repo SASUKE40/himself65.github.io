@@ -9,11 +9,6 @@ module.exports = {
   },
 
   devServer: {
-    proxy: {
-      '/api': {
-        target: `http://localhost:300${isMock ? 1 : 0}`,
-        changeOrigin: false
-      }
-    }
+    proxy: `http://localhost:300${isMock ? 1 : 0}`
   }
 }

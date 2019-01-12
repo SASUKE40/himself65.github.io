@@ -3,14 +3,13 @@ import Vuetify from 'vuetify'
 import Vee from 'vee-validate'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
-import 'vuetify/dist/vuetify.min.css'
 import '@kuen/components/dist/kuen.css'
+import 'vuetify/dist/vuetify.min.css'
 import Kuen from '@kuen/components'
 import './sw-register'
-import routerConf from './router'
-import storeConf from './store'
+import { router } from './router'
+import { store } from './store'
 import App from './App.vue'
-import { startApp } from '@kuen/loader'
 
 Vue.use(Kuen)
 Vue.use(Vee)
@@ -26,8 +25,19 @@ Vue.use(Vuetify, {
   }
 })
 
-startApp({
-  routerConf: routerConf,
-  storeConf: storeConf,
-  appView: App
+export const kuen = new Vue({
+  el: '#app',
+  name: 'Himself65',
+  data: () => ({
+    isLoaded: document.readyState === 'complete'
+  }),
+
+  render: (h) => h(App),
+  router,
+  store
+})
+
+kuen.isLoaded || window.addEventListener('load', () => {
+  kuen.isLoaded = true
+  console.log('Website load')
 })
