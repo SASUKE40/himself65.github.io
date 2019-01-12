@@ -1,8 +1,5 @@
-import axios from 'axios'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
-import { kuen } from './main'
 
 Vue.use(VueRouter)
 
@@ -42,18 +39,4 @@ export const router = new VueRouter({
       component: () => import('./views/Login.vue')
     }
   ]
-})
-
-// hooks
-router.beforeEach(async (to, from, next) => {
-  const data = await axios.get(to.fullPath, {
-    data: to.query,
-    headers: {
-      'X-Himself65-Type': 'json-only'
-    }
-  })
-  kuen.$props = {
-    currentData: data.currentData,
-    currentUser: data.currentUser
-  }
 })
