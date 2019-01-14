@@ -3,7 +3,23 @@
     <toolbar />
     <width-wrap>
       <v-layout slot="main">
-        <v-container>
+        <v-container class="lists">
+          <v-card dark>
+            <v-img
+              src="https://i.pximg.net/img-master/img/2016/10/21/00/05/31/59561306_p1_master1200.jpg"
+              height="400px"
+            >
+              <v-layout>
+                <v-flex>
+                  <v-card-title>
+                    <div class="headline">
+                      我永远喜欢Saber
+                    </div>
+                  </v-card-title>
+                </v-flex>
+              </v-layout>
+            </v-img>
+          </v-card>
           <v-card dark class="white--text">
             <v-img
               :src="titleIMGs[0].src"
@@ -58,14 +74,10 @@ export default {
       const wife = [
         '樱岛麻衣',
         '雷姆',
-        '双叶里央'
+        '双叶里央',
+        '阿尔托莉雅'
       ]
       return wife[random(0, wife.length - 1)]
-    },
-    headerStyle () {
-      return {
-        'background-image': `url('${this.titleUrl}')`
-      }
     }
   }
 }
@@ -74,68 +86,7 @@ export default {
 <style lang="stylus" scoped>
   @import "~@kuen/ui/src/setting.styl"
 
-  .intro-header {
-    height: 650px
-    background-color: transparent
-    background-position: center 50%
-    background-attachment: scroll
-    background-size: cover
-    display: flex
-    justify-content: flex-end
-    flex-direction: column
-    align-items: center
-
-    .site-master {
-      background: $blue.lighten-2
-      opacity: .95
-      width: 80%
-      color: #eee
-      padding: 1rem 0
-      margin-bottom: 2rem
-      border-radius: 15px
-      text-align: center
-
-      .avatar {
-        elevationTransition()
-        height: 100px
-        width: 100px
-        border-radius: 50%
-
-        &:hover {
-          elevation(7)
-        }
-      }
-
-      .description {
-        font-size: 17px
-        font-weight: 700
-        margin: 1rem 0 2rem
-
-        span:nth-child(1) {
-          color: #eee
-        }
-
-        span:nth-child(2) {
-          margin-left: .5rem
-          color: #eee
-        }
-      }
-    }
-
-    @media $display-breakpoints.sm-and-down {
-      height: 300px
-      padding-bottom: auto
-      min-height 10rem
-
-      .site-master {
-        display: none
-      }
-    }
-  }
-
-  .page-home {
-    max-width: 500px
-
+  .lists {
     > div {
       margin-top 1rem
     }
