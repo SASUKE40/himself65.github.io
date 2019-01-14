@@ -1,6 +1,6 @@
 <template>
-  <b-container>
-    <b-width-wrap>
+  <v-container>
+    <width-wrap>
       <b-card slot="side">
         <b-card-header title="友情链接" />
         <b-card-body>
@@ -19,15 +19,17 @@
           <b-text :content="msg" />
         </b-card-body>
       </b-card>
-    </b-width-wrap>
-  </b-container>
+    </width-wrap>
+  </v-container>
 </template>
 
 <script>
 import config from '../../config'
+import WidthWrap from '../layout/WidthWrap'
 
 export default {
   name: 'About',
+  components: { WidthWrap },
   data () {
     const { friends } = config
     return {

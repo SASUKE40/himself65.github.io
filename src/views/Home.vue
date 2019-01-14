@@ -2,9 +2,36 @@
   <div>
     <toolbar />
     <width-wrap>
-      <v-container slot="main">
-        <v-img :src="titleIMGs[0].src" />
-      </v-container>
+      <v-layout slot="main">
+        <v-container>
+          <v-card dark class="white--text">
+            <v-img
+              :src="titleIMGs[0].src"
+            >
+              <v-layout>
+                <v-flex>
+                  <v-card-title primary-title>
+                    <div>
+                      <div class="headline">
+                        我的Blog
+                      </div>
+                      <div class="grey--text">
+                        Updated
+                      </div>
+                      <div>
+                        采用和Luogu相同的UI设计
+                      </div>
+                      <div>
+                        敬请期待
+                      </div>
+                    </div>
+                  </v-card-title>
+                </v-flex>
+              </v-layout>
+            </v-img>
+          </v-card>
+        </v-container>
+      </v-layout>
       <v-container slot="side" />
     </width-wrap>
   </div>

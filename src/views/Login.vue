@@ -1,5 +1,5 @@
 <template>
-  <b-container>
+  <v-container>
     <v-form
       v-model="valid"
       lazy-validation
@@ -43,7 +43,7 @@
         </v-icon>
       </v-btn>
     </v-form>
-  </b-container>
+  </v-container>
 </template>
 
 <script>

@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style lang="stylus">
-  @import "~@kuen/components/src/stylus/setting.styl"
+  @import "~vuetify/src/stylus/settings/_colors.styl"
 
   html {
     background #eee
@@ -36,8 +36,7 @@ export default {
   #app {
     width 100%
     height 100%
-    font-family $font-size-default
-    text-align center
+    font-family 12px
     color #2c3e50
   }
 

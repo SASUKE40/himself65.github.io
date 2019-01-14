@@ -1,6 +1,6 @@
 <!-- removed -->
 <template>
-  <b-container>
+  <v-container>
     <b-width-wrap>
       <!-- fixme error on b-width-wrap -->
       <div slot="main">
@@ -44,7 +44,7 @@
         </b-card>
       </div>
     </b-width-wrap>
-  </b-container>
+  </v-container>
 </template>
 
 <script>
