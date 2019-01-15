@@ -6,7 +6,7 @@
         <v-container class="lists">
           <v-card dark>
             <v-img
-              src="https://i.pximg.net/img-master/img/2016/10/21/00/05/31/59561306_p1_master1200.jpg"
+              src="https://s2.ax1x.com/2019/01/15/Fz7P8f.jpg"
               height="400px"
             >
               <v-layout>
