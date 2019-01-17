@@ -7,13 +7,18 @@
           <v-card dark>
             <v-img
               src="https://s2.ax1x.com/2019/01/15/Fz7P8f.jpg"
-              height="400px"
             >
               <v-layout>
                 <v-flex>
                   <v-card-title>
-                    <div class="headline">
-                      我永远喜欢Saber
+                    <div>
+                      <div class="headline">
+                        我永远喜欢Saber
+                      </div>
+                      <br>
+                      <div>
+                        好像这个背景是贞德？？？（逃
+                      </div>
                     </div>
                   </v-card-title>
                 </v-flex>

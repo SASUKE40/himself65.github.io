@@ -40,11 +40,6 @@ export default {
     color #2c3e50
   }
 
-  .b-router {
-    color: #fff
-    text-decoration none
-  }
-
   .markdown {
     >>> a {
       color: $blue.light

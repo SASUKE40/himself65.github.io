@@ -1,8 +1,10 @@
 <template>
   <v-navigation-drawer
-    :mini-variant="true"
+    v-model="drawer"
+    :mini-variant="smallDisplay"
+    :permanent="smallDisplay"
     mini-variant-width="60"
-    :permanent="true"
+    class="site-side-nav"
     hide-overlay
     dark
     app
@@ -57,6 +59,12 @@ export default {
         { name: '关于', href: '/about', icon: 'fas fa-info' }
       ]
     }
+  },
+
+  computed: {
+    smallDisplay () {
+      return this.$vuetify.breakpoint.lgAndUp
+    }
   }
 }
 </script>
@@ -64,24 +72,27 @@ export default {
 <style lang="stylus" scoped>
   @import "../../node_modules/vuetify/src/stylus/settings/_variables.styl"
 
-  .site-logo {
+  .site-side-nav {
 
-  }
+    .site-logo {
 
-  .side-nav-item {
-    &:hover:before, &:focus:before {
-      background-color transparent!important
     }
 
-    margin-top 1rem
+    .side-nav-item {
+      &:hover:before, &:focus:before {
+        background-color transparent !important
+      }
 
-    >>> div {
-      flex-direction column
-    }
+      margin-top 1rem
 
-    span {
-      padding-top .5rem
-      font-size 10px
+      >>> div {
+        flex-direction column
+      }
+
+      span {
+        padding-top .5rem
+        font-size 10px
+      }
     }
   }
 </style>

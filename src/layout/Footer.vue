@@ -1,5 +1,6 @@
 <template>
   <v-footer
+    v-show="smallDisplay"
     color="white"
     :height="height"
     absolute
@@ -48,8 +49,11 @@ export default {
         { desc: 'Analytic by', name: 'Google Analytics', href: 'http://www.google.com/analytics/' }
       ]
     }
+  },
+  computed: {
+    smallDisplay () {
+      return this.$vuetify.breakpoint.lgAndUp
+    }
   }
 }
 </script>
-
-<style lang="stylus" scoped></style>
