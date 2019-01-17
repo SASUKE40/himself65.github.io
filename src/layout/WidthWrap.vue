@@ -23,12 +23,10 @@ export default {
     display flex
 
     &--main {
-      display inline-flex
       flex 4 1 0
     }
 
     &--side {
-      display inline-flex
       flex 1 0 0
       margin-left 1.5rem
     }

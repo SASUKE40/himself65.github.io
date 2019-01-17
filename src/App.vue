@@ -5,6 +5,19 @@
       <v-content>
         <RouterView />
       </v-content>
+      <v-btn
+        bottom
+        right
+        icon
+        dark
+        fixed
+        color="primary"
+        @click="$store.state.drawer = !$store.state.drawer"
+      >
+        <v-icon>
+          add
+        </v-icon>
+      </v-btn>
       <Footer />
     </v-app>
   </v-app>

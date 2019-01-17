@@ -1,6 +1,6 @@
 <template>
   <v-footer
-    v-show="smallDisplay"
+    v-show="hugeDisplay"
     color="white"
     :height="height"
     absolute
@@ -51,7 +51,7 @@ export default {
     }
   },
   computed: {
-    smallDisplay () {
+    hugeDisplay () {
       return this.$vuetify.breakpoint.lgAndUp
     }
   }

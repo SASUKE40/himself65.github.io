@@ -1,8 +1,8 @@
 <template>
   <v-navigation-drawer
-    v-model="drawer"
-    :mini-variant="smallDisplay"
-    :permanent="smallDisplay"
+    v-model="$store.state.drawer"
+    :mini-variant="hugeDisplay"
+    :permanent="hugeDisplay"
     mini-variant-width="60"
     class="site-side-nav"
     hide-overlay
@@ -11,16 +11,17 @@
   >
     <v-list>
       <v-btn
+        class="site-logo"
         to="/"
         flat
         icon
       >
-        <v-avatar class="site-logo">
+        <v-avatar>
           <img src="/img/icons/ms-icon-144x144.png">
         </v-avatar>
       </v-btn>
       <v-spacer />
-      <div class="side-nav-items">
+      <div v-if="hugeDisplay" class="side-nav-items">
         <v-tooltip
           v-for="item in items" :key="item.name"
           right
@@ -29,8 +30,8 @@
           <v-btn
             slot="activator"
             active-class=""
-            exact-active-class="side-nav-item"
-            class="side-nav-item"
+            exact-active-class="side-nav-items--item"
+            class="side-nav-items--item"
             depressed
             :to="item.href"
             flat
@@ -39,10 +40,30 @@
             <v-icon>
               {{ item.icon }}
             </v-icon>
-            <span> {{ item.name }}</span>
           </v-btn>
           <span> {{ item.name }}</span>
         </v-tooltip>
+      </div>
+      <div
+        v-if="!hugeDisplay"
+        class="side-nav-items"
+      >
+        <v-btn
+          v-for="item in items"
+          :key="item.name"
+          style="height: 3.5rem"
+          depressed
+          flat
+          block
+          class="side-nav-items--item white--text"
+        >
+          <v-icon class="icon">
+            {{ item.icon }}
+          </v-icon>
+          <span class="text">
+            {{ item.name }}
+          </span>
+        </v-btn>
       </div>
     </v-list>
   </v-navigation-drawer>
@@ -53,7 +74,6 @@ export default {
   name: 'SideNav',
   data () {
     return {
-      drawer: true,
       mini: true,
       items: [
         { name: '关于', href: '/about', icon: 'fas fa-info' }
@@ -62,8 +82,15 @@ export default {
   },
 
   computed: {
-    smallDisplay () {
+    hugeDisplay () {
       return this.$vuetify.breakpoint.lgAndUp
+    }
+  },
+
+  watch: {
+    hugeDisplay (val, oldVal) {
+      if (val === oldVal) return
+      this.$store.state.drawer = false
     }
   }
 }
@@ -75,19 +102,42 @@ export default {
   .site-side-nav {
 
     .site-logo {
-
+      @media $display-breakpoints.md-and-down {
+        margin-left 1rem
+      }
     }
 
-    .side-nav-item {
+    .side-nav-items {
+      &--item {
+        display flex
+        flex-direction row
+        padding .5rem
+
+        @media $display-breakpoints.md-and-down {
+          >>> .v-btn__content {
+            justify-content left
+          }
+        }
+
+        .icon {
+          text-align center
+          margin 0 .3em
+          width 1.5em
+          vertical-align middle
+        }
+
+        .text {
+          margin 0 1rem
+          font-size .8em
+          vertical-align middle
+        }
+      }
+
       &:hover:before, &:focus:before {
         background-color transparent !important
       }
 
       margin-top 1rem
-
-      >>> div {
-        flex-direction column
-      }
 
       span {
         padding-top .5rem
