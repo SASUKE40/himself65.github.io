@@ -1,10 +1,7 @@
-import Header from '@/components/Header.vue'
+import Toolbar from '@/layout/Toolbar.vue'
 
-describe('Header.vue', () => {
-  it('have data', () => {
-    expect(typeof Header.data).toBe('function')
-    const data = Header.data()
-    expect(data.items).toBeDefined()
-    expect(data.logo).toBeDefined()
+describe('Toolbar.vue', () => {
+  it('have name', () => {
+    expect(Toolbar.name).toBeDefined()
   })
 })
