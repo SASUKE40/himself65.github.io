@@ -6,6 +6,7 @@
         <RouterView />
       </v-content>
       <v-btn
+        v-show="!$vuetify.breakpoint.lgAndUp"
         bottom
         right
         icon
@@ -15,7 +16,7 @@
         @click="$store.state.drawer = !$store.state.drawer"
       >
         <v-icon>
-          add
+          list
         </v-icon>
       </v-btn>
       <Footer />

@@ -51,6 +51,7 @@
         <v-btn
           v-for="item in items"
           :key="item.name"
+          :to="item.href"
           style="height: 3.5rem"
           depressed
           flat
