@@ -38,11 +38,19 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+  @import "~vuetify/src/stylus/settings/_variables.styl"
+
   .site-header {
     display flex
 
     .site-user-nav {
       margin-right 3rem
+    }
+
+    @media $display-breakpoints.md-and-down {
+      .site-user-nav {
+        margin-right 1.5rem
+      }
     }
   }
 </style>
