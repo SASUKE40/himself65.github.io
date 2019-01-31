@@ -1,7 +1,13 @@
+const webpackConfig = require('./build/webpack.dev.config')
+
 const isMock = process.env.TARGET === 'mock'
 
 module.exports = {
   assetsDir: 'public',
+
+  configureWebpack: {
+    ...webpackConfig
+  },
 
   pwa: {
     name: 'Himself65',

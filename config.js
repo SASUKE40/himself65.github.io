@@ -1,5 +1,12 @@
+const path = require('path')
+
+const resolve = dir => path.resolve(dir)
+
 module.exports = {
   appName: 'himself65',
+  paths: {
+    posts: resolve('./public/_posts/')
+  },
   friends: [
     {
       title: 'memset0的Blog',

@@ -5,10 +5,10 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'vuetify/dist/vuetify.min.css'
 import Kuen from '@kuen/components'
-import './sw-register'
-import { router } from './router'
-import { store } from './store'
-import App from './App.vue'
+import '@/sw-register'
+import { router } from '@/router'
+import { store } from '@/store'
+import App from '@/App.vue'
 
 Vue.use(Kuen)
 Vue.use(Vee)

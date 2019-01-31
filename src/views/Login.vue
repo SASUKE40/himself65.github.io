@@ -47,6 +47,8 @@
 </template>
 
 <script>
+import { login } from '@/api'
+
 export default {
   name: 'Login',
 
@@ -67,8 +69,13 @@ export default {
   },
 
   methods: {
-    login () {
+    async login () {
+      await login(this.username, this.password)
+        .then(res => {
+          if (res.statusCode !== 200) {
 
+          }
+        })
     },
     register () {
 

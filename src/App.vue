@@ -24,8 +24,8 @@
   </v-app>
 </template>
 <script>
-import Footer from './layout/Footer'
-import SideNav from './layout/SideNav'
+import Footer from '@/layout/Footer'
+import SideNav from '@/layout/SideNav'
 
 export default {
   components: {
