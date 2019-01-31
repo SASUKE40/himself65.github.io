@@ -2,7 +2,7 @@
 
 面包的个人网站
 
-[![Build Status](https://travis-ci.com/Himself65/himself65.svg?branch=newWebsite)](https://travis-ci.com/Himself65/himself65)
+[![Build Status](https://travis-ci.com/Himself65/himself65.svg?branch=dev)](https://travis-ci.com/Himself65/himself65)
 [![License](https://img.shields.io/github/license/himself65/kuen.svg)](htttps:://github.com/himself65/himself65)
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/himself65/himself65.svg)](htttps:://github.com/himself65/himself65)
 [![GitHub top language](https://img.shields.io/github/languages/top/himself65/himself65.svg)](htttps:://github.com/himself65/himself65)
