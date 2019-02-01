@@ -5,7 +5,7 @@ export const regex = /.*(?=\..+)/
 
 function requireContents (path) {
   if (!path) {
-    throw Error(`param path is nullable`)
+    throw Error(`param path cannot be nullable`)
   }
   let files = {}
   try {
