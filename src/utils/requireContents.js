@@ -1,6 +1,8 @@
 import { readdirSync, readFileSync } from 'fs'
 import { resolve } from 'path'
 
+export const regex = /.*(?=\..+)/
+
 function requireContents (path) {
   if (!path) {
     throw Error(`param path is nullable`)
@@ -14,7 +16,7 @@ function requireContents (path) {
   return files.map(file => {
     const filePath = resolve(path, file)
     return {
-      key: /.*(?=\..+)/.exec(file.toString())[0],
+      key: regex.exec(file.toString())[0],
       value: readFileSync(filePath)
     }
   })
