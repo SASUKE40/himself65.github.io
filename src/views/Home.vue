@@ -4,52 +4,18 @@
     <width-wrap>
       <v-layout slot="main">
         <v-container class="lists">
-          <v-card dark>
-            <v-img
-              src="https://s2.ax1x.com/2019/01/15/Fz7P8f.jpg"
-            >
-              <v-layout>
-                <v-flex>
-                  <v-card-title>
-                    <div>
-                      <div class="headline">
-                        我永远喜欢Saber
-                      </div>
-                      <br>
-                      <div>
-                        好像这个背景是贞德？？？（逃
-                      </div>
-                    </div>
-                  </v-card-title>
-                </v-flex>
-              </v-layout>
-            </v-img>
-          </v-card>
-          <v-card dark class="white--text">
-            <v-img
-              :src="titleIMGs[0].src"
-            >
-              <v-layout>
-                <v-flex>
-                  <v-card-title primary-title>
-                    <div>
-                      <div class="headline">
-                        我的Blog
-                      </div>
-                      <div class="grey--text">
-                        Updated
-                      </div>
-                      <div>
-                        采用和Luogu相同的UI设计
-                      </div>
-                      <div>
-                        敬请期待
-                      </div>
-                    </div>
-                  </v-card-title>
-                </v-flex>
-              </v-layout>
-            </v-img>
+          <v-card v-for="post in posts" :key="post.date">
+            <v-card-title primary-title>
+              <div>
+                <h1 class="headline mb-0">
+                  {{ post.title }}
+                </h1>
+                <div class="grey--text">
+                  {{ post.author }} | {{ post.date }}
+                </div>
+                <div class="post-markdown" v-html="post.content" />
+              </div>
+            </v-card-title>
           </v-card>
         </v-container>
       </v-layout>
@@ -70,7 +36,8 @@ export default {
     return {
       titleIMGs: [
         { src: '/img/header.png' }
-      ]
+      ],
+      posts: null
     }
   },
 
@@ -84,6 +51,23 @@ export default {
       ]
       return wife[random(0, wife.length - 1)]
     }
+  },
+
+  async created () {
+    // todo: support definitely typed
+    await this.$store.state.butter.post.list({ page: 1, page_size: 5 })
+      .then(res => {
+        this.posts = res.data.data.map(({ author, title, body, status, published }) => {
+          if (status !== 'published') return
+          return {
+            author: author.first_name + author.last_name,
+            title: title,
+            content: body,
+            date: /[0-9]+-[0-9]+-[0-9]{2}/.exec(published)[0]
+          }
+        })
+        console.log(this.posts)
+      })
   }
 }
 </script>
@@ -99,5 +83,11 @@ export default {
 
   .friend {
     padding: 1rem 0
+  }
+
+  .post-markdown {
+    >>> img {
+      width 100%
+    }
   }
 </style>
