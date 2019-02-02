@@ -16,6 +16,7 @@
     "@kuen/loader": "^0.1.5-alpha.7",
     "@kuen/ui": "^0.1.5-alpha.7",
     "axios": "^0.18.0",
+    "buttercms": "^1.1.4",
     "lodash": "^4.17.11",
     "markdown-palettes": "^0.4.6-3",
     "marked": "^0.5.2",
@@ -64,6 +65,7 @@
     "nodemon": "^1.18.9",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
+    "vue-disqus": "^3.0.5",
     "vue-template-compiler": "^2.5.21"
   }
 }
