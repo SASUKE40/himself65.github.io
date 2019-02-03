@@ -1,6 +1,6 @@
 <template>
   <v-footer
-    v-show="hugeDisplay"
+    v-if="hugeDisplay"
     color="white"
     :height="height"
     absolute
