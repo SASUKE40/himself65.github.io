@@ -46,7 +46,7 @@ export default {
 
 <style lang="stylus" scoped>
   .site-md {
-    height 500px
+    height 500px !important // fixme: is this a bug?
     width 100%
   }
 </style>
