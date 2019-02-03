@@ -7,6 +7,7 @@
           <v-carousel
             hide-controls
             hide-delimiters
+            :height=" $vuetify.breakpoint.lgAndUp ? 500 : 200"
           >
             <v-carousel-item
               v-for="(item,i) in titleIMGs"
