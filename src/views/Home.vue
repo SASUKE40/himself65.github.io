@@ -4,19 +4,27 @@
     <width-wrap>
       <v-layout slot="main">
         <v-container class="lists">
-          <v-card v-for="post in posts" :key="post.date">
-            <v-card-title primary-title>
-              <div>
-                <h1 class="headline mb-0">
-                  {{ post.title }}
-                </h1>
-                <div class="grey--text">
-                  {{ post.author }} | {{ post.date }}
+          <template v-if="posts">
+            <v-card v-for="post in posts" :key="post.date">
+              <v-card-title primary-title>
+                <div>
+                  <h1 class="headline mb-0">
+                    {{ post.title }}
+                  </h1>
+                  <div class="grey--text">
+                    {{ post.author }} | {{ post.date }}
+                  </div>
+                  <vue-markdown class="post-markdown" :source="post.content" />
                 </div>
-                <div class="post-markdown" v-html="post.content" />
-              </div>
-            </v-card-title>
-          </v-card>
+              </v-card-title>
+            </v-card>
+          </template>
+          <div v-else class="text-xs-center">
+            <v-progress-circular
+              indeterminate
+              color="primary"
+            />
+          </div>
         </v-container>
       </v-layout>
       <v-container slot="side" />
@@ -26,12 +34,13 @@
 
 <script>
 import random from 'lodash/random'
+import VueMarkdown from 'vue-markdown'
 import WidthWrap from '../layout/WidthWrap'
 import Toolbar from '../layout/Toolbar'
 
 export default {
   name: 'Home',
-  components: { Toolbar, WidthWrap },
+  components: { Toolbar, WidthWrap, VueMarkdown },
   data () {
     return {
       titleIMGs: [
@@ -66,7 +75,6 @@ export default {
             date: /[0-9]+-[0-9]+-[0-9]{2}/.exec(published)[0]
           }
         })
-        console.log(this.posts)
       })
   }
 }
