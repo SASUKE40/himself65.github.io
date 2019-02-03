@@ -57,7 +57,7 @@ export default {
         { src: '/img/header.png' },
         { src: '/img/title/1.png' },
         { src: '/img/title/4.png' },
-        { src: '/img/title/14.jng' }
+        { src: '/img/title/14.jpg' }
       ],
       posts: null
     }
