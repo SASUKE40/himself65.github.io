@@ -1,10 +1,10 @@
 <template>
   <div class="site-width-wrap">
-    <div class="site-width-wrap--main">
+    <div class="site-width-wrap--main" :style="mainStyles">
       <slot v-if="$slots.main" name="main" />
       <slot v-if="!$slots.main" />
     </div>
-    <div class="site-width-wrap--side">
+    <div class="site-width-wrap--side" :style="sideStyles">
       <slot name="side" />
     </div>
   </div>
@@ -12,7 +12,22 @@
 
 <script>
 export default {
-  name: 'WidthWrap'
+  name: 'WidthWrap',
+  props: {
+    scale: { type: Number, default: 8 / 10 }
+  },
+  computed: {
+    mainStyles () {
+      return {
+        flex: `${this.scale * 10} 1 0`
+      }
+    },
+    sideStyles () {
+      return {
+        flex: `${10 - this.scale * 10} 0 0`
+      }
+    }
+  }
 }
 </script>
 

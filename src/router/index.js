@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import backstage from './backstage'
 
 Vue.use(VueRouter)
 
@@ -10,12 +11,12 @@ export const router = new VueRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('@/views/Home.vue')
+      component: () => import('views/Home.vue')
     },
     {
       path: '/about',
       name: 'about',
-      component: () => import('@/views/About.vue')
+      component: () => import('views/About.vue')
     },
     {
       path: '/login',
@@ -23,7 +24,7 @@ export const router = new VueRouter({
       props: {
         loginPage: true
       },
-      component: () => import('@/views/Login.vue')
+      component: () => import('views/Login.vue')
     },
     {
       path: '/register',
@@ -31,7 +32,8 @@ export const router = new VueRouter({
       props: {
         loginPage: false
       },
-      component: () => import('@/views/Login.vue')
-    }
+      component: () => import('views/Login.vue')
+    },
+    ...backstage
   ]
 })

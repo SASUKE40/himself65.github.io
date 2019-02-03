@@ -4,7 +4,8 @@ const path = require('path')
 module.exports = {
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, '../', 'src/'),
+      '@': path.resolve(__dirname, '../', 'src'),
+      'views': path.resolve(__dirname, '../', 'src', 'views'),
       'config': path.resolve(__dirname, '../', 'config.js')
     }
   }
