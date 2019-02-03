@@ -12,9 +12,6 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.6.3",
-    "@kuen/components": "^0.1.5-alpha.7",
-    "@kuen/loader": "^0.1.5-alpha.7",
-    "@kuen/ui": "^0.1.5-alpha.7",
     "axios": "^0.18.0",
     "buttercms": "^1.1.4",
     "lodash": "^4.17.11",
@@ -26,6 +23,7 @@
     "vee-validate": "^2.1.4",
     "vue": "^2.5.21",
     "vue-aplayer": "^1.6.1",
+    "vue-markdown": "^2.2.4",
     "vue-router": "^3.0.1",
     "vuetify": "^1.4.1",
     "vuex": "^3.0.1"

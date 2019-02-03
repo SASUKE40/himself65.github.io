@@ -73,8 +73,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  @import "~@kuen/ui/src/setting.styl"
-
   .lists {
     > div {
       margin-top 1rem
