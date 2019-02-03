@@ -1,6 +1,6 @@
 # [Himself65.com](https://himself65.com)
 
-面包的个人网站
+> 面包的个人网站，前端部分
 
 [![Build Status](https://travis-ci.com/Himself65/himself65.svg?branch=dev)](https://travis-ci.com/Himself65/himself65)
 [![License](https://img.shields.io/github/license/himself65/kuen.svg)](htttps:://github.com/himself65/himself65)
@@ -10,20 +10,17 @@
 ## 用法
 
 ```bash
+# 安装依赖
 yarn install
 
+# 开发环境，使用mock数据
 yarn dev
-# or
+# 开发环境，配合Astoria开发调试
 yarn serve
+
+# 生产部署，具体使用到Astoria中查阅
+yarn build
 ```
-
-### 其他
-
-serve环境将会将所有api访问转发到其他端口
-
-dev环境将打开[mock服务器](./mock)(基于koa.js搭建)
-
-https://github.com/Himself65/himself65/blob/e31159adbb28900442b694693182b89d0e9f8614/vue.config.js#L17-L19
 
 ## LICENSE
 
