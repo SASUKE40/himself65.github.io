@@ -4,6 +4,16 @@
     <width-wrap>
       <v-layout slot="main">
         <v-container class="lists">
+          <v-carousel
+            hide-controls
+            hide-delimiters
+          >
+            <v-carousel-item
+              v-for="(item,i) in titleIMGs"
+              :key="i"
+              :src="item.src"
+            />
+          </v-carousel>
           <template v-if="posts">
             <v-card v-for="post in posts" :key="post.date">
               <v-card-title primary-title>
@@ -44,7 +54,10 @@ export default {
   data () {
     return {
       titleIMGs: [
-        { src: '/img/header.png' }
+        { src: '/img/header.png' },
+        { src: '/img/title/1.png' },
+        { src: '/img/title/4.png' },
+        { src: '/img/title/14.jng' }
       ],
       posts: null
     }
