@@ -50,7 +50,9 @@ export default {
     }
   },
   mounted () {
-    setTimeout(() => { this.notice = false }, 2000)
+    setTimeout(() => {
+      this.notice = false
+    }, 2000)
   }
 }
 </script>

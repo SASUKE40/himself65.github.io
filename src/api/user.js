@@ -11,5 +11,12 @@ export function login (username, password) {
 }
 
 export function getUserInfo (detail = false) {
-  return axios.post(userInfoAPI).then(null) // todo
+  return axios.post(userInfoAPI, { detail })
+    .then(res => {
+      if (res.status === 200) {
+        return res.data.data
+      } else {
+        return null
+      }
+    })
 }

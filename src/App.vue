@@ -31,6 +31,10 @@ export default {
   components: {
     SideNav,
     Footer
+  },
+  async beforeCreate () {
+    // updateCurrentUser
+    await this.$store.dispatch('global/updateCurrentUser')
   }
 }
 </script>
