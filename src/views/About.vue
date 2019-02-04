@@ -1,35 +1,39 @@
 <template>
-  <v-container>
+  <div>
     <toolbar />
     <width-wrap>
-      <v-card slot="side">
-        <v-card-title>
-          <div>
-            <h1 class="headline mb-0">
-              友情链接
-            </h1>
-            <span v-for="friend in friends" :key="friend.title" class="friend">
-              <a
-                target="_blank"
-                :href="friend.href"
-              >
-                {{ friend.title }}
-              </a>
-              <br>
-            </span>
-          </div>
-        </v-card-title>
-      </v-card>
-      <v-card slot="main">
-        <v-card-title>
-          <vue-markdown
-            class="site-markdown"
-            :source="msg"
-          />
-        </v-card-title>
-      </v-card>
+      <v-container slot="side">
+        <v-card>
+          <v-card-title>
+            <div>
+              <h1 class="headline mb-0">
+                友情链接
+              </h1>
+              <span v-for="friend in friends" :key="friend.title" class="friend">
+                <a
+                  target="_blank"
+                  :href="friend.href"
+                >
+                  {{ friend.title }}
+                </a>
+                <br>
+              </span>
+            </div>
+          </v-card-title>
+        </v-card>
+      </v-container>
+      <v-container slot="main">
+        <v-card>
+          <v-card-title>
+            <vue-markdown
+              class="site-markdown"
+              :source="msg"
+            />
+          </v-card-title>
+        </v-card>
+      </v-container>
     </width-wrap>
-  </v-container>
+  </div>
 </template>
 
 <script>

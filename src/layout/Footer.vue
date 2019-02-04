@@ -44,9 +44,9 @@ export default {
       height: '200px',
       meta: [
         { desc: 'Hosted on', name: 'Github', href: 'https://github.com/himself65/himself65.github.io' },
-        { desc: 'Powered by', name: 'Kuen', href: 'https://github.com/Himself65/kuen' },
-        { desc: 'Cloud Service by', name: 'Vultr', href: 'https://www.vultr.com/' },
-        { desc: 'Analytic by', name: 'Google Analytics', href: 'http://www.google.com/analytics/' }
+        { desc: 'Powered by', name: 'Vuetify', href: 'https://vuetifyjs.com/zh-Hans' },
+        { desc: 'Cloud Service by', name: 'Vultr', href: 'https://www.vultr.com' },
+        { desc: 'Analytic by', name: 'Google Analytics', href: 'http://www.google.com/analytics' }
       ]
     }
   },
