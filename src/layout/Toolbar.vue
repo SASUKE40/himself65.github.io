@@ -6,14 +6,24 @@
       dense
       floating
     >
-      <v-btn icon>
-        <v-badge color="red" right>
-          <span v-if="false" slot="badge">
-            0
-          </span>
-          <v-icon>fas fa-envelope</v-icon>
-        </v-badge>
-      </v-btn>
+      <v-menu bottom left>
+        <v-btn
+          slot="activator"
+          icon
+        >
+          <v-badge color="red" right>
+            <span v-if="notice" slot="badge">
+              0
+            </span>
+            <v-icon>fas fa-envelope</v-icon>
+          </v-badge>
+        </v-btn>
+        <v-list>
+          <v-list-tile>
+            <v-list-tile-title>暂时什么都没有</v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
 
       <v-btn
         :to="userUrl"
@@ -28,11 +38,19 @@
 <script>
 export default {
   name: 'Toolbar',
+  data () {
+    return {
+      notice: true
+    }
+  },
   computed: {
     userUrl () {
       // fixme: 根据是否登陆返回地址
       return '/login'
     }
+  },
+  mounted () {
+    setTimeout(() => { this.notice = false }, 2000)
   }
 }
 </script>

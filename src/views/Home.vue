@@ -78,7 +78,7 @@ export default {
 
   async created () {
     // todo: support definitely typed
-    await this.$store.state.butter.post.list({ page: 1, page_size: 5 })
+    await this.$store.state.global.butter.post.list({ page: 1, page_size: 5 })
       .then(res => {
         this.posts = res.data.data.map(({ author, title, body, status, published }) => {
           if (status !== 'published') return

@@ -1,6 +1,6 @@
 <template>
   <v-navigation-drawer
-    v-model="$store.state.drawer"
+    v-model="$store.state.global.currentSettings.drawer"
     :mini-variant="hugeDisplay"
     :permanent="hugeDisplay"
     mini-variant-width="60"
@@ -91,7 +91,7 @@ export default {
   watch: {
     hugeDisplay (val, oldVal) {
       if (val === oldVal) return
-      this.$store.state.drawer = false
+      this.$store.commit('global/setDrawer', false)
     }
   }
 }

@@ -1,14 +1,15 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import butter from './butter'
+import Global from './modules/global'
 
 Vue.use(Vuex)
 
 export const store = new Vuex.Store({
-  state: {
-    drawer: false,
-    butter: butter
+  modules: {
+    global: Global
   },
   mutations: {},
   actions: {}
 })
+
+export default store

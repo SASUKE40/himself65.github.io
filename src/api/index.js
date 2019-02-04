@@ -1,3 +1,2 @@
-export { login } from './user'
-
-export { submitArticle } from './article'
+export * from './article'
+export * from './user'

@@ -13,7 +13,7 @@
         dark
         fixed
         color="primary"
-        @click="$store.state.drawer = !$store.state.drawer"
+        @click="$store.commit('global/setDrawer')"
       >
         <v-icon>
           list

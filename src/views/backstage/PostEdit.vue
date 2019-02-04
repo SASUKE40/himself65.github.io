@@ -22,7 +22,7 @@
 
 <script>
 import MarkdownPalettes from 'markdown-palettes'
-import { submitArticle } from '@/api'
+import { submitArticle, cacheArticle } from '@/api'
 
 export default {
   name: 'PostEditPage',
@@ -39,6 +39,7 @@ export default {
       await submitArticle(this.title, this.src).then(null) // todo
     },
     async cache () {
+      await cacheArticle(this.title, this.src).then(null) // todo
     }
   }
 }

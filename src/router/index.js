@@ -39,6 +39,11 @@ export const router = new VueRouter({
       },
       component: () => import('views/Login.vue')
     },
+    {
+      path: '/article/:id',
+      name: 'article',
+      component: () => import('views/Article.vue')
+    },
     ...backstage
   ]
 })

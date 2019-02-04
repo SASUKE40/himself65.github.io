@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <toolbar />
     <width-wrap>
       <v-card slot="side">
         <v-card-title>
@@ -36,9 +37,12 @@ import config from '../../config'
 import VueMarkdown from 'vue-markdown'
 import WidthWrap from '../layout/WidthWrap'
 
+import Toolbar from '@/layout/Toolbar'
+
 export default {
   name: 'About',
   components: {
+    Toolbar,
     VueMarkdown,
     WidthWrap
   },
