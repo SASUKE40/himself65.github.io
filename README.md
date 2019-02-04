@@ -14,9 +14,10 @@
 yarn install
 
 # 开发环境，使用mock数据
-yarn dev
-# 开发环境，配合Astoria开发调试
-yarn serve
+yarn dev:mock
+
+# 开发环境，提供Astoria提供静态文件
+yarn dev:serve
 
 # 生产部署，具体使用到Astoria中查阅
 yarn build

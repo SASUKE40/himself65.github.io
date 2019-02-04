@@ -3,11 +3,11 @@
   "private": true,
   "scripts": {
     "build": "vue-cli-service build --name himself65-website --modern",
-    "test": "yarn lint",
-    "lint": "vue-cli-service lint",
-    "dev": "concurrently \" cross-env DEV_TARGET=mock vue-cli-service serve \" \" nodemon mock/index.js \" ",
-    "serve": "cross-env DEV_TARGET=serve vue-cli-service serve",
+    "dev:mock": "concurrently \" cross-env DEV_TARGET=mock vue-cli-service serve \" \" nodemon mock/index.js \" ",
+    "dev:serve": "vue-cli-service build --name himself65-website --watch --report",
     "inspect": "vue-cli-service inspect",
+    "lint": "vue-cli-service lint",
+    "test": "yarn lint",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {

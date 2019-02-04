@@ -1,3 +1,5 @@
+import { getUserInfo } from '@/api'
+
 import butter from '@/store/butter'
 
 export default {
@@ -16,6 +18,13 @@ export default {
       } else {
         state.currentSettings.drawer = val
       }
+    }
+  },
+  actions: {
+    async updateCurrentUser ({ state: global }) {
+      await getUserInfo(true).then(user => {
+        global.currentUser = user
+      })
     }
   }
 }
