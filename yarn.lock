@@ -3641,9 +3641,9 @@ eslint-import-resolver-node@^0.3.2:
     resolve "^1.5.0"
 
 eslint-loader@^2.1.1:
-  version "2.1.1"
-  resolved "http://registry.npm.taobao.org/eslint-loader/download/eslint-loader-2.1.1.tgz#2a9251523652430bfdd643efdb0afc1a2a89546a"
-  integrity sha1-KpJRUjZSQwv91kPv2wr8GiqJVGo=
+  version "2.1.2"
+  resolved "http://registry.npm.taobao.org/eslint-loader/download/eslint-loader-2.1.2.tgz#453542a1230d6ffac90e4e7cb9cadba9d851be68"
+  integrity sha1-RTVCoSMNb/rJDk58ucrbqdhRvmg=
   dependencies:
     loader-fs-cache "^1.0.0"
     loader-utils "^1.0.2"
@@ -10351,9 +10351,9 @@ vue@*, vue@^2.6.2:
   integrity sha1-HMnJyPe6jfRem5fChJR954t2MBw=
 
 vuetify@^1.4.4:
-  version "1.4.6"
-  resolved "http://registry.npm.taobao.org/vuetify/download/vuetify-1.4.6.tgz#908cbe4e39e842a23e26fe0d25f059dc39b7eef6"
-  integrity sha1-kIy+TjnoQqI+Jv4NJfBZ3Dm37vY=
+  version "1.5.0"
+  resolved "http://registry.npm.taobao.org/vuetify/download/vuetify-1.5.0.tgz#b7334f525b5dd416b01d5e9ddbadad22beeb9d7f"
+  integrity sha1-tzNPUltd1BawHV6d262tIr7rnX8=
 
 vuex@^3.0.1:
   version "3.1.0"
