@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from './'
 
 export const talksAPI = '/api/talks'
 

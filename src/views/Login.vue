@@ -76,7 +76,8 @@ export default {
         password: this.password
       }).then(res => {
         if (res.status === 200) {
-
+          const token = res.data.data
+          this.$ls.set('token', token)
         }
       })
     },

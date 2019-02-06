@@ -1,17 +1,10 @@
-import axios from 'axios'
+import axios from './'
 
 export const loginAPI = '/api/login'
 export const userInfoAPI = '/api/user'
 
-export function login (username, password) {
-  return axios.post(loginAPI, {
-    username: username,
-    password: password
-  }).then(null) // todo
-}
-
 export function getUserInfo (detail = false) {
-  return axios.post(userInfoAPI, { detail })
+  return axios.get(userInfoAPI, { data: { detail: detail } })
     .then(res => {
       if (res.status === 200) {
         return res.data.data

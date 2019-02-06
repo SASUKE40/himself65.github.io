@@ -104,6 +104,7 @@ import random from 'lodash/random'
 import VueMarkdown from 'vue-markdown'
 import WidthWrap from '../layout/WidthWrap'
 import Toolbar from '../layout/Toolbar'
+import { getTalks } from '@/api'
 
 export default {
   name: 'Home',
@@ -147,6 +148,7 @@ export default {
           }
         })
       })
+    this.talks = await getTalks()
   }
 }
 </script>
