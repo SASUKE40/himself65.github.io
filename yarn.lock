@@ -10300,6 +10300,11 @@ vue-loader@^15.6.2:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
+vue-localstorage@^0.6.2:
+  version "0.6.2"
+  resolved "http://registry.npm.taobao.org/vue-localstorage/download/vue-localstorage-0.6.2.tgz#7f84c99f4ce0b6be23b16c1fab194d4d67182456"
+  integrity sha1-f4TJn0zgtr4jsWwfqxlNTWcYJFY=
+
 vue-markdown@^2.2.4:
   version "2.2.4"
   resolved "http://registry.npm.taobao.org/vue-markdown/download/vue-markdown-2.2.4.tgz#db0f774178f3bc91ee18c626d86a3a0d2de22746"

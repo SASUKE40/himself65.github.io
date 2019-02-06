@@ -47,7 +47,8 @@
 </template>
 
 <script>
-import { login } from '@/api'
+import { loginAPI } from '@/api'
+import axios from 'axios'
 
 export default {
   name: 'Login',
@@ -70,15 +71,17 @@ export default {
 
   methods: {
     async login () {
-      await login(this.username, this.password)
-        .then(res => {
-          if (res.statusCode !== 200) {
+      await axios.post(loginAPI, {
+        username: this.username,
+        password: this.password
+      }).then(res => {
+        if (res.status === 200) {
 
-          }
-        })
+        }
+      })
     },
     register () {
-
+      // todo
     }
   }
 }
