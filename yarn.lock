@@ -724,6 +724,13 @@
     error-stack-parser "^2.0.0"
     string-width "^2.0.0"
 
+"@types/axios@^0.14.0":
+  version "0.14.0"
+  resolved "http://registry.npm.taobao.org/@types/axios/download/@types/axios-0.14.0.tgz#ec2300fbe7d7dddd7eb9d3abf87999964cafce46"
+  integrity sha1-7CMA++fX3d1+udOr+HmZlkyvzkY=
+  dependencies:
+    axios "*"
+
 "@types/body-parser@*":
   version "1.17.0"
   resolved "http://registry.npm.taobao.org/@types/body-parser/download/@types/body-parser-1.17.0.tgz#9f5c9d9bd04bb54be32d5eb9fc0d8c974e6cf58c"
@@ -1608,20 +1615,20 @@ aws4@^1.8.0:
   resolved "http://registry.npm.taobao.org/aws4/download/aws4-1.8.0.tgz#f0e003d9ca9e7f59c7a508945d7b2ef9a04a542f"
   integrity sha1-8OAD2cqef1nHpQiUXXsu+aBKVC8=
 
-axios@0.9.1:
-  version "0.9.1"
-  resolved "http://registry.npm.taobao.org/axios/download/axios-0.9.1.tgz#95608b16447ee29b033589854c3fc7ee2c06bf6e"
-  integrity sha1-lWCLFkR+4psDNYmFTD/H7iwGv24=
-  dependencies:
-    follow-redirects "0.0.7"
-
-axios@^0.18.0:
+axios@*, axios@^0.18.0:
   version "0.18.0"
   resolved "http://registry.npm.taobao.org/axios/download/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
   integrity sha1-MtU+SFHv3AoRmTts0AB4nXDAUQI=
   dependencies:
     follow-redirects "^1.3.0"
     is-buffer "^1.1.5"
+
+axios@0.9.1:
+  version "0.9.1"
+  resolved "http://registry.npm.taobao.org/axios/download/axios-0.9.1.tgz#95608b16447ee29b033589854c3fc7ee2c06bf6e"
+  integrity sha1-lWCLFkR+4psDNYmFTD/H7iwGv24=
+  dependencies:
+    follow-redirects "0.0.7"
 
 babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
   version "6.26.0"
@@ -3135,6 +3142,11 @@ date-now@^0.1.4:
   version "0.1.4"
   resolved "http://registry.npm.taobao.org/date-now/download/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
   integrity sha1-6vQ5/U1ISK105cx9vvIAZyueNFs=
+
+dateformat@^3.0.3:
+  version "3.0.3"
+  resolved "http://registry.npm.taobao.org/dateformat/download/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
+  integrity sha1-puN0maTZqc+F71hyBE1ikByYia4=
 
 de-indent@^1.0.2:
   version "1.0.2"

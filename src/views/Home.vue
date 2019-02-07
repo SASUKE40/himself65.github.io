@@ -14,17 +14,17 @@
             :src="item.src"
           />
         </v-carousel>
-        <template v-if="posts">
-          <v-card v-for="post in posts" :key="post.date">
+        <template v-if="articles">
+          <v-card v-for="article in articles" :key="article._id">
             <v-card-title primary-title>
               <div>
                 <h1 class="headline mb-0">
-                  {{ post.title }}
+                  {{ article.title }}
                 </h1>
                 <div class="grey--text">
-                  {{ post.author }} | {{ post.date }}
+                  {{ article.author }} | {{ article.createdDate }}
                 </div>
-                <vue-markdown class="post-markdown" :source="post.content" />
+                <vue-markdown class="post-markdown" :source="article.content" />
               </div>
             </v-card-title>
           </v-card>
@@ -41,7 +41,7 @@
           <v-card
             v-for="talk in talks"
 
-            :key="talk.id"
+            :key="talk._id"
             class="mx-auto"
             color="#26c6da"
             dark
@@ -104,7 +104,7 @@ import random from 'lodash/random'
 import VueMarkdown from 'vue-markdown'
 import WidthWrap from '../layout/WidthWrap'
 import Toolbar from '../layout/Toolbar'
-import { getTalks } from '@/api'
+import { getArticles, getTalks } from '@/api'
 
 export default {
   name: 'Home',
@@ -117,7 +117,7 @@ export default {
         { src: '/img/title/4.png' },
         { src: '/img/title/14.jpg' }
       ],
-      posts: null,
+      articles: null,
       talks: null
     }
   },
@@ -136,18 +136,7 @@ export default {
 
   async created () {
     // todo: support definitely typed
-    await this.$store.state.global.butter.post.list({ page: 1, page_size: 5 })
-      .then(res => {
-        this.posts = res.data.data.map(({ author, title, body, status, published }) => {
-          if (status !== 'published') return
-          return {
-            author: author.first_name + author.last_name,
-            title: title,
-            content: body,
-            date: /[0-9]+-[0-9]+-[0-9]{2}/.exec(published)[0]
-          }
-        })
-      })
+    this.articles = await getArticles()
     this.talks = await getTalks()
   }
 }
