@@ -32,6 +32,7 @@
       </v-btn>
       <v-btn
         v-show="loginPage"
+        disabled
         href="/api/login/auth/github"
       >
         通过 GitHub 注册
@@ -47,8 +48,9 @@
 </template>
 
 <script>
-import { loginAPI } from '@/api'
 import axios from 'axios'
+import { loginAPI } from '@/api'
+import debug from '@/debug'
 
 export default {
   name: 'Login',
@@ -77,7 +79,16 @@ export default {
       }).then(res => {
         if (res.status === 200) {
           const token = res.data.data
+          debug('login success')
           this.$ls.set('token', token)
+          this.$alert.fire({
+            type: 'success',
+            title: '登陆成功',
+            text: '将自动回到主页',
+            timer: 1500
+          }).then(() => {
+            this.$router.replace('/')
+          })
         }
       })
     },

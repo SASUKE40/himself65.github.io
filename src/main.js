@@ -1,17 +1,18 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import Vee from 'vee-validate'
+import '@/install/LocalStorage'
+import SweetAlert from '@/install/SweetAlert'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'vuetify/dist/vuetify.min.css'
-import '@/install/LocalStorage'
-import '@/install/SweetAlert'
 import '@/sw-register'
 import { router } from '@/router'
 import { store } from '@/store'
 import App from '@/App.vue'
 
 Vue.use(Vee)
+Vue.use(SweetAlert)
 Vue.use(Vuetify, {
   theme: {
     primary: '#03A9F4',
