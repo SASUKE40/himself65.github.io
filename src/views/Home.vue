@@ -3,17 +3,17 @@
     <toolbar />
     <width-wrap>
       <v-container slot="main" class="lists">
-        <v-carousel
-          hide-controls
-          hide-delimiters
-          :height=" $vuetify.breakpoint.lgAndUp ? 500 : 200"
-        >
-          <v-carousel-item
-            v-for="(item,i) in titleIMGs"
-            :key="i"
-            :src="item.src"
-          />
-        </v-carousel>
+        <!--<v-carousel-->
+        <!--hide-controls-->
+        <!--hide-delimiters-->
+        <!--:height=" $vuetify.breakpoint.lgAndUp ? 500 : 200"-->
+        <!--&gt;-->
+        <!--<v-carousel-item-->
+        <!--v-for="(item,i) in titleIMGs"-->
+        <!--:key="i"-->
+        <!--:src="item.src"-->
+        <!--/>-->
+        <!--</v-carousel>-->
         <template v-if="articles">
           <v-card v-for="article in articles" :key="article._id">
             <v-card-title primary-title>
