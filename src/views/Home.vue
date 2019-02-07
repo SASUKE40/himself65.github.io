@@ -27,6 +27,15 @@
                 <vue-markdown class="post-markdown" :source="article.content" />
               </div>
             </v-card-title>
+            <v-card-actions v-if="haveAccess(article)">
+              <v-btn
+                flat
+                color="accent"
+                :to="'/article/'+article._id+'/edit'"
+              >
+                编辑
+              </v-btn>
+            </v-card-actions>
           </v-card>
         </template>
         <div v-else class="text-xs-center">
@@ -138,6 +147,14 @@ export default {
     // todo: support definitely typed
     this.articles = await getArticles()
     this.talks = await getTalks()
+  },
+
+  methods: {
+    haveAccess (article) {
+      const currentUser = this.$store.getters.currentUser
+      return article.author === currentUser.username ||
+          currentUser.level !== 1
+    }
   }
 }
 </script>

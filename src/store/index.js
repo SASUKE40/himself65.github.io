@@ -8,6 +8,11 @@ export const store = new Vuex.Store({
   modules: {
     global: Global
   },
+  getters: {
+    currentUser: state => {
+      return state.global.currentUser
+    }
+  },
   mutations: {},
   actions: {}
 })

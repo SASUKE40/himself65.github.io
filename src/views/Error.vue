@@ -23,7 +23,10 @@
 export default {
   name: 'Error',
   props: {
-    error: { type: String, default: '网站出现了点偏差' }
+    error: { type: String, default: '您的操作出了点偏差' }
+  },
+  created () {
+    console.log(this.$router)
   }
 }
 </script>
