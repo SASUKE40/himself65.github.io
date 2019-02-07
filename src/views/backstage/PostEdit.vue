@@ -75,7 +75,7 @@ export default {
 
   methods: {
     async submit () {
-      await submitArticle(this.title, this.src, this.isNew)
+      await submitArticle(this.title, this.src, this.$route.params.id)
         .then(this.$alert.fire({
           type: 'success',
           title: '创建成功',

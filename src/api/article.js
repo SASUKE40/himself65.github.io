@@ -3,11 +3,11 @@ import dateFormat from 'dateformat'
 
 export const articleAPI = '/api/article'
 
-export async function submitArticle (title, content, isNew) {
-  return axios.post(articleAPI, { title, content, isNew }).then(res => {
+export async function submitArticle (title, content, id) {
+  return axios.post(articleAPI, { title, content, _id: id }).then(res => {
     if (res.status === 200) {
       return {
-        message: `${isNew ? '新建' : '更新'}成功`
+        message: `${id ? '更新' : '新建'}成功`
       }
     } else {
       return res.data
