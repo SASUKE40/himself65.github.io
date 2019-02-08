@@ -1,9 +1,9 @@
 <template>
-  <v-app id="app" app>
+  <div id="app">
     <v-app>
-      <SideNav />
-      <v-content>
-        <RouterView />
+      <SideNav class="site-side-nav" app />
+      <v-content class="site-content" app>
+        <RouterView class="fill-height" />
       </v-content>
       <v-btn
         v-show="!$vuetify.breakpoint.lgAndUp"
@@ -19,9 +19,9 @@
           list
         </v-icon>
       </v-btn>
-      <Footer />
+      <Footer class="site-footer" app />
     </v-app>
-  </v-app>
+  </div>
 </template>
 <script>
 import Footer from '@/layout/Footer'
@@ -62,6 +62,17 @@ export default {
     >>> a {
       color: $blue.light
       text-decoration none
+    }
+  }
+
+  .site-content {
+    margin-bottom 5rem
+  }
+
+  .item {
+    margin-bottom 10px
+    &:first-child {
+      margin-top 20px
     }
   }
 </style>

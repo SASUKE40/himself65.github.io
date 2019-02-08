@@ -1,8 +1,7 @@
 <template>
   <v-footer
-    v-if="hugeDisplay"
     color="white"
-    :height="height"
+    height="auto"
     absolute
     inset
     app
@@ -41,18 +40,12 @@ export default {
   name: 'Footer',
   data () {
     return {
-      height: '200px',
       meta: [
         { desc: 'Hosted on', name: 'Github', href: 'https://github.com/himself65/himself65.github.io' },
         { desc: 'Powered by', name: 'Vuetify', href: 'https://vuetifyjs.com/zh-Hans' },
         { desc: 'Cloud Service by', name: 'Vultr', href: 'https://www.vultr.com' },
         { desc: 'Analytic by', name: 'Google Analytics', href: 'http://www.google.com/analytics' }
       ]
-    }
-  },
-  computed: {
-    hugeDisplay () {
-      return this.$vuetify.breakpoint.lgAndUp
     }
   }
 }

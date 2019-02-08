@@ -2,37 +2,36 @@
   <div>
     <toolbar />
     <width-wrap>
-      <v-container slot="main" class="lists">
-        <display-list
-          url="/api/articles"
-        >
-          <template slot="card" slot-scope="article">
-            <v-card :key="article._id">
-              <v-card-title primary-title>
-                <div>
-                  <h1 class="headline mb-0">
-                    {{ article.title }}
-                  </h1>
-                  <div class="grey--text">
-                    {{ article.author }} | {{ article.createdDate }}
-                  </div>
-                  <vue-markdown class="post-markdown" :source="article.content" />
+      <display-list
+        slot="main" class="lists"
+        url="/api/articles"
+      >
+        <template slot="card" slot-scope="article">
+          <v-card :key="article._id" class="item">
+            <v-card-title primary-title>
+              <div>
+                <h1 class="headline mb-0">
+                  {{ article.title }}
+                </h1>
+                <div class="grey--text">
+                  {{ article.author }} | {{ article.createdDate }}
                 </div>
-              </v-card-title>
-              <v-card-actions v-if="haveAccess(article)">
-                <v-btn
-                  flat
-                  color="accent"
-                  :to="'/article/'+article._id+'/edit'"
-                >
-                  编辑
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </template>
-        </display-list>
-      </v-container>
-      <v-container slot="side" />
+                <vue-markdown class="post-markdown" :source="article.content" />
+              </div>
+            </v-card-title>
+            <v-card-actions v-if="haveAccess(article)">
+              <v-btn
+                flat
+                color="accent"
+                :to="'/article/'+article._id+'/edit'"
+              >
+                编辑
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </template>
+      </display-list>
+      <!--<v-container slot="side" />-->
     </width-wrap>
   </div>
 </template>

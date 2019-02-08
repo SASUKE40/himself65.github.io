@@ -4,7 +4,7 @@
       <slot v-if="$slots.main" name="main" />
       <slot v-if="!$slots.main" />
     </div>
-    <div class="site-width-wrap--side" :style="sideStyles">
+    <div v-if="$slots.side" class="site-width-wrap--side" :style="sideStyles">
       <slot name="side" />
     </div>
   </div>
@@ -36,6 +36,7 @@ export default {
 
   .site-width-wrap {
     display flex
+    height 100%
 
     &--main {
       flex 4 1 0
@@ -48,16 +49,6 @@ export default {
 
     @media $display-breakpoints.sm-and-down {
       flex-direction: column-reverse
-
-      &--side {
-        padding: .5rem .2rem
-        margin-left: 0
-      }
-
-      &--main {
-        padding: .5rem .2rem
-        margin-top: 1rem
-      }
     }
   }
 </style>

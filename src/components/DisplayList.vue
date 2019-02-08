@@ -1,24 +1,31 @@
 <template>
-  <div>
-    <template v-if="items">
-      <template v-for="item in items">
-        <slot name="card" v-bind="item" />
+  <v-container class="fill-height" fluid>
+    <v-layout class="fill-height" column>
+      <template v-if="items">
+        <v-flex class="fill-height">
+          <template v-for="item in items">
+            <slot name="card" v-bind="item" />
+          </template>
+        </v-flex>
+        <v-spacer />
+        <v-flex>
+          <div class="text-xs-center">
+            <v-pagination
+              v-model="current"
+              :total-visible="5"
+              :length="pages"
+            />
+          </div>
+        </v-flex>
       </template>
-      <div class="text-xs-center">
-        <v-pagination
-          v-model="current"
-          :total-visible="5"
-          :length="pages"
+      <v-flex v-else class="text-xs-center">
+        <v-progress-circular
+          indeterminate
+          color="primary"
         />
-      </div>
-    </template>
-    <div v-else class="text-xs-center">
-      <v-progress-circular
-        indeterminate
-        color="primary"
-      />
-    </div>
-  </div>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
