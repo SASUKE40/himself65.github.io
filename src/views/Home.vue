@@ -131,20 +131,7 @@ export default {
     }
   },
 
-  computed: {
-    description () {
-      const wife = [
-        '樱岛麻衣',
-        '雷姆',
-        '双叶里央',
-        '阿尔托莉雅'
-      ]
-      return wife[random(0, wife.length - 1)]
-    }
-  },
-
   async beforeMount () {
-    // todo: support definitely typed
     this.articles = await getArticles()
     this.talks = await getTalks()
   },
@@ -152,6 +139,7 @@ export default {
   methods: {
     haveAccess (article) {
       const currentUser = this.$store.getters.currentUser
+      if (!currentUser) return false
       return article.author === currentUser.username ||
           currentUser.level !== 1
     }
