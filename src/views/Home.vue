@@ -3,137 +3,53 @@
     <toolbar />
     <width-wrap>
       <v-container slot="main" class="lists">
-        <!--<v-carousel-->
-        <!--hide-controls-->
-        <!--hide-delimiters-->
-        <!--:height=" $vuetify.breakpoint.lgAndUp ? 500 : 200"-->
-        <!--&gt;-->
-        <!--<v-carousel-item-->
-        <!--v-for="(item,i) in titleIMGs"-->
-        <!--:key="i"-->
-        <!--:src="item.src"-->
-        <!--/>-->
-        <!--</v-carousel>-->
-        <template v-if="articles">
-          <v-card v-for="article in articles" :key="article._id">
-            <v-card-title primary-title>
-              <div>
-                <h1 class="headline mb-0">
-                  {{ article.title }}
-                </h1>
-                <div class="grey--text">
-                  {{ article.author }} | {{ article.createdDate }}
+        <display-list
+          url="/api/articles"
+        >
+          <template slot="card" slot-scope="article">
+            <v-card :key="article._id">
+              <v-card-title primary-title>
+                <div>
+                  <h1 class="headline mb-0">
+                    {{ article.title }}
+                  </h1>
+                  <div class="grey--text">
+                    {{ article.author }} | {{ article.createdDate }}
+                  </div>
+                  <vue-markdown class="post-markdown" :source="article.content" />
                 </div>
-                <vue-markdown class="post-markdown" :source="article.content" />
-              </div>
-            </v-card-title>
-            <v-card-actions v-if="haveAccess(article)">
-              <v-btn
-                flat
-                color="accent"
-                :to="'/article/'+article._id+'/edit'"
-              >
-                编辑
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </template>
-        <div v-else class="text-xs-center">
-          <v-progress-circular
-            indeterminate
-            color="primary"
-          />
-        </div>
-      </v-container>
-      <v-container slot="side">
-        <template v-if="talks">
-          <v-card
-            v-for="talk in talks"
-
-            :key="talk._id"
-            class="mx-auto"
-            color="#26c6da"
-            dark
-          >
-            <v-card-title>
-              <v-icon
-                large
-                left
-              >
-                mdi-twitter
-              </v-icon>
-              <span class="title font-weight-light">
-                Himself65
-              </span>
-              <v-card-text class="headline font-weight-bold">
-                {{ talk.content }}
-              </v-card-text>
-              <v-card-actions>
-                <v-list-tile class="grow">
-                  <v-list-tile-avatar color="grey darken-3">
-                    <v-img
-                      class="elevation-6"
-                      src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
-                    />
-                  </v-list-tile-avatar>
-
-                  <v-list-tile-content>
-                    <v-list-tile-title>{{ talk.author }}</v-list-tile-title>
-                  </v-list-tile-content>
-
-                  <v-layout
-                    align-center
-                    justify-end
-                  >
-                    <v-icon class="mr-1">
-                      mdi-heart
-                    </v-icon>
-                    <span class="subheading mr-2">
-                      {{ talk.like }}
-                    </span>
-                  </v-layout>
-                </v-list-tile>
+              </v-card-title>
+              <v-card-actions v-if="haveAccess(article)">
+                <v-btn
+                  flat
+                  color="accent"
+                  :to="'/article/'+article._id+'/edit'"
+                >
+                  编辑
+                </v-btn>
               </v-card-actions>
-            </v-card-title>
-          </v-card>
-        </template>
-        <div v-else class="text-xs-center">
-          <v-progress-circular
-            indeterminate
-            color="primary"
-          />
-        </div>
+            </v-card>
+          </template>
+        </display-list>
       </v-container>
+      <v-container slot="side" />
     </width-wrap>
   </div>
 </template>
 
 <script>
-import random from 'lodash/random'
 import VueMarkdown from 'vue-markdown'
 import WidthWrap from '../layout/WidthWrap'
 import Toolbar from '../layout/Toolbar'
-import { getArticles, getTalks } from '@/api'
+import DisplayList from '@/components/DisplayList'
 
 export default {
   name: 'Home',
-  components: { Toolbar, WidthWrap, VueMarkdown },
+  components: { DisplayList, Toolbar, WidthWrap, VueMarkdown },
   data () {
     return {
-      titleIMGs: [
-        { src: '/img/header.png' },
-        { src: '/img/title/1.png' },
-        { src: '/img/title/4.png' },
-        { src: '/img/title/14.jpg' }
-      ],
-      articles: null,
       talks: null
     }
-  },
-
-  async beforeMount () {
-    this.articles = await getArticles()
-    this.talks = await getTalks()
   },
 
   methods: {
