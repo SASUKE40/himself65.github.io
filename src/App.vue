@@ -6,12 +6,8 @@
         <RouterView class="fill-height" />
       </v-content>
       <v-btn
-        v-show="!$vuetify.breakpoint.lgAndUp"
-        bottom
-        right
-        icon
-        dark
-        fixed
+        v-show="!$vuetify.breakpoint.lgAndUp" bottom right
+        icon dark fixed
         color="primary"
         @click="$store.commit('global/setDrawer')"
       >
@@ -19,19 +15,14 @@
           list
         </v-icon>
       </v-btn>
-      <Footer class="site-footer" app />
     </v-app>
   </div>
 </template>
 <script>
-import Footer from '@/layout/Footer'
 import SideNav from '@/layout/SideNav'
 
 export default {
-  components: {
-    SideNav,
-    Footer
-  },
+  components: { SideNav },
   async beforeCreate () {
     // updateCurrentUser
     await this.$store.dispatch('global/updateCurrentUser')
@@ -41,9 +32,10 @@ export default {
 
 <style lang="stylus">
   @import "~vuetify/src/stylus/settings/_colors.styl"
+  @import "~vuetify/src/stylus/settings/_theme.styl"
 
   html {
-    background #eee
+    background-color: $material-light.background
   }
 
   body {
@@ -54,7 +46,6 @@ export default {
   #app {
     width 100%
     height 100%
-    font-family 12px
     color #2c3e50
   }
 
@@ -65,12 +56,9 @@ export default {
     }
   }
 
-  .site-content {
-    margin-bottom 5rem
-  }
-
   .item {
     margin-bottom 10px
+
     &:first-child {
       margin-top 20px
     }

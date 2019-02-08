@@ -45,7 +45,7 @@ export default {
   },
   computed: {
     userUrl () {
-      // fixme: 根据是否登陆返回地址
+      if (this.$store.getters.currentUser !== null) return '/user'
       return '/login'
     }
   },

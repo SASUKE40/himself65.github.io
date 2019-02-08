@@ -19,6 +19,11 @@ export const router = new VueRouter({
       component: () => import('views/About.vue')
     },
     {
+      path: '/user',
+      name: 'user',
+      component: () => import('views/User.vue')
+    },
+    {
       path: '/error',
       name: 'error',
       component: () => import('views/Error.vue')

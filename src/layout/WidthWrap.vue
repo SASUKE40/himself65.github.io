@@ -49,6 +49,10 @@ export default {
 
     @media $display-breakpoints.sm-and-down {
       flex-direction: column-reverse
+
+      &--side {
+       margin-left 0
+      }
     }
   }
 </style>
