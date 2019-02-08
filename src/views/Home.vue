@@ -143,7 +143,7 @@ export default {
     }
   },
 
-  async created () {
+  async beforeMount () {
     // todo: support definitely typed
     this.articles = await getArticles()
     this.talks = await getTalks()
