@@ -35,7 +35,7 @@
 
 <script>
 import MarkdownPalettes from 'markdown-palettes'
-import { submitArticle, cacheArticle, getArticle } from '@/api'
+import { submitArticle, removeArticle, cacheArticle, getArticle } from '@/api'
 
 export default {
   name: 'PostEditPage',
@@ -52,15 +52,24 @@ export default {
     }
   },
 
+  computed: {
+    articleID () {
+      return this.$route.params.id
+    },
+    localStorageTempKey () {
+      return 'temp-article-content'
+    }
+  },
+
   watch: {
     src (val) {
-      this.$ls.set('temp-article', val)
+      this.$ls.set(this.localStorageTempKey, val)
     }
   },
 
   async created () {
-    const temp = this.$ls.get('temp-article-content')
-    if (temp) {
+    const temp = this.$ls.get(this.localStorageTempKey)
+    if (temp && temp !== '') {
       this.src = temp
     }
     if (!this.isNew) {
@@ -80,13 +89,33 @@ export default {
           type: 'success',
           title: '创建成功',
           timer: 3000
-        }).then(() => this.$router.replace('/')))
+        })
+          .then(() => this.cleanAll())
+          .then(() => this.$router.replace('/')))
     },
     async cache () {
       await cacheArticle(this.title, this.src).then(null) // todo
     },
     async remove () {
-      await this.$message('shit', 'success', 'no')
+      await this.$alert.fire({
+        title: '确定删除？',
+        text: '无法撤回此操作',
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: this.$vuetify.theme.info,
+        cancelButtonColor: this.$vuetify.theme.error,
+        confirmButtonText: '确定',
+        cancelButtonText: '取消'
+      }).then(async (result) => {
+        if (result.value) {
+          await removeArticle(this.articleID)
+            .then(success => this.$message(`删除${success ? '成功' : '失败'}`, success ? 'success' : 'error'))
+            .then(() => this.$router.replace('/'))
+        }
+      })
+    },
+    cleanAll () {
+      this.$ls.set(this.localStorageTempKey, '')
     }
   }
 }
