@@ -695,13 +695,6 @@
     cssnano-preset-default "^4.0.0"
     postcss "^7.0.0"
 
-"@luogu-dev/markdown-it-katex@^0.0.1":
-  version "0.0.1"
-  resolved "http://registry.npm.taobao.org/@luogu-dev/markdown-it-katex/download/@luogu-dev/markdown-it-katex-0.0.1.tgz#800d3c5a004af6c005ea797393b35670b5d459f2"
-  integrity sha1-gA08WgBK9sAF6nlzk7NWcLXUWfI=
-  dependencies:
-    katex "^0.9.0"
-
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "http://registry.npm.taobao.org/@mrmlnc/readdir-enhanced/download/@mrmlnc/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -3425,6 +3418,11 @@ dom-serializer@0:
     domelementtype "~1.1.1"
     entities "~1.1.1"
 
+dom-walk@^0.1.0:
+  version "0.1.1"
+  resolved "http://registry.npm.taobao.org/dom-walk/download/dom-walk-0.1.1.tgz#672226dc74c8f799ad35307df936aba11acd6018"
+  integrity sha1-ZyIm3HTI95mtNTB9+TaroRrNYBg=
+
 domain-browser@^1.1.1:
   version "1.2.0"
   resolved "http://registry.npm.taobao.org/domain-browser/download/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
@@ -4619,6 +4617,14 @@ global-dirs@^0.1.0:
   integrity sha1-sxnA3UYH81PzvpzKTHL8FIxJ9EU=
   dependencies:
     ini "^1.3.4"
+
+global@^4.3.2:
+  version "4.3.2"
+  resolved "http://registry.npm.taobao.org/global/download/global-4.3.2.tgz#e76989268a6c74c38908b1305b10fc0e394e9d0f"
+  integrity sha1-52mJJopsdMOJCLEwWxD8DjlOnQ8=
+  dependencies:
+    min-document "^2.19.0"
+    process "~0.5.1"
 
 globals@^11.0.1, globals@^11.1.0, globals@^11.7.0:
   version "11.10.0"
@@ -6662,6 +6668,11 @@ lodash.uniq@^4.5.0:
   resolved "http://registry.npm.taobao.org/lodash.uniq/download/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
+lodash@4.17.10:
+  version "4.17.10"
+  resolved "http://registry.npm.taobao.org/lodash/download/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
+  integrity sha1-G3eTz3JZ6jj7NmHU04syYK+K5Oc=
+
 lodash@4.x, lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0:
   version "4.17.11"
   resolved "http://registry.npm.taobao.org/lodash/download/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
@@ -6809,6 +6820,28 @@ markdown-it-toc-and-anchor@^4.1.2:
     clone "^2.1.0"
     uslug "^1.0.4"
 
+markdown-it-v-codemirror-highlighter@1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/markdown-it-v-codemirror-highlighter/download/markdown-it-v-codemirror-highlighter-1.0.0.tgz#f5ef9aae8a751b46dc2bf6caeddc5111c2545070"
+  integrity sha1-9e+arop1G0bcK/bK7dxREcJUUHA=
+  dependencies:
+    codemirror "^5.39.0"
+
+markdown-it-v-katex@^1.0.0-alpha.1:
+  version "1.0.0-alpha.1"
+  resolved "http://registry.npm.taobao.org/markdown-it-v-katex/download/markdown-it-v-katex-1.0.0-alpha.1.tgz#b85a2848a46ed7f2eecd124352fb812f853381a2"
+  integrity sha1-uFooSKRu1/LuzRJDUvuBL4UzgaI=
+  dependencies:
+    katex "^0.9.0"
+
+markdown-it-v@^1.2.1:
+  version "1.2.1"
+  resolved "http://registry.npm.taobao.org/markdown-it-v/download/markdown-it-v-1.2.1.tgz#2226f496654e145f5dc310f4bf98795444466f9d"
+  integrity sha1-Iib0lmVOFF9dwxD0v5h5VERGb50=
+  dependencies:
+    lodash "^4.17.10"
+    markdown-it "^8.4.2"
+
 markdown-it@^6.0.1:
   version "6.1.1"
   resolved "http://registry.npm.taobao.org/markdown-it/download/markdown-it-6.1.1.tgz#ced037f4473ee9f5153ac414f77dc83c91ba927c"
@@ -6820,7 +6853,7 @@ markdown-it@^6.0.1:
     mdurl "~1.0.1"
     uc.micro "^1.0.1"
 
-markdown-it@^8.4.1:
+markdown-it@^8.4.2:
   version "8.4.2"
   resolved "http://registry.npm.taobao.org/markdown-it/download/markdown-it-8.4.2.tgz#386f98998dc15a37722aa7722084f4020bdd9b54"
   integrity sha1-OG+YmY3BWjdyKqdyIIT0Agvdm1Q=
@@ -6831,19 +6864,22 @@ markdown-it@^8.4.1:
     mdurl "^1.0.1"
     uc.micro "^1.0.5"
 
-markdown-palettes@^0.4.6-3:
-  version "0.4.6-3"
-  resolved "http://registry.npm.taobao.org/markdown-palettes/download/markdown-palettes-0.4.6-3.tgz#ba9f0f5d8fff8b3133c531b6878fd14a326f6272"
-  integrity sha1-up8PXY//izEzxTG2h4/RSjJvYnI=
+markdown-palettes@^0.4.8-alpha:
+  version "0.4.8-alpha"
+  resolved "http://registry.npm.taobao.org/markdown-palettes/download/markdown-palettes-0.4.8-alpha.tgz#af0964f51c5c08e57ea4c1abaa74b071fd470ed5"
+  integrity sha1-rwlk9RxcCOV+pMGrqnSwcf1HDtU=
   dependencies:
     "@fortawesome/fontawesome-free" "^5.1.0"
-    "@luogu-dev/markdown-it-katex" "^0.0.1"
     axios "^0.18.0"
     codemirror "^5.39.0"
-    highlight.js "^9.12.0"
+    global "^4.3.2"
     katex "^0.9.0"
-    lodash "^4.17.4"
-    markdown-it "^8.4.1"
+    lodash "4.17.10"
+    markdown-it "^8.4.2"
+    markdown-it-v "^1.2.1"
+    markdown-it-v-codemirror-highlighter "1.0.0"
+    markdown-it-v-katex "^1.0.0-alpha.1"
+    vue "^2.5.11"
 
 marked@^0.5.2:
   version "0.5.2"
@@ -7029,6 +7065,13 @@ mimic-response@^1.0.0:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/mimic-response/download/mimic-response-1.0.1.tgz#4923538878eef42063cb8a3e3b0798781487ab1b"
   integrity sha1-SSNTiHju9CBjy4o+OweYeBSHqxs=
+
+min-document@^2.19.0:
+  version "2.19.0"
+  resolved "http://registry.npm.taobao.org/min-document/download/min-document-2.19.0.tgz#7bd282e3f5842ed295bb748cdd9f1ffa2c824685"
+  integrity sha1-e9KC4/WELtKVu3SM3Z8f+iyCRoU=
+  dependencies:
+    dom-walk "^0.1.0"
 
 mini-css-extract-plugin@^0.5.0:
   version "0.5.0"
@@ -8401,6 +8444,11 @@ process@^0.11.10:
   version "0.11.10"
   resolved "http://registry.npm.taobao.org/process/download/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha1-czIwDoQBYb2j5podHZGn1LwW8YI=
+
+process@~0.5.1:
+  version "0.5.2"
+  resolved "http://registry.npm.taobao.org/process/download/process-0.5.2.tgz#1638d8a8e34c2f440a91db95ab9aeb677fc185cf"
+  integrity sha1-FjjYqONML0QKkduVq5rrZ3/Bhc8=
 
 progress@^2.0.0:
   version "2.0.3"
@@ -10537,6 +10585,11 @@ vue@*, vue@^2.6.2:
   version "2.6.2"
   resolved "http://registry.npm.taobao.org/vue/download/vue-2.6.2.tgz#1cc9c9c8f7ba8df45e9b97c284947de78b76301c"
   integrity sha1-HMnJyPe6jfRem5fChJR954t2MBw=
+
+vue@^2.5.11:
+  version "2.6.8"
+  resolved "http://registry.npm.taobao.org/vue/download/vue-2.6.8.tgz#f21cbc536bfc14f7d1d792a137bb12f69e60ea91"
+  integrity sha1-8hy8U2v8FPfR15KhN7sS9p5g6pE=
 
 vuetify@^1.4.4:
   version "1.5.0"

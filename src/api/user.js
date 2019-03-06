@@ -1,7 +1,7 @@
 import axios from './'
 
 export const loginAPI = '/api/login'
-export const userInfoAPI = '/api/user'
+export const userInfoAPI = '/api/user/current'
 
 export function getUserInfo (detail = false) {
   return axios.get(userInfoAPI, { data: { detail: detail } })

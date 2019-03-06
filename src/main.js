@@ -3,6 +3,7 @@ import Vuetify from 'vuetify'
 import Vee from 'vee-validate'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
+import 'markdown-palettes/dist/markdown-palettes.css'
 import 'vuetify/dist/vuetify.min.css'
 // local module
 import '@/install/LocalStorage'
