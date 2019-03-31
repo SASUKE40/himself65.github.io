@@ -30,7 +30,7 @@ module.exports = {
     },
     {
       title: "yizr_cnyali's blog",
-      href: 'http://yizr-cnyali.ac.cn/'
+      href: 'http://yizr-cnyali.ac/'
     }
   ]
 }
