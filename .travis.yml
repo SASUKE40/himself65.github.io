@@ -1,10 +1,11 @@
 language: node_js
 node_js:
   - lts/*
-install:
-  - npm ci
+before_install:
+  - npm install --registry=https://registry.npm.taobao.org -g yarn
+  - yarn --frozen-lockfile --non-interactive
 script:
-  - npm run docs:build
+  - yarn docs:build
 deploy:
   provider: pages
   skip-cleanup: true
