@@ -1,5 +1,7 @@
 module.exports = {
   theme: '@vuepress/blog',
+  title: '扩散性百万甜面包',
+  description: '个人主页，随便写写',
   themeConfig: {
     nav: [
       {
