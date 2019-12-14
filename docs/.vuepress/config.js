@@ -15,7 +15,7 @@ module.exports = {
         },
         {
           type: 'twitter',
-          link: 'https://github.com/himself6565'
+          link: 'https://github.com/himself_65'
         }
       ]
     },
