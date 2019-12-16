@@ -1,5 +1,5 @@
 module.exports = {
-  theme: '@vuepress/blog',
+  theme: 'vuepress-theme-blog-enhance',
   title: '扩散性百万甜面包',
   description: '个人主页，随便写写',
   themeConfig: {

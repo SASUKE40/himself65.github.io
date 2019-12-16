@@ -4756,6 +4756,11 @@ mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.1, mkdirp@~0.5.x:
   dependencies:
     minimist "0.0.8"
 
+moment@^2.24.0:
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
+
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -7293,6 +7298,11 @@ vue-i18n@^8.11.2:
   resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-8.15.0.tgz#9b11ef8e7a124f67cdf788c8c90a81f3606240ed"
   integrity sha512-juJ/avAP39bOMycC+qQDLJ8U9z9LtLF/9PsRoJLBSfsYZo9bqYntyyX5QPicwlb1emJKjgxhZ3YofHiQcXBu0Q==
 
+vue-js-toggle-button@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/vue-js-toggle-button/-/vue-js-toggle-button-1.3.3.tgz#d603089039e41d45e607355ad2e0478c6a52aceb"
+  integrity sha512-0b920oztgK+1SqlYF26MPiT28hAieL5aAQE7u21XEym5ryfzD4EMer4hLkgDC/1sWsCHb22GvV+t1Kb4AI6QFw==
+
 vue-loader@^15.7.1:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-15.7.2.tgz#cc89e2716df87f70fe656c9da9d7f8bec06c73d6"
@@ -7401,6 +7411,21 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   integrity sha512-qsQkDftLVFLe8BiviIHaLV0Ea38YLZKKonDGsNQy1IE0wllFpFIEldWD8frWZtDFdx6b/O3KDMgVQ0qp5NjJCg==
   dependencies:
     smoothscroll-polyfill "^0.4.3"
+
+vuepress-theme-blog-enhance@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/vuepress-theme-blog-enhance/-/vuepress-theme-blog-enhance-1.3.3.tgz#273ba96fcf9bfffb07ed2e4fbfabd6ccfe3bc64b"
+  integrity sha512-pR6XCeybjDjoK3c1yQ1G1B5zG9kWmH0Ji1lFa6pQ+awIRhss9VCissd5EwCt6fLLTNd2av9gh1OEJxKow88QQQ==
+  dependencies:
+    "@vuepress/plugin-blog" "^1.5.1"
+    "@vuepress/plugin-medium-zoom" "1.0.0"
+    "@vuepress/plugin-nprogress" "1.0.0"
+    "@vuepress/plugin-pwa" "1.0.0"
+    "@vuepress/plugin-search" "1.0.0"
+    moment "^2.24.0"
+    remove-markdown "^0.3.0"
+    vue-feather-icons "^4.21.0"
+    vue-js-toggle-button "^1.3.3"
 
 vuepress@^1.2.0:
   version "1.2.0"
