@@ -13,6 +13,6 @@
   "dependencies": {
     "@vuepress/theme-blog": "^1.3.3",
     "vuepress": "^1.2.0",
-    "vuepress-theme-blog-enhance": "^1.3.3"
+    "vuepress-theme-blog-enhance": "^1.3.4"
   }
 }
