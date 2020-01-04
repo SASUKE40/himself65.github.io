@@ -1,0 +1,19 @@
+{
+  "name": "rust-node",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "himself65",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "build": "node-gyp build && cargo build",
+    "start": "node src/main.js"
+  },
+  "dependencies": {
+    "node-gyp": "^5.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^13.1.4",
+    "node-addon-api": "^2.0.0"
+  }
+}

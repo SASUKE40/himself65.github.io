@@ -1,0 +1,12 @@
+[package]
+name = "node-rs"
+version = "0.1.0"
+authors = ["himself65 <himself65@outlook.com>"]
+edition = "2018"
+
+[dependencies]
+libc = "0.2.66"
+
+[lib]
+name = "int_add"
+crate-type = ["staticlib"]
