@@ -2,6 +2,14 @@ module.exports = {
   theme: 'vuepress-theme-blog-enhance',
   title: '扩散性百万甜面包',
   description: '个人主页，随便写写',
+  plugins: [
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-110549153-1'
+      }
+    ]
+  ],
   themeConfig: {
     nav: [
       {
@@ -30,9 +38,9 @@ module.exports = {
         itemLayout: 'Post',
         itemPermalink: '/:year/:month/:day/:slug',
         pagination: {
-          lengthPerPage: 5,
-        },
-      },
-    ],
+          lengthPerPage: 5
+        }
+      }
+    ]
   }
 }
