@@ -1,0 +1,17 @@
+[package]
+name = "rust-to-node-with-neon"
+version = "0.1.0"
+authors = ["himself65 <himself65@outlook.com>"]
+license = "MIT"
+build = "build.rs"
+exclude = ["artifacts.json", "index.node"]
+
+[lib]
+name = "rust_to_node_with_neon"
+crate-type = ["cdylib"]
+
+[build-dependencies]
+neon-build = "0.3.3"
+
+[dependencies]
+neon = "0.3.3"
