@@ -8,6 +8,15 @@ module.exports = {
       {
         'ga': 'UA-110549153-1'
       }
+    ],
+    [
+      'vuepress-plugin-rss',
+      {
+        base_url: '/',
+        site_url: 'https://himself65.com',
+        copyright: '2020 Himself65',
+        count: 7
+      }
     ]
   ],
   themeConfig: {
