@@ -8,6 +8,8 @@ date: 2020-1-5
 
 > 笔者尝试了各种方法用Rust给Node.js写插件，本文将介绍四种方法给Node.js写拓展
 
+代码样例请到 [examples](https://github.com/Himself65/himself65.github.io/tree/master/examples)
+
 ## 背景
 
 最近学Rust，看到了ry的项目 [rusty-v8](https://github.com/denoland/rusty_v8)，本来想试着用整到 `node.js` 上面，然而发现这个项目在 `build` 时候已经链接好了 `v8`，所以看起来只能和 `Deno` 写。于是我顺便尝试了其他方法给 `node.js` 写扩展
