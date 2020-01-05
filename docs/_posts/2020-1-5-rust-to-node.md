@@ -1,7 +1,7 @@
 ---
 title: 各种方法用Rust给Node写扩展
 tags: code
-date: 2020-1-5
+date: 2020-01-05
 ---
 
 # 各种方法用Rust给Node写扩展
