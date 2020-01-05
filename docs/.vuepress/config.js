@@ -1,3 +1,8 @@
+const HOST = 'https://www.himself65.com';
+const feed_options = {
+  canonical_base: HOST,
+  posts_directories: ['/_posts/'],
+};
 module.exports = {
   theme: 'vuepress-theme-blog-enhance',
   title: '扩散性百万甜面包',
@@ -6,20 +11,25 @@ module.exports = {
     nav: [
       {
         text: '主页',
-        link: '/'
-      }
+        link: '/',
+      },
+      {
+        text: '订阅RSS',
+        link: `${HOST}/rss.xml`,
+        target: '_blank',
+      },
     ],
     footer: {
       contact: [
         {
           type: 'github',
-          link: 'https://github.com/himself65'
+          link: 'https://github.com/himself65',
         },
         {
           type: 'twitter',
-          link: 'https://twitter.com/himself_65'
-        }
-      ]
+          link: 'https://twitter.com/himself_65',
+        },
+      ],
     },
     directories: [
       {
@@ -34,5 +44,6 @@ module.exports = {
         },
       },
     ],
-  }
-}
+  },
+  plugins: [['vuepress-plugin-feed', feed_options]],
+};
