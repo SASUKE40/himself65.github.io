@@ -6,8 +6,8 @@ module.exports = {
     siteUrl: 'https://himself65.com/',
     social: {
       twitter: 'himself_65',
-      github: 'himself65',
-    },
+      github: 'himself65'
+    }
   },
   plugins: [
     {
@@ -22,30 +22,30 @@ module.exports = {
             language: 'superscript',
             extend: 'javascript',
             definition: {
-              superscript_types: /(SuperType)/,
+              superscript_types: /(SuperType)/
             },
             insertBefore: {
               function: {
-                superscript_keywords: /(superif|superelse)/,
-              },
-            },
-          },
-        ],
-      },
+                superscript_keywords: /(superif|superelse)/
+              }
+            }
+          }
+        ]
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content/blog`,
-        name: 'blog',
-      },
+        name: 'blog'
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content/assets`,
-        name: 'assets',
-      },
+        name: 'assets'
+      }
     },
     {
       resolve: 'gatsby-transformer-remark',
@@ -54,28 +54,28 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 590,
-            },
+              maxWidth: 590
+            }
           },
           {
             resolve: 'gatsby-remark-responsive-iframe',
             options: {
-              wrapperStyle: 'margin-bottom: 1.0725rem',
-            },
+              wrapperStyle: 'margin-bottom: 1.0725rem'
+            }
           },
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
-        ],
-      },
+          'gatsby-remark-smartypants'
+        ]
+      }
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'UA-110549153-1',
-      },
+        trackingId: 'UA-110549153-1'
+      }
     },
     'gatsby-plugin-feed',
     {
@@ -87,18 +87,18 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'content/assets/himself65.jpg',
-      },
+        icon: 'content/assets/himself65.jpg'
+      }
     },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-typography',
       options: {
-        pathToConfigModule: 'src/utils/typography',
-      },
-    },
+        pathToConfigModule: 'src/utils/typography'
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ],
+  ]
 }
