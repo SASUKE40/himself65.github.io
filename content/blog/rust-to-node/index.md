@@ -50,7 +50,7 @@ pub extern fn method(a: i32, b: i32) -> i32 {
 
 然后在头文件中声名一下函数
 
-```c++
+```cpp
 #ifndef NODE_RS_LIB_H
 #define NODE_RS_LIB_H
 
