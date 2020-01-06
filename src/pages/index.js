@@ -26,8 +26,8 @@ class BlogIndex extends React.Component {
               Dark mode
             </label>
           )}
-          <SEO title='主页' />
-          <Bio />
+          <SEO title='主页'/>
+          <Bio/>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
@@ -79,6 +79,7 @@ export const pageQuery = graphql`
           frontmatter {
             date
             title
+            description
           }
         }
       }
