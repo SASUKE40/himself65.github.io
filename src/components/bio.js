@@ -5,11 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Image from 'gatsby-image'
 
-import { rhythm } from "../utils/typography"
+import { rhythm } from '../utils/typography'
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -37,8 +37,8 @@ const Bio = () => {
   return (
     <div
       style={{
-        display: `flex`,
-        marginBottom: rhythm(2.5),
+        display: 'flex',
+        marginBottom: rhythm(2.5)
       }}
     >
       <Image
@@ -48,24 +48,24 @@ const Bio = () => {
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
           minWidth: 50,
-          borderRadius: `100%`,
+          borderRadius: '100%'
         }}
         imgStyle={{
-          borderRadius: `50%`,
+          borderRadius: '50%'
         }}
       />
       <p>
         Written by <strong>{author}</strong>, who contributing to open source,
         and working from school.
-        {` `}
+        {' '}
         <br/>
         <span>You can follow him on </span>
-        <a target='_blank' href={`https://twitter.com/${social.twitter}`}>
+        <a target='_blank' rel='noopener noreferrer' href={`https://twitter.com/${social.twitter}`}>
           Twitter
         </a>
         <br/>
         <span> Or </span>
-        <a target='_blank' href={`https://github.com/${social.github}`}>
+        <a target='_blank' rel='noopener noreferrer' href={`https://github.com/${social.github}`}>
           Github
         </a>
       </p>
