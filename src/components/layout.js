@@ -9,15 +9,17 @@ import { rhythm, scale } from '../utils/typography'
 
 class Layout extends React.Component {
   state = {
-    theme: null,
+    theme: null
   }
-  componentDidMount() {
+
+  componentDidMount () {
     this.setState({ theme: window.__theme })
     window.__onThemeChange = () => {
       this.setState({ theme: window.__theme })
     }
   }
-  render() {
+
+  render () {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
@@ -28,14 +30,14 @@ class Layout extends React.Component {
           style={{
             ...scale(1.5),
             marginBottom: rhythm(1.5),
-            marginTop: 0,
+            marginTop: 0
           }}
         >
           <Link
             style={{
               boxShadow: 'none',
               textDecoration: 'none',
-              color: 'inherit',
+              color: 'inherit'
             }}
             to={'/'}
           >
@@ -48,14 +50,14 @@ class Layout extends React.Component {
         <h3
           style={{
             fontFamily: 'Montserrat, sans-serif',
-            marginTop: 0,
+            marginTop: 0
           }}
         >
           <Link
             style={{
               boxShadow: 'none',
               textDecoration: 'none',
-              color: 'inherit',
+              color: 'inherit'
             }}
             to={'/'}
           >
@@ -74,15 +76,15 @@ class Layout extends React.Component {
           marginLeft: 'auto',
           marginRight: 'auto',
           maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
         }}
       >
         <Helmet
           meta={[
             {
               name: 'theme-color',
-              content: this.state.theme === 'light' ? '#ffa8c5' : '#282c35',
-            },
+              content: this.state.theme === 'light' ? '#ffa8c5' : '#282c35'
+            }
           ]}
         />
         <header
@@ -90,7 +92,7 @@ class Layout extends React.Component {
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
-            marginBottom: '2.625rem',
+            marginBottom: '2.625rem'
           }}
         >
           {header}
@@ -100,21 +102,21 @@ class Layout extends React.Component {
                 checked: (
                   <img
                     src={moon}
-                    width="16"
-                    height="16"
-                    role="presentation"
+                    width='16'
+                    height='16'
+                    role='presentation'
                     style={{ pointerEvents: 'none' }}
                   />
                 ),
                 unchecked: (
                   <img
                     src={sun}
-                    width="16"
-                    height="16"
-                    role="presentation"
+                    width='16'
+                    height='16'
+                    role='presentation'
                     style={{ pointerEvents: 'none' }}
                   />
-                ),
+                )
               }}
               checked={this.state.theme === 'dark'}
               onChange={e =>
@@ -128,7 +130,7 @@ class Layout extends React.Component {
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with{' '}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href='https://www.gatsbyjs.org'>Gatsby</a>
         </footer>
       </div>
     )
