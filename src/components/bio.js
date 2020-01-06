@@ -64,7 +64,7 @@ const Bio = () => {
         </a>
         <br/>
         <span> Or </span>
-        <a target='_blank' href={`https://himself65.com/${social.github}`}>
+        <a target='_blank' href={`https://github.com/${social.github}`}>
           Github
         </a>
       </p>
