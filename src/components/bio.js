@@ -59,13 +59,13 @@ const Bio = () => {
         {` `}
         <br/>
         <span>You can follow him on </span>
-        <a href={`https://twitter.com/${social.twitter}`}>
+        <a target='_blank' href={`https://twitter.com/${social.twitter}`}>
           Twitter
         </a>
         <br/>
         <span> Or </span>
-        <a href={`https://himself65.com${social.twitter}`}>
-          Github Account
+        <a target='_blank' href={`https://himself65.com/${social.github}`}>
+          Github
         </a>
       </p>
     </div>
