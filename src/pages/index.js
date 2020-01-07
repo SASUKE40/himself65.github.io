@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
+import RouterTabs from '../components/RouterTabs'
 import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -15,8 +16,9 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title='主页'/>
+        <SEO title='Home'/>
         <Bio/>
+        <RouterTabs routers={data.site.siteMetadata.menuLinks} currentPage='/'/>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -55,6 +57,15 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        menuLinks {
+          name
+          link
+        }
+        friendship {
+          description
+          name
+          url
+        }
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {

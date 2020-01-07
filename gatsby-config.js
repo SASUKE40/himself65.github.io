@@ -10,6 +10,16 @@ module.exports = {
       twitter: 'himself_65',
       github: 'himself65'
     },
+    menuLinks: [
+      {
+        name: 'Home',
+        link: '/'
+      },
+      {
+        name: 'Friends',
+        link: '/friends'
+      }
+    ],
     friendship: [...friendship]
   },
   plugins: [
