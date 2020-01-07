@@ -6,5 +6,6 @@ push('ice1000', 'https://ice1000.org', 'ice1000.jpg')
 push('Edward Elric', 'https://sasuke40.github.io/', 'sasuke.jpg')
 push('DIYgod', 'https://diygod.me/', 'DIYgod.jpg')
 push('太狼', 'https://lynvv.xyz', 'lynvv.jpg')
+push('木子', 'https://blog.502.li', 'muzi502.png')
 
 module.exports = friendship
