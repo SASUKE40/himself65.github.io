@@ -1,3 +1,5 @@
+const friendship = require('./friendship')
+
 module.exports = {
   siteMetadata: {
     title: 'Himself65 Blog',
@@ -7,7 +9,8 @@ module.exports = {
     social: {
       twitter: 'himself_65',
       github: 'himself65'
-    }
+    },
+    friendship: [...friendship]
   },
   plugins: [
     {
