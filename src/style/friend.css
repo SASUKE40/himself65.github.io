@@ -8,6 +8,7 @@
   text-decoration-color: transparent;
   align-items: center;
   justify-content: start;
+  cursor: pointer;
 }
 
 .friend-card-content {
