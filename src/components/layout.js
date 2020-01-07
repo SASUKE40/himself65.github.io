@@ -107,7 +107,7 @@ const Layout = (props) => {
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built {' '}
-        on {moment(data.site.buildTime).format('YYYY D Mo, H:m')}{' '}
+        on {moment(data.site.buildTime).local().format('YYYY D Mo, H:m')}{' '}
         with <a href='https://www.gatsbyjs.org'>Gatsby</a>
       </footer>
     </div>
