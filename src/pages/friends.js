@@ -16,8 +16,6 @@ const FriendPage = (props) => {
     avatar => /^friend/.test(avatar.node.relativePath))
     .map(avatar => avatar.node)
 
-  console.log(avatars)
-
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title='Friends'/>
