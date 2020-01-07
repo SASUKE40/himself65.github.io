@@ -103,13 +103,6 @@ module.exports = {
         icon: 'content/assets/himself65.jpg'
       }
     },
-    {
-      resolve: 'gatsby-plugin-html2amp',
-      options: {
-        files: ['**/*.html', 'index.html'],
-        dist: 'public'
-      }
-    },
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     {
