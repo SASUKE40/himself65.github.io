@@ -1,6 +1,6 @@
 const friendship = []
 const push = (name, url, image = '', description = '') =>
-  friendship.push({ name, description, url })
+  friendship.push({ name, url, image, description })
 
 push('ice1000', 'https://ice1000.org', 'ice1000.jpg')
 push('Edward Elric', 'https://sasuke40.github.io/', 'sasuke.jpg')

@@ -4522,7 +4522,7 @@ eslint-plugin-flowtype@^3.13.0:
   dependencies:
     lodash "^4.17.15"
 
-eslint-plugin-graphql@^3.1.0:
+eslint-plugin-graphql@^3.1.0, eslint-plugin-graphql@^3.1.1:
   version "3.1.1"
   resolved "https://registry.npm.taobao.org/eslint-plugin-graphql/download/eslint-plugin-graphql-3.1.1.tgz#640f7f73f12cee2f7145140bd2ff21694018bff5"
   integrity sha1-ZA9/c/Es7i9xRRQL0v8haUAYv/U=
