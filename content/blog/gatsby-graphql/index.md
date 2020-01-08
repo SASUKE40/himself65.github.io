@@ -149,4 +149,4 @@ on component
 })}
 ```
 
-You can find the detail [here](https://github.com/Himself65/himself65.github.io/blob/master/src/pages/friends.js)
+You can find all details [here](https://github.com/Himself65/himself65.github.io/blob/master/src/pages/friends.js)
