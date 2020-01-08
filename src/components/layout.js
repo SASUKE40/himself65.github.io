@@ -12,21 +12,12 @@ import moment from 'moment'
 
 const Layout = (props) => {
   const { title, children } = props
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
+  const [theme, setTheme] = useState(null)
   const themeEvent = useMemo(() => new EE({
     preferredTheme: null
   }, conf => {
     try {
       conf.preferredTheme = window.localStorage.getItem('theme') || 'light'
-    } catch (err) {}
-    document.body.className = conf.preferredTheme
-  }).on('setTheme', function (themeKey) {
-    this.conf.preferredTheme = themeKey
-  }).on('setTheme', themeKey => {
-    document.body.className = themeKey
-  }).on('setTheme', themeKey => {
-    try {
-      window.localStorage.setItem('theme', themeKey)
     } catch (err) {}
   }), [])
   const themeConfig = useMemo(() => createMuiTheme({
@@ -36,6 +27,17 @@ const Layout = (props) => {
     }
   }), [theme])
   useEffect(() => {
+    setTheme(localStorage.getItem('theme') || 'light')
+    document.body.className = themeEvent.conf.preferredTheme
+    themeEvent.on('setTheme', function (themeKey) {
+      this.conf.preferredTheme = themeKey
+    }).on('setTheme', themeKey => {
+      document.body.className = themeKey
+    }).on('setTheme', themeKey => {
+      try {
+        window.localStorage.setItem('theme', themeKey)
+      } catch (err) {}
+    })
     themeEvent.on('setTheme', themeKey => setTheme(themeKey))
   }, [])
   const data = useStaticQuery(graphql`
