@@ -6,6 +6,7 @@ export const themeEvent = new EE({
   try {
     conf.preferredTheme = window.localStorage.getItem('theme') || 'light'
   } catch (err) {}
+  document.body.className = conf.preferredTheme
 }).on('setTheme', function (themeKey) {
   this.conf.preferredTheme = themeKey
 }).on('setTheme', themeKey => {
