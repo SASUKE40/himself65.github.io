@@ -1,21 +1,27 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
+import Helmet from 'react-helmet'
+import { ThemeProvider, createMuiTheme } from '@material-ui/core'
+
 import Toggle from './Toggle'
 import sun from '../assets/sun.png'
 import moon from '../assets/moon.png'
-import Helmet from 'react-helmet'
-
 import { rhythm } from '../utils/typography'
 import moment from 'moment'
+import { themeEvent } from '../utils/shared'
 
 const Layout = (props) => {
-  const [theme, setTheme] = useState(null)
-  useEffect(() => {
-    setTheme(window.__theme)
-    window.__onThemeChange = () => setTheme(window.__theme)
-  }, [])
-
   const { title, children } = props
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
+  const themeConfig = useMemo(() => createMuiTheme({
+    palette: {
+      type: theme
+      // todo
+    }
+  }), [])
+  useEffect(() => {
+    themeEvent.on('setTheme', themeKey => setTheme(themeKey))
+  }, [])
   const data = useStaticQuery(graphql`
     query LayoutQuery {
       site {
@@ -44,73 +50,76 @@ const Layout = (props) => {
     </h3>
   )
   return (
-    <div
-      style={{
-        color: 'var(--textNormal)',
-        background: 'var(--bg)',
-        // transition: 'color 0.2s ease-out, background 0.2s ease-out',
-        // minHeight: '100vh',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
-      }}
-    >
-      <Helmet
-        meta={[
-          {
-            name: 'theme-color',
-            content: theme === 'light' ? '#ffa8c5' : '#282c35'
-          }
-        ]}
-      />
-      <header
+    <ThemeProvider theme={themeConfig}>
+      <div
         style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          marginBottom: '2.625rem'
+          color: 'var(--textNormal)',
+          background: 'var(--bg)',
+          // transition: 'color 0.2s ease-out, background 0.2s ease-out',
+          // minHeight: '100vh',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          maxWidth: rhythm(24),
+          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
         }}
       >
-        {header}
-        {theme != null ? (
-          <Toggle
-            icons={{
-              checked: (
-                <img
-                  src={moon}
-                  width='16'
-                  height='16'
-                  role='presentation'
-                  style={{ pointerEvents: 'none' }}
-                />
-              ),
-              unchecked: (
-                <img
-                  src={sun}
-                  width='16'
-                  height='16'
-                  role='presentation'
-                  style={{ pointerEvents: 'none' }}
-                />
-              )
-            }}
-            checked={theme === 'dark'}
-            onChange={e =>
-              window.__setPreferredTheme(e.target.checked ? 'dark' : 'light')
+        <Helmet
+          meta={[
+            {
+              name: 'theme-color',
+              content: theme === 'light' ? '#ffa8c5' : '#282c35'
             }
-          />
-        ) : (
-          <div style={{ height: '24px' }}/>
-        )}
-      </header>
-      <main>{children}</main>
-      <footer>
+          ]}
+        />
+        <header
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            marginBottom: '2.625rem'
+          }}
+        >
+          {header}
+          {theme != null ? (
+            <Toggle
+              icons={{
+                checked: (
+                  <img
+                    src={moon}
+                    width='16'
+                    height='16'
+                    role='presentation'
+                    style={{ pointerEvents: 'none' }}
+                  />
+                ),
+                unchecked: (
+                  <img
+                    src={sun}
+                    width='16'
+                    height='16'
+                    role='presentation'
+                    style={{ pointerEvents: 'none' }}
+                  />
+                )
+              }}
+              checked={theme === 'dark'}
+              onChange={e =>
+                themeEvent.emit('setTheme',
+                  e.target.checked ? 'dark' : 'light')
+              }
+            />
+          ) : (
+            <div style={{ height: '24px' }}/>
+          )}
+        </header>
+        <main>{children}</main>
+        <footer>
         © {new Date().getFullYear()}, Built {' '}
         on {moment(data.site.buildTime).local().format('YYYY D Mo, H:m')}{' '}
         with <a href='https://www.gatsbyjs.org'>Gatsby</a>
-      </footer>
-    </div>
+        </footer>
+      </div>
+    </ThemeProvider>
   )
 }
 
