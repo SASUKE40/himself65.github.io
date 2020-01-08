@@ -1,4 +1,4 @@
-import React  from 'react'
+import React from 'react'
 import { Link, graphql } from 'gatsby'
 
 import RouterTabs from '../components/RouterTabs'
