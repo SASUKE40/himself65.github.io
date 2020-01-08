@@ -1,5 +1,5 @@
 ---
-title: an GraphQL Problem on Gatsby
+title: a GraphQL Problem on Gatsby
 tags: code
 date: "2020-01-08"
 ---
