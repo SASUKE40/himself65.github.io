@@ -92,8 +92,7 @@ const ImageRender = ({ url }) => {
 }
 ```
 
-
-Other people (through my Google and looking up Gatsby repo's issue), they faced the same problem.
+Through my Google and looking up Gatsby repo's issue, some other people faced the same problem too.
 
 https://spectrum.chat/gatsby-js/general/using-variables-in-a-staticquery~abee4d1d-6bc4-4202-afb2-38326d91bd05
 
