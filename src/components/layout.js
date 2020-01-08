@@ -10,6 +10,8 @@ import moon from '../assets/moon.png'
 import { rhythm } from '../utils/typography'
 import moment from 'moment'
 
+const defaultTheme = createMuiTheme({})
+
 const Layout = (props) => {
   const { title, children } = props
   const [theme, setTheme] = useState(null)
@@ -21,9 +23,11 @@ const Layout = (props) => {
     } catch (err) {}
   }), [])
   const themeConfig = useMemo(() => createMuiTheme({
+    ...defaultTheme,
     palette: {
-      type: theme
       // todo
+      ...defaultTheme.palette,
+      type: theme
     }
   }), [theme])
   useEffect(() => {
