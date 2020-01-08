@@ -91,7 +91,7 @@ body:lang(ko) article {
  */
 code[class*='language-'],
 pre[class*='language-'] {
-  color: white;
+  color: white!important;
   background: none;
   font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
   font-feature-settings: normal;
@@ -186,7 +186,7 @@ pre[class*='language-'] ::selection {
 }
 
 .token.punctuation {
-  color: rgb(199, 146, 234);
+  color: rgb(199, 146, 234)!important;
 }
 
 .token.selector,
