@@ -99,7 +99,7 @@ https://spectrum.chat/gatsby-js/general/using-variables-in-a-staticquery~abee4d1
 
 https://github.com/gatsbyjs/gatsby/issues/10482
 
-We have to find another way to achieve our point. One solution I found is to fetch all data and filter them on rendering. Because of SSR, we don't need to worried about the performance loss.
+We have to find another way to achieve our aim. One solution I found is to fetch all data and filter them on rendering. Because of SSR, we don't need to worried about the performance loss.
 
 ```js
 export const pageQuery = graphql`
