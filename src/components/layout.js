@@ -3,16 +3,32 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import Helmet from 'react-helmet'
 import { ThemeProvider, createMuiTheme } from '@material-ui/core'
 
+import EE from '../utils/EventEmitter'
 import Toggle from './Toggle'
 import sun from '../assets/sun.png'
 import moon from '../assets/moon.png'
 import { rhythm } from '../utils/typography'
 import moment from 'moment'
-import { themeEvent } from '../utils/shared'
 
 const Layout = (props) => {
   const { title, children } = props
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
+  const themeEvent = useMemo(() => new EE({
+    preferredTheme: null
+  }, conf => {
+    try {
+      conf.preferredTheme = window.localStorage.getItem('theme') || 'light'
+    } catch (err) {}
+    document.body.className = conf.preferredTheme
+  }).on('setTheme', function (themeKey) {
+    this.conf.preferredTheme = themeKey
+  }).on('setTheme', themeKey => {
+    document.body.className = themeKey
+  }).on('setTheme', themeKey => {
+    try {
+      window.localStorage.setItem('theme', themeKey)
+    } catch (err) {}
+  }), [])
   const themeConfig = useMemo(() => createMuiTheme({
     palette: {
       type: theme
