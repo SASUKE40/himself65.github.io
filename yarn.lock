@@ -5508,7 +5508,7 @@ gatsby-graphiql-explorer@^0.2.31:
   dependencies:
     "@babel/runtime" "^7.7.6"
 
-gatsby-image@^2.2.34:
+gatsby-image@^2.2.37:
   version "2.2.37"
   resolved "https://registry.npm.taobao.org/gatsby-image/download/gatsby-image-2.2.37.tgz#dc7e6b15860e1d505925d0a08cd390f7d32efec0"
   integrity sha1-3H5rFYYOHVBZJdCgjNOQ99Mu/sA=
@@ -5540,7 +5540,7 @@ gatsby-page-utils@^0.0.36:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
-gatsby-plugin-feed@^2.3.23:
+gatsby-plugin-feed@^2.3.25:
   version "2.3.25"
   resolved "https://registry.npm.taobao.org/gatsby-plugin-feed/download/gatsby-plugin-feed-2.3.25.tgz#ed92ce21fc1fc4a936ca23ab27025c0a8e64e0d0"
   integrity sha1-7ZLOIfwfxKk2yiOrJwJcCo5k4NA=
@@ -5551,14 +5551,14 @@ gatsby-plugin-feed@^2.3.23:
     lodash.merge "^4.6.2"
     rss "^1.2.2"
 
-gatsby-plugin-google-analytics@^2.1.29:
+gatsby-plugin-google-analytics@^2.1.31:
   version "2.1.31"
   resolved "https://registry.npm.taobao.org/gatsby-plugin-google-analytics/download/gatsby-plugin-google-analytics-2.1.31.tgz#d53d20aa26321f43fa8320c169db0316320f98f8"
   integrity sha1-1T0gqiYyH0P6gyDBadsDFjIPmPg=
   dependencies:
     "@babel/runtime" "^7.7.6"
 
-gatsby-plugin-manifest@^2.2.31:
+gatsby-plugin-manifest@^2.2.34:
   version "2.2.34"
   resolved "https://registry.npm.taobao.org/gatsby-plugin-manifest/download/gatsby-plugin-manifest-2.2.34.tgz#578ad8ef689f06564097649a941744ace25d4b27"
   integrity sha1-V4rY72ifBlZAl2SalBdErOJdSyc=
@@ -5603,16 +5603,16 @@ gatsby-plugin-page-creator@^2.1.37:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
-gatsby-plugin-react-helmet@^3.1.16:
+gatsby-plugin-react-helmet@^3.1.18:
   version "3.1.18"
   resolved "https://registry.npm.taobao.org/gatsby-plugin-react-helmet/download/gatsby-plugin-react-helmet-3.1.18.tgz#093b5d92e50dafa837ae97ac2672d79a96feb201"
   integrity sha1-CTtdkuUNr6g3rpesJnLXmpb+sgE=
   dependencies:
     "@babel/runtime" "^7.7.6"
 
-gatsby-plugin-sharp@^2.3.5:
+gatsby-plugin-sharp@^2.3.10:
   version "2.3.10"
-  resolved "https://registry.npm.taobao.org/gatsby-plugin-sharp/download/gatsby-plugin-sharp-2.3.10.tgz#072acfcaf5de0eda21bbaf3e7d6e0cd891cac6b2"
+  resolved "https://registry.npm.taobao.org/gatsby-plugin-sharp/download/gatsby-plugin-sharp-2.3.10.tgz?cache=0&sync_timestamp=1578411180803&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fgatsby-plugin-sharp%2Fdownload%2Fgatsby-plugin-sharp-2.3.10.tgz#072acfcaf5de0eda21bbaf3e7d6e0cd891cac6b2"
   integrity sha1-ByrPyvXeDtohu68+fW4M2JHKxrI=
   dependencies:
     "@babel/runtime" "^7.7.6"
@@ -5636,7 +5636,7 @@ gatsby-plugin-sharp@^2.3.5:
     svgo "1.3.2"
     uuid "^3.3.3"
 
-gatsby-plugin-typography@^2.3.18:
+gatsby-plugin-typography@^2.3.20:
   version "2.3.20"
   resolved "https://registry.npm.taobao.org/gatsby-plugin-typography/download/gatsby-plugin-typography-2.3.20.tgz#0eb6f686e876bbd5a6172f7082f831fc83f7d543"
   integrity sha1-Drb2huh2u9WmFy9wgvgx/IP31UM=
@@ -5652,7 +5652,7 @@ gatsby-react-router-scroll@^2.1.19:
     scroll-behavior "^0.9.10"
     warning "^3.0.0"
 
-gatsby-remark-copy-linked-files@^2.1.31:
+gatsby-remark-copy-linked-files@^2.1.33:
   version "2.1.33"
   resolved "https://registry.npm.taobao.org/gatsby-remark-copy-linked-files/download/gatsby-remark-copy-linked-files-2.1.33.tgz#2c2cc75b85550350c4fd3dc3d395943eb654b067"
   integrity sha1-LCzHW4VVA1DE/T3D05WUPrZUsGc=
@@ -5666,7 +5666,7 @@ gatsby-remark-copy-linked-files@^2.1.31:
     probe-image-size "^4.1.1"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-images@^3.1.35:
+gatsby-remark-images@^3.1.39:
   version "3.1.39"
   resolved "https://registry.npm.taobao.org/gatsby-remark-images/download/gatsby-remark-images-3.1.39.tgz#2488a10580993c877d56626b3347b9f63a5df494"
   integrity sha1-JIihBYCZPId9VmJrM0e59jpd9JQ=
@@ -5683,7 +5683,7 @@ gatsby-remark-images@^3.1.35:
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.1.2"
 
-gatsby-remark-prismjs@^3.3.28:
+gatsby-remark-prismjs@^3.3.29:
   version "3.3.29"
   resolved "https://registry.npm.taobao.org/gatsby-remark-prismjs/download/gatsby-remark-prismjs-3.3.29.tgz#f7517f95c4a106ff3b517992b5681fef9c941e80"
   integrity sha1-91F/lcShBv87UXmStWgf75yUHoA=
@@ -5692,7 +5692,7 @@ gatsby-remark-prismjs@^3.3.28:
     parse-numeric-range "^0.0.2"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-responsive-iframe@^2.2.28:
+gatsby-remark-responsive-iframe@^2.2.30:
   version "2.2.30"
   resolved "https://registry.npm.taobao.org/gatsby-remark-responsive-iframe/download/gatsby-remark-responsive-iframe-2.2.30.tgz#9a269a2e3dd0f8e311728d03533095c49c00275c"
   integrity sha1-miaaLj3Q+OMRco0DUzCVxJwAJ1w=
@@ -5703,7 +5703,7 @@ gatsby-remark-responsive-iframe@^2.2.28:
     lodash "^4.17.15"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-smartypants@^2.1.17:
+gatsby-remark-smartypants@^2.1.19:
   version "2.1.19"
   resolved "https://registry.npm.taobao.org/gatsby-remark-smartypants/download/gatsby-remark-smartypants-2.1.19.tgz#f9ac5015a2d02bd303b584e5e6b8466a57f30068"
   integrity sha1-+axQFaLQK9MDtYTl5rhGalfzAGg=
@@ -5713,7 +5713,7 @@ gatsby-remark-smartypants@^2.1.17:
     retext-smartypants "^3.0.3"
     unist-util-visit "^1.4.1"
 
-gatsby-source-filesystem@^2.1.40:
+gatsby-source-filesystem@^2.1.43:
   version "2.1.43"
   resolved "https://registry.npm.taobao.org/gatsby-source-filesystem/download/gatsby-source-filesystem-2.1.43.tgz#02652b41fcdd8999b2b2107edecdec8703273620"
   integrity sha1-AmUrQfzdiZmyshB+3s3shwMnNiA=
@@ -5784,7 +5784,7 @@ gatsby-transformer-remark@^2.6.45:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.4.1"
 
-gatsby-transformer-sharp@^2.3.7:
+gatsby-transformer-sharp@^2.3.9:
   version "2.3.9"
   resolved "https://registry.npm.taobao.org/gatsby-transformer-sharp/download/gatsby-transformer-sharp-2.3.9.tgz#246dbed225079ba5cc26d56f1f6270e2d0fad8ca"
   integrity sha1-JG2+0iUHm6XMJtVvH2Jw4tD62Mo=
@@ -5797,7 +5797,7 @@ gatsby-transformer-sharp@^2.3.7:
     semver "^5.7.1"
     sharp "^0.23.4"
 
-gatsby@^2.18.12:
+gatsby@^2.18.18:
   version "2.18.18"
   resolved "https://registry.npm.taobao.org/gatsby/download/gatsby-2.18.18.tgz#a5505f70e86f9cfd6b3828614aeecfd05b2d4407"
   integrity sha1-pVBfcOhvnP1rOChhSu7P0FstRAc=
