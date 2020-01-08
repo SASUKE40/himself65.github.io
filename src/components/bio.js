@@ -11,7 +11,7 @@ import Image from 'gatsby-image'
 
 import { rhythm } from '../utils/typography'
 
-const Bio = () => {
+const Bio = ({ children }) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
@@ -53,6 +53,7 @@ const Bio = () => {
           borderRadius: '50%'
         }}
       />
+      {children ||
       <p>
         Written by <strong>{author}</strong>, who contributing to open source,
         and working from school.
@@ -69,7 +70,7 @@ const Bio = () => {
           href={`https://github.com/${social.github}`}>
           Github
         </a>
-      </p>
+      </p>}
     </div>
   )
 }

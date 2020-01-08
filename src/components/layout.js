@@ -18,7 +18,7 @@ const Layout = (props) => {
       type: theme
       // todo
     }
-  }), [])
+  }), [theme])
   useEffect(() => {
     themeEvent.on('setTheme', themeKey => setTheme(themeKey))
   }, [])
