@@ -31,13 +31,6 @@ function pointerCoord (event) {
 export default class Toggle extends PureComponent {
   constructor (props) {
     super(props)
-    this.handleClick = this.handleClick.bind(this)
-    this.handleTouchStart = this.handleTouchStart.bind(this)
-    this.handleTouchMove = this.handleTouchMove.bind(this)
-    this.handleTouchEnd = this.handleTouchEnd.bind(this)
-    this.handleTouchCancel = this.handleTouchCancel.bind(this)
-    this.handleFocus = this.handleFocus.bind(this)
-    this.handleBlur = this.handleBlur.bind(this)
     this.state = {
       checked: !!(props.checked || props.defaultChecked),
       hasFocus: false,
@@ -54,7 +47,7 @@ export default class Toggle extends PureComponent {
     }
   }
 
-  handleClick (event) {
+  handleClick = event => {
     const checkbox = this.input
     if (event.target !== checkbox && !this.moved) {
       event.preventDefault()
@@ -69,14 +62,14 @@ export default class Toggle extends PureComponent {
     })
   }
 
-  handleTouchStart (event) {
+  handleTouchStart = event => {
     this.startX = pointerCoord(event).x
     this.touchStarted = true
     this.hadFocusAtTouchStart = this.state.hasFocus
     this.setState({ hasFocus: true })
   }
 
-  handleTouchMove (event) {
+  handleTouchMove = event => {
     if (!this.touchStarted) return
     this.touchMoved = true
 
@@ -92,7 +85,7 @@ export default class Toggle extends PureComponent {
     }
   }
 
-  handleTouchEnd (event) {
+  handleTouchEnd = event => {
     if (!this.touchMoved) return
     const checkbox = this.input
     event.preventDefault()
@@ -112,7 +105,7 @@ export default class Toggle extends PureComponent {
     }
   }
 
-  handleTouchCancel (event) {
+  handleTouchCancel = event => {
     if (this.startX != null) {
       this.touchStarted = false
       this.startX = null
@@ -124,7 +117,7 @@ export default class Toggle extends PureComponent {
     }
   }
 
-  handleFocus (event) {
+  handleFocus = event => {
     const { onFocus } = this.props
 
     if (onFocus) {
@@ -135,7 +128,7 @@ export default class Toggle extends PureComponent {
     this.setState({ hasFocus: true })
   }
 
-  handleBlur (event) {
+  handleBlur = event => {
     const { onBlur } = this.props
 
     if (onBlur) {
@@ -146,7 +139,7 @@ export default class Toggle extends PureComponent {
     this.setState({ hasFocus: false })
   }
 
-  getIcon (type) {
+  getIcon = type => {
     const { icons } = this.props
     if (!icons) {
       return null
@@ -181,8 +174,7 @@ export default class Toggle extends PureComponent {
             {this.getIcon('unchecked')}
           </div>
         </div>
-        <div className='react-toggle-thumb' />
-
+        <div className='react-toggle-thumb'/>
         <input
           {...inputProps}
           ref={ref => {
