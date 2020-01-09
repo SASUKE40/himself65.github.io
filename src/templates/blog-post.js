@@ -6,6 +6,7 @@ import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
+import NeverUseZhihu from '../components/NeverUseZhihu'
 
 class BlogPostTemplate extends React.Component {
   render () {
@@ -19,6 +20,7 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
+        <NeverUseZhihu/>
         <article>
           <header>
             <h1
@@ -39,14 +41,14 @@ class BlogPostTemplate extends React.Component {
               {post.frontmatter.date}
             </p>
           </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <section dangerouslySetInnerHTML={{ __html: post.html }}/>
           <hr
             style={{
               marginBottom: rhythm(1)
             }}
           />
           <footer>
-            <Bio />
+            <Bio/>
           </footer>
         </article>
 
