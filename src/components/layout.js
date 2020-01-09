@@ -25,7 +25,8 @@ const Layout = (props) => {
     }
   }), [theme])
   useEffect(() => {
-    setTheme(document.body.className = window.localStorage.getItem('theme') || 'light')
+    setTheme(
+      document.body.className = window.localStorage.getItem('theme') || 'light')
     themeSubject.subscribe(themeKey => {
       try {
         window.localStorage.setItem('theme', themeKey)
@@ -126,9 +127,9 @@ const Layout = (props) => {
         </header>
         <main>{children}</main>
         <footer>
-        © {new Date().getFullYear()}, Built {' '}
-        on {moment(data.site.buildTime).local().format('YYYY D Mo, H:m')}{' '}
-        with <a href='https://www.gatsbyjs.org'>Gatsby</a>
+          © {new Date().getFullYear()}, Built {' '}
+          on {moment(data.site.buildTime).local().format('YYYY D Mo, H:m')}{' '}
+          with <a href='https://www.gatsbyjs.org'>Gatsby</a>
         </footer>
       </div>
     </ThemeProvider>
