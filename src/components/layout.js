@@ -1,9 +1,9 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import Helmet from 'react-helmet'
 import { ThemeProvider, createMuiTheme } from '@material-ui/core'
+import Helmet from 'react-helmet'
+import { Subject } from 'rxjs'
 
-import EE from '../utils/EventEmitter'
 import Toggle from './Toggle'
 import sun from '../assets/sun.png'
 import moon from '../assets/moon.png'
@@ -15,13 +15,7 @@ const defaultTheme = createMuiTheme({})
 const Layout = (props) => {
   const { title, children } = props
   const [theme, setTheme] = useState(null)
-  const themeEvent = useMemo(() => new EE({
-    preferredTheme: null
-  }, conf => {
-    try {
-      conf.preferredTheme = window.localStorage.getItem('theme') || 'light'
-    } catch (err) {}
-  }), [])
+  const themeSubject = useMemo(() => new Subject(), [])
   const themeConfig = useMemo(() => createMuiTheme({
     ...defaultTheme,
     palette: {
@@ -31,18 +25,15 @@ const Layout = (props) => {
     }
   }), [theme])
   useEffect(() => {
-    setTheme(localStorage.getItem('theme') || 'light')
-    document.body.className = themeEvent.conf.preferredTheme
-    themeEvent.on('setTheme', function (themeKey) {
-      this.conf.preferredTheme = themeKey
-    }).on('setTheme', themeKey => {
-      document.body.className = themeKey
-    }).on('setTheme', themeKey => {
+    setTheme(document.body.className = window.localStorage.getItem('theme') || 'light')
+    themeSubject.subscribe(themeKey => {
       try {
         window.localStorage.setItem('theme', themeKey)
-      } catch (err) {}
+      } catch (err) {} finally {
+        document.body.className = themeKey
+        setTheme(themeKey)
+      }
     })
-    themeEvent.on('setTheme', themeKey => setTheme(themeKey))
   }, [])
   const data = useStaticQuery(graphql`
     query LayoutQuery {
@@ -126,8 +117,7 @@ const Layout = (props) => {
               }}
               checked={theme === 'dark'}
               onChange={e =>
-                themeEvent.emit('setTheme',
-                  e.target.checked ? 'dark' : 'light')
+                themeSubject.next(e.target.checked ? 'dark' : 'light')
               }
             />
           ) : (
