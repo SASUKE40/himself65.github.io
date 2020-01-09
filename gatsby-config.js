@@ -1,4 +1,5 @@
 const friendship = require('./friendship')
+require('dotenv').config()
 
 module.exports = {
   siteMetadata: {

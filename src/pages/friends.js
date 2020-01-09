@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
+import Disqus from 'disqus-react'
 import Divider from '@material-ui/core/Divider'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import Image from 'gatsby-image'
@@ -22,6 +23,9 @@ const useStyles = makeStyles({
     '& img': {
       margin: 'auto'
     }
+  },
+  comment: {
+    marginTop: '1.5rem'
   }
 })
 
@@ -30,6 +34,11 @@ const FriendPage = (props) => {
   const theme = useTheme()
   const classes = useStyles()
   const siteTitle = data.site.siteMetadata.title
+  const discusConfig = {
+    url: props.url,
+    identifier: 'global-comment',
+    title: '评论区'
+  }
 
   const avatars = data.avatars.edges.filter(
     avatar => /^friend/.test(avatar.node.relativePath))
@@ -85,6 +94,9 @@ const FriendPage = (props) => {
           />
         </div>
       </Bio>
+      <div className={classes.comment}>
+        <Disqus.DiscussionEmbed shortname={process.env.GATSBY_DISQUS_NAME} config={discusConfig}/>
+      </div>
     </Layout>
   )
 }
