@@ -1,37 +1,25 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "sourceType": "module",
-    "allowImportExportEverywhere": false,
-    "codeFrame": false
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "useJSXTextNode": true,
+    "project": "./tsconfig.json"
   },
   "extends": [
+    "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "standard"
   ],
   "plugins": [
+    "@typescript-eslint",
     "react",
     "react-hooks",
     "jsx-a11y",
     "graphql"
   ],
-  "env": {
-    "browser": true,
-    "jest": true
-  },
   "rules": {
-    "max-len": [
-      "error",
-      {
-        "code": 100
-      }
-    ],
-    "prefer-promise-reject-errors": [
-      "off"
-    ],
-    "no-return-assign": [
-      "off"
-    ],
     "eqeqeq": "error",
     "no-eval": "error",
     "no-var": "error",
@@ -57,9 +45,26 @@
     ],
     "camelcase": "off",
     "react/prop-types": "off",
-    "react/display-name": "off"
+    "react/display-name": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      {
+        "multiline": {
+          "delimiter": "none",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "semi",
+          "requireLast": false
+        }
+      }
+    ],
+    "@typescript-eslint/explicit-function-return-type": "off",
   },
-  "globals": {
-    "__PATH_PREFIX__": true
+  "env": {
+    "jest": true,
+    "browser": true
   }
 }

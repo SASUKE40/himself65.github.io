@@ -12,21 +12,24 @@ import moment from 'moment'
 
 const defaultTheme = createMuiTheme({})
 
-const Layout = (props) => {
+const Layout: React.FC<{
+  title: string
+}> = props => {
   const { title, children } = props
-  const [theme, setTheme] = useState(null)
-  const themeSubject = useMemo(() => new Subject(), [])
+  const [theme, setTheme] = useState<'dark' | 'light' | null>(null)
+  const themeSubject = useMemo(() => new Subject<'light' | 'dark'>(), [])
   const themeConfig = useMemo(() => createMuiTheme({
     ...defaultTheme,
     palette: {
       // todo
       ...defaultTheme.palette,
-      type: theme
+      type: theme || 'light'
     }
   }), [theme])
   useEffect(() => {
     setTheme(
-      document.body.className = window.localStorage.getItem('theme') || 'light')
+      document.body.className = window.localStorage.getItem(
+        'theme') as 'dark' | 'light' | null || 'light')
     themeSubject.subscribe(themeKey => {
       try {
         window.localStorage.setItem('theme', themeKey)
@@ -117,7 +120,7 @@ const Layout = (props) => {
                 )
               }}
               checked={theme === 'dark'}
-              onChange={e =>
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 themeSubject.next(e.target.checked ? 'dark' : 'light')
               }
             />
