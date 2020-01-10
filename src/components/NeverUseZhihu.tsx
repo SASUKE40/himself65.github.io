@@ -5,7 +5,7 @@ import Alert from '@material-ui/lab/Alert'
 const NeverUseZhihu: React.FC = () => {
   const [open, setOpen] = useState(true)
   useEffect(() => {
-    if (!/zhihu.com/.test(document.referrer || '')) {
+    if (!/zhihu.com/.test(document.referrer)) {
       setOpen(false)
     }
   }, [])
