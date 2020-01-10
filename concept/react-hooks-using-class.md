@@ -38,3 +38,34 @@ const Component = props => {
   )
 }
 ```
+
+---
+
+## Step
+
+```tsx
+class C {
+  @inject.state('foo')
+  render ([foo, setFoo]) {
+    return (
+      <div>
+        {foo}
+      </div>
+    )
+  }
+}
+```
+
+```ts
+export const state = {
+  state: () => {
+    return (target, name, desc) => {
+      const originalValue = desc.value
+      const desc.value = () => {
+        const v = target[symbol](name)  // find that state
+        originalValue.call(null, v)
+      }
+    }
+  }
+}
+```
