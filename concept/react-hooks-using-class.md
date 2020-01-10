@@ -58,8 +58,8 @@ class C {
 
 ```ts
 export const inject = {
-  state: () => {
-    return (target, name, desc) => {
+  state: name => {
+    return (target, key, desc) => {
       const originalValue = desc.value
       const desc.value = () => {
         const v = target[stateFindSymbol](name)  // find that state
