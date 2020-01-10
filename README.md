@@ -27,8 +27,8 @@ yarn build      # build blog
 
 ## LICENSE
 
-ALL Code using [MIT](LICENSE) LICENSE.
+ALL code using [MIT](LICENSE) LICENSE.
 
-and ALL BLog and Article using
+And all articles using
 [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)
 LICENSE.
