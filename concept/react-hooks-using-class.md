@@ -57,7 +57,7 @@ class C {
 ```
 
 ```ts
-export const state = {
+export const inject = {
   state: () => {
     return (target, name, desc) => {
       const originalValue = desc.value
