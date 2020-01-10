@@ -9,6 +9,7 @@ import sun from '../assets/sun.png'
 import moon from '../assets/moon.png'
 import { rhythm } from '../utils/typography'
 import moment from 'moment'
+import NeverUseZhihu from './NeverUseZhihu'
 
 const defaultTheme = createMuiTheme({})
 
@@ -68,6 +69,7 @@ const Layout: React.FC<{
   )
   return (
     <ThemeProvider theme={themeConfig}>
+      <NeverUseZhihu/>
       <div
         style={{
           color: 'var(--textNormal)',
