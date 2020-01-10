@@ -21,11 +21,10 @@ const NeverUseZhihu: React.FC = () => {
       autoHideDuration={5000}
     >
       <Alert
-        color='warning'
+        color='error'
         onClose={() => setOpen(false)}
       >
-        I support you to build your own blog
-        instead of using Zhihu.com
+        我希望每个人都有一个自己的博客，而不是用知乎
       </Alert>
     </Snackbar>
   )
