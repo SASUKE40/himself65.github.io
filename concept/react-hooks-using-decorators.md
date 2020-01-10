@@ -1,4 +1,4 @@
-# React hooks using class
+# React hooks using decorators
 
 this is one of my thinking, not so much accurate.
 
