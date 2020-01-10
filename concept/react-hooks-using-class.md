@@ -65,6 +65,7 @@ export const inject = {
         const v = target[stateFindSymbol](name)  // find that state
         originalValue.call(null, v)
       }
+      return desc
     }
   }
 }
