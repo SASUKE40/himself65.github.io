@@ -62,7 +62,7 @@ export const state = {
     return (target, name, desc) => {
       const originalValue = desc.value
       const desc.value = () => {
-        const v = target[symbol](name)  // find that state
+        const v = target[stateFindSymbol](name)  // find that state
         originalValue.call(null, v)
       }
     }
