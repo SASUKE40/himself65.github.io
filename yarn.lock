@@ -5740,6 +5740,13 @@ gatsby-remark-copy-linked-files@^2.1.33:
     probe-image-size "^4.1.1"
     unist-util-visit "^1.4.1"
 
+gatsby-remark-images-medium-zoom@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.npm.taobao.org/gatsby-remark-images-medium-zoom/download/gatsby-remark-images-medium-zoom-1.4.0.tgz#6becf8c34382391b59da26530e65cb19fea401d6"
+  integrity sha1-a+z4w0OCORtZ2iZTDmXLGf6kAdY=
+  dependencies:
+    medium-zoom "^1.0.4"
+
 gatsby-remark-images@^3.1.39:
   version "3.1.39"
   resolved "https://registry.npm.taobao.org/gatsby-remark-images/download/gatsby-remark-images-3.1.39.tgz#2488a10580993c877d56626b3347b9f63a5df494"
@@ -8448,6 +8455,11 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.npm.taobao.org/media-typer/download/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
+
+medium-zoom@^1.0.4:
+  version "1.0.5"
+  resolved "https://registry.npm.taobao.org/medium-zoom/download/medium-zoom-1.0.5.tgz#81413dda20ccdd857141ff420cfab788dd32e20e"
+  integrity sha1-gUE92iDM3YVxQf9CDPq3iN0y4g4=
 
 mem@^4.0.0:
   version "4.3.0"
