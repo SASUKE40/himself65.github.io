@@ -1,6 +1,6 @@
 ---
 title: Combine React Hooks and Decorators?
-tags: code
+tags: ["code"]
 date: "2020-01-11"
 ---
 

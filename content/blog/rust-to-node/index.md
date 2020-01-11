@@ -1,6 +1,6 @@
 ---
 title: 各种方法用Rust给Node写扩展
-tags: code
+tags: ["code"]
 date: "2020-01-05"
 ---
 > 笔者尝试了各种方法用Rust给Node.js写插件，本文将介绍四种方法给Node.js写拓展

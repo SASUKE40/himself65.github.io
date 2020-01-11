@@ -1,6 +1,6 @@
 ---
 title: 2019年我读了哪些觉得比较好的计算机书籍？
-tags: life
+tags: ["life"]
 date: "2019-12-18"
 ---
 > [知乎问题：2019年你读了哪些觉得比较好的计算机书籍？](http://www.zhihu.com/question/361165485)

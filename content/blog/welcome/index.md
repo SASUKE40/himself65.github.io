@@ -1,6 +1,6 @@
 ---
 title: 博客更新
-tags: water
+tags: ["water"]
 date: "2019-06-10"
 article_header:
   type: cover

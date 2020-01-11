@@ -1,6 +1,6 @@
 ---
 title: Myself 2019
-tags: diary
+tags: ["diary"]
 date: "2020-01-06"
 ---
 

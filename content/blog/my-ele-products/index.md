@@ -1,6 +1,6 @@
 ---
 title: 十年中，我的电子产品变化
-tags: life
+tags: ["life"]
 date: "2019-12-15"
 ---
 > [知乎问题：这十年你携带的电子产品发生了哪些变化？](https://www.zhihu.com/question/347363750)
