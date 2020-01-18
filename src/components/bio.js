@@ -11,7 +11,7 @@ import Image from 'gatsby-image'
 
 import { rhythm } from '../utils/typography'
 
-const Bio = ({ children }) => {
+const Bio = ({ children = null }) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
