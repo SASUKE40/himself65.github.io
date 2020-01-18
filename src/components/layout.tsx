@@ -14,9 +14,9 @@ import NeverUseZhihu from './NeverUseZhihu'
 const defaultTheme = createMuiTheme({})
 
 const Layout: React.FC<{
-  title: string
+  title: string | null | undefined
 }> = props => {
-  const { title, children } = props
+  const { title = 'UNKNOWN', children } = props
   const [theme, setTheme] = useState<'dark' | 'light' | null>(null)
   const themeSubject = useMemo(() => new Subject<'light' | 'dark'>(), [])
   const themeConfig = useMemo(() => createMuiTheme({

@@ -19,6 +19,10 @@ module.exports = {
       {
         name: 'Friends',
         link: '/friends'
+      },
+      {
+        name: 'Tags',
+        link: '/tags'
       }
     ],
     friendship: [...friendship]
@@ -30,6 +34,17 @@ module.exports = {
         isTSX: true,
         jsxPragma: 'React',
         allExtensions: true
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-graphql-codegen',
+      options: {
+        fileName: 'types/graphql-types.ts',
+        documentPaths: [
+          './src/**/*.{ts,tsx}',
+          './node_modules/gatsby-*/**/*.js'
+        ],
+        codegenDelay: 200
       }
     },
     {

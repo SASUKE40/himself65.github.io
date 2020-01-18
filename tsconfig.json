@@ -7,6 +7,11 @@
       "dom.iterable",
       "esnext"
     ],
+    "paths": {
+      "~types": [
+        "../types/graphql-types.ts"
+      ]
+    },
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -21,6 +26,8 @@
     "jsx": "react"
   },
   "include": [
-    "src"
+    "src",
+    "types",
+    "*.js"
   ]
 }
