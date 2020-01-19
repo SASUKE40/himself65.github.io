@@ -1,0 +1,16 @@
+{
+  "name": "babel-to-es5",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "author": "himself65",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "npx babel ./src/index.js --out-file dist/index.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3"
+  }
+}
