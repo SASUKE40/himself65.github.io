@@ -29,3 +29,12 @@ function h (array: MyArray) {
     })
   }
 }
+
+function j (array: MyArray) {
+  if (typeof array[0] === 'string') {
+    // it works too
+    (array as string[]).map(item => {
+      // do something
+    })
+  }
+}
