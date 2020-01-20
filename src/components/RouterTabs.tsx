@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { navigate } from 'gatsby'
-import { useImported } from 'react-imported-component'
 
 import { SiteSiteMetadataMenuLinks } from '~types'
 import Tabs from '@material-ui/core/Tabs'
@@ -18,13 +17,9 @@ const RouterTabs: React.FC<{
       onChange={(_, value) => navigate(routers[value].link as string)}
     >
       {routers.map(router => {
-        const {
-          imported: Icon = () => null
-        } = useImported(() => import(`@material-ui/icons/${router.icon}`))
         return (
           <Tab
             label={router.name}
-            icon={<Icon/>}
             key={router.link as string}/>
         )
       })}
