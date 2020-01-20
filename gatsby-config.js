@@ -14,15 +14,18 @@ module.exports = {
     menuLinks: [
       {
         name: 'Home',
-        link: '/'
+        link: '/',
+        icon: 'Home'
       },
       {
         name: 'Friends',
-        link: '/friends'
+        link: '/friends',
+        icon: 'Group'
       },
       {
         name: 'Tags',
-        link: '/tags'
+        link: '/tags',
+        icon: 'LocalOffer'
       }
     ],
     friendship: [...friendship]
