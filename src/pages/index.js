@@ -33,6 +33,7 @@ export const pageQuery = graphql`
         menuLinks {
           name
           link
+          icon
         }
         friendship {
           description

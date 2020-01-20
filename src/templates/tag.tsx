@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import { TagPageQuery } from '~types'
+import { SiteSiteMetadataMenuLinks, TagPageQuery } from '~types'
 import Layout from '../components/layout'
 import PostList from '../components/PostList'
 import RouterTabs from '../components/RouterTabs'
@@ -16,7 +16,15 @@ const TagPage: React.FC<{
     edge => edge.node.frontmatter?.tags?.includes(props.pageContext.tag))
   return (
     <Layout title={props.data.site?.siteMetadata?.title}>
-      <RouterTabs currentPage='/tags' routers={props.data.site?.siteMetadata?.menuLinks || []}/>
+      <RouterTabs
+        routers={
+          (props.data.site?.siteMetadata?.menuLinks ?? []) as
+            // i donn't know why this always fail
+            // but success after added 'as' expression
+            SiteSiteMetadataMenuLinks[]
+        }
+        currentPage='/tags'
+      />
       <PostList posts={targetPost}/>
     </Layout>
   )
@@ -32,6 +40,7 @@ export const pageQuery = graphql`
         menuLinks {
           name
           link
+          icon
         }
       }
     }

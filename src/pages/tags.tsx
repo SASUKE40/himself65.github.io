@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import { TagsPageQuery } from '~types'
+import { SiteSiteMetadataMenuLinks, TagsPageQuery } from '~types'
 import Chip from '@material-ui/core/Chip'
 import { makeStyles } from '@material-ui/core'
 
@@ -27,7 +27,12 @@ const TagsPage: React.FC<TagsPageProps> = ({ data }) => {
   return (
     <Layout title={data.site?.siteMetadata?.title || 'UNKNOWN'}>
       <RouterTabs
-        routers={data.site?.siteMetadata?.menuLinks || []}
+        routers={
+          (data.site?.siteMetadata!?.menuLinks ?? []) as
+            // i donn't know why this always fail
+            // but success after added 'as' expression
+            SiteSiteMetadataMenuLinks[]
+        }
         currentPage='/tags'
       />
       <div className={classes.badges}>
@@ -60,6 +65,7 @@ export const pageQuery = graphql`
         menuLinks {
           name
           link
+          icon
         }
       }
     }
