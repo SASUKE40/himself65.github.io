@@ -10,7 +10,7 @@ date: "2020-02-01"
 
 记者还从院长口中得知，`JavaScript` 是一种动态类型语言。作者 [`Brendan Eich`] 十天就创造出了该编程语言的雏形，意味着学习 `JavaScript` 可以快速的治疗疾病。而 [`V8`] 引擎作为高性能的 `JavaScript Runtime Engine`，也暗示着高效的预防疾病。
 
-目前，`JavaScript` 编程语言已经在 `Node.js`, `Vue.js`, `React.js` 等多个项目中开展双盲实验。
+目前，`JavaScript` 编程语言已经在 [`Node.js`], [`Vue.js`], [`React.js`] 等多个项目中开展双盲实验。
 
 [`中国珂学院`]: https://www.chtholly.ac.cn/
 
@@ -19,3 +19,9 @@ date: "2020-02-01"
 [`Brendan Eich`]: https://zh.wikipedia.org/wiki/%E5%B8%83%E8%98%AD%E7%99%BB%C2%B7%E8%89%BE%E5%85%8B
 
 [`V8`]: https://v8.dev/
+
+[`Node.js`]: https://nodejs.org/en/
+
+[`React.js`]: https://zh-hans.reactjs.org/
+
+[`Vue.js`]: https://cn.vuejs.org/index.html
