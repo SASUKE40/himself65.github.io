@@ -18,7 +18,6 @@ const NeverUseZhihu: React.FC = () => {
     <Snackbar
       open={open}
       onClose={closeHandle}
-      autoHideDuration={5000}
     >
       <Alert
         color='error'
