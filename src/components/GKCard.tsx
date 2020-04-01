@@ -7,9 +7,11 @@ const useStyles = makeStyles(theme => ({
   root: {
     background: 'var(--bg)',
     display: 'flex',
+    // @ts-ignore
     [theme.breakpoints.down('md')]: {
       flexDirection: 'column-reverse'
     },
+    // @ts-ignore
     [theme.breakpoints.up('md')]: {
       flexDirection: 'row-reverse'
     }
@@ -19,6 +21,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     color: 'var(--textNormal)',
+    // @ts-ignore
     [theme.breakpoints.down('md')]: {
       width: '100%'
     }
@@ -27,6 +30,7 @@ const useStyles = makeStyles(theme => ({
     width: '50%',
     background: 'transparent',
     backgroundSize: '100%',
+    // @ts-ignore
     [theme.breakpoints.down('md')]: {
       width: '100%'
     }

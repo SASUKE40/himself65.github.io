@@ -1396,11 +1396,6 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@emotion/hash@^0.7.4":
-  version "0.7.4"
-  resolved "https://registry.npm.taobao.org/@emotion/hash/download/@emotion/hash-0.7.4.tgz?cache=0&sync_timestamp=1577064852888&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40emotion%2Fhash%2Fdownload%2F%40emotion%2Fhash-0.7.4.tgz#f14932887422c9056b15a8d222a9074a7dfa2831"
-  integrity sha1-8UkyiHQiyQVrFajSIqkHSn36KDE=
-
 "@emotion/hash@^0.8.0":
   version "0.8.0"
   resolved "https://registry.npm.taobao.org/@emotion/hash/download/@emotion/hash-0.8.0.tgz?cache=0&sync_timestamp=1583144171562&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40emotion%2Fhash%2Fdownload%2F%40emotion%2Fhash-0.8.0.tgz#bbbff68978fefdbe68ccb533bc8cbe1d1afb5413"
@@ -1851,10 +1846,10 @@
   dependencies:
     core-js "^2.5.7"
 
-"@material-ui/core@4.9.7":
-  version "4.9.7"
-  resolved "https://registry.npm.taobao.org/@material-ui/core/download/@material-ui/core-4.9.7.tgz#0c1caf123278770f34c5d8e9ecd9e1314f87a621"
-  integrity sha1-DByvEjJ4dw80xdjp7NnhMU+HpiE=
+"@material-ui/core@^4.9.8":
+  version "4.9.8"
+  resolved "https://registry.npm.taobao.org/@material-ui/core/download/@material-ui/core-4.9.8.tgz#21c37a9aadf4ff8a2719b8cfcad0ae9e6ca53791"
+  integrity sha1-IcN6mq30/4onGbjPytCunmylN5E=
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@material-ui/styles" "^4.9.6"
@@ -1876,38 +1871,16 @@
   dependencies:
     "@babel/runtime" "^7.4.4"
 
-"@material-ui/lab@4.0.0-alpha.46":
-  version "4.0.0-alpha.46"
-  resolved "https://registry.npm.taobao.org/@material-ui/lab/download/@material-ui/lab-4.0.0-alpha.46.tgz#453546d58d3a0064263c198dedb6a1c54d24d1a4"
-  integrity sha1-RTVG1Y06AGQmPBmN7bahxU0k0aQ=
+"@material-ui/lab@^4.0.0-alpha.47":
+  version "4.0.0-alpha.47"
+  resolved "https://registry.npm.taobao.org/@material-ui/lab/download/@material-ui/lab-4.0.0-alpha.47.tgz#757a336e4c2496f700a392ff41e25a7d460a387b"
+  integrity sha1-dXozbkwklvcAo5L/QeJafUYKOHs=
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@material-ui/utils" "^4.9.6"
     clsx "^1.0.4"
     prop-types "^15.7.2"
     react-is "^16.8.0"
-
-"@material-ui/styles@^4.9.0":
-  version "4.9.0"
-  resolved "https://registry.npm.taobao.org/@material-ui/styles/download/@material-ui/styles-4.9.0.tgz#10c31859f6868cfa9d3adf6b6c3e32c9d676bc76"
-  integrity sha1-EMMYWfaGjPqdOt9rbD4yydZ2vHY=
-  dependencies:
-    "@babel/runtime" "^7.4.4"
-    "@emotion/hash" "^0.7.4"
-    "@material-ui/types" "^5.0.0"
-    "@material-ui/utils" "^4.7.1"
-    clsx "^1.0.2"
-    csstype "^2.5.2"
-    hoist-non-react-statics "^3.2.1"
-    jss "^10.0.3"
-    jss-plugin-camel-case "^10.0.3"
-    jss-plugin-default-unit "^10.0.3"
-    jss-plugin-global "^10.0.3"
-    jss-plugin-nested "^10.0.3"
-    jss-plugin-props-sort "^10.0.3"
-    jss-plugin-rule-value-function "^10.0.3"
-    jss-plugin-vendor-prefixer "^10.0.3"
-    prop-types "^15.7.2"
 
 "@material-ui/styles@^4.9.6":
   version "4.9.6"
@@ -1944,15 +1917,6 @@
   version "5.0.0"
   resolved "https://registry.npm.taobao.org/@material-ui/types/download/@material-ui/types-5.0.0.tgz#26d6259dc6b39f4c2e1e9aceff7a11e031941741"
   integrity sha1-JtYlncazn0wuHprO/3oR4DGUF0E=
-
-"@material-ui/utils@^4.7.1":
-  version "4.7.1"
-  resolved "https://registry.npm.taobao.org/@material-ui/utils/download/@material-ui/utils-4.7.1.tgz#dc16c7f0d2cd02fbcdd5cfe601fd6863ae3cc652"
-  integrity sha1-3BbH8NLNAvvN1c/mAf1oY648xlI=
-  dependencies:
-    "@babel/runtime" "^7.4.4"
-    prop-types "^15.7.2"
-    react-is "^16.8.0"
 
 "@material-ui/utils@^4.9.6":
   version "4.9.6"
@@ -7919,7 +7883,7 @@ hmac-drbg@^1.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hoist-non-react-statics@^3.2.1, hoist-non-react-statics@^3.3.0:
+hoist-non-react-statics@^3.3.0:
   version "3.3.1"
   resolved "https://registry.npm.taobao.org/hoist-non-react-statics/download/hoist-non-react-statics-3.3.1.tgz#101685d3aff3b23ea213163f6e8e12f4f111e19f"
   integrity sha1-EBaF06/zsj6iExY/bo4S9PER4Z8=
