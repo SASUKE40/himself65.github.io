@@ -137,7 +137,7 @@ const Layout: React.FC<{
           with <a href='https://www.gatsbyjs.org'>Gatsby</a>
           <br/>
           <span style={{ color: '#999', fontSize: '0.8rem' }}>
-            These articles is licensed under a{' '}
+            These articles are licensed under a{' '}
             <a
               rel='license'
               style={{ color: '#0084b5' }}
