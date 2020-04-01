@@ -135,6 +135,17 @@ const Layout: React.FC<{
           © {new Date().getFullYear()}, Built {' '}
           on {moment(data.site.buildTime).local().format('YYYY D Mo, H:m')}{' '}
           with <a href='https://www.gatsbyjs.org'>Gatsby</a>
+          <br/>
+          <span style={{ color: '#999', fontSize: '0.8rem' }}>
+            These articles is licensed under a{' '}
+            <a
+              rel='license'
+              style={{ color: '#0084b5' }}
+              href='http://creativecommons.org/licenses/by-sa/4.0/'
+            >
+              Creative Commons Attribution-ShareAlike 4.0 International License
+            </a>
+          </span>
         </footer>
       </div>
     </ThemeProvider>
