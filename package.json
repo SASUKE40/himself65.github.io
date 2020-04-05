@@ -37,6 +37,7 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
+    "recharts": "^1.8.5",
     "rxjs": "^6.5.4",
     "typeface-merriweather": "^0.0.72",
     "typeface-montserrat": "^0.0.75",
@@ -47,6 +48,7 @@
   "devDependencies": {
     "@types/react": "^16.9.17",
     "@types/react-helmet": "^5.0.15",
+    "@types/recharts": "^1.8.9",
     "@types/signale": "^1.2.1",
     "@typescript-eslint/eslint-plugin": "^2.15.0",
     "@typescript-eslint/parser": "^2.15.0",

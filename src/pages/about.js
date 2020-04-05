@@ -11,6 +11,9 @@ import SEO from '../components/seo'
 import Bio from '../components/bio'
 
 import '../style/friend.css'
+import Stock from '../components/Stock'
+import { renderRutabagas } from '../utils/helpers'
+import { Typography } from '@material-ui/core'
 
 const useStyles = makeStyles({
   friends: {
@@ -46,11 +49,17 @@ const FriendPage = (props) => {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO title='Friends'/>
+      <SEO title='About'/>
       <RouterTabs
         routers={data.site.siteMetadata.menuLinks}
-        currentPage='/friends'
+        currentPage='/about'
       />
+      <Typography
+        style={{ marginTop: '1rem' }}
+        variant='h5' align='center'
+      >
+        My Friends
+      </Typography>
       <ul className={classes.friends}>
         {data.site.siteMetadata.friendship.map(friend => {
           const image = avatars.find(
@@ -80,6 +89,10 @@ const FriendPage = (props) => {
           )
         })}
       </ul>
+      <Stock data={renderRutabagas(
+        data.site.siteMetadata.currentRutabagas,
+        data.site.siteMetadata.startDate
+      )}/>
       <Divider className={classes.divider} light={theme.palette.type === 'light'}/>
       <Bio>
         <div className={classes.introduction}>
@@ -118,6 +131,8 @@ export const pageQuery = graphql`
           url
           image
         }
+        currentRutabagas
+        startDate
       }
     }
     avatars: allFile {

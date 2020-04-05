@@ -1,5 +1,6 @@
-const friendship = require('./friendship')
 require('dotenv').config()
+const friendship = require('./friendship')
+const data = require('./data')
 
 module.exports = {
   siteMetadata: {
@@ -18,8 +19,8 @@ module.exports = {
         icon: 'Home'
       },
       {
-        name: 'Friends',
-        link: '/friends',
+        name: 'About',
+        link: '/about',
         icon: 'Group'
       },
       {
@@ -95,7 +96,8 @@ module.exports = {
           }
         ]
       }
-    ]
+    ],
+    ...data
   },
   plugins: [
     {
