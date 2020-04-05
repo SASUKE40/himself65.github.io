@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import {
   AreaChart, XAxis, YAxis,
   CartesianGrid, Tooltip, Area
 } from 'recharts'
-import { Typography } from '@material-ui/core'
+import { Typography, Snackbar } from '@material-ui/core'
+import Alert from '@material-ui/lab/Alert'
 
 export type StockProps = {
   data: {
@@ -16,15 +17,24 @@ const MAX_WIDTH = 630
 
 const Stock: React.FC<StockProps> = ({ data }) => {
   const [width, setWidth] = useState(MAX_WIDTH)
+  const [open, setOpen] = useState(false)
   useEffect(() => {
-    const listener = () => setWidth(
-      document.body.offsetWidth > MAX_WIDTH ? MAX_WIDTH : (document.body.offsetWidth - 40)
-    )
+    const listener = () => {
+      setWidth(
+        document.body.offsetWidth > MAX_WIDTH ? MAX_WIDTH : (document.body.offsetWidth - 40)
+      )
+      if (document.body.offsetWidth < MAX_WIDTH) {
+        setOpen(true)
+      }
+    }
     window.addEventListener('resize', listener)
     listener()
     return () => {
       window.removeEventListener('resize', listener)
     }
+  }, [])
+  const handleClose = useCallback(() => {
+    setOpen(false)
   }, [])
   return (
     <div style={{
@@ -33,6 +43,16 @@ const Stock: React.FC<StockProps> = ({ data }) => {
       alignItems: 'center'
     }}>
       <Typography variant='h5'>Rutabaga Price Trend</Typography>
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert
+          onClose={handleClose}
+          elevation={6}
+          variant='filled'
+          severity='warning'
+        >
+          Recommended to watch in the widescreen
+        </Alert>
+      </Snackbar>
       <AreaChart width={width} height={250} data={data}>
         <defs>
           <linearGradient id='colorUv' x1='0' y1='0' x2='0' y2='1'>
