@@ -1,7 +1,7 @@
 module.exports = {
   currentRutabagas: [
     [72, 68],
-    [0, 0],
+    [64, 59],
     [0, 0],
     [0, 0],
     [0, 0],
