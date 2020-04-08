@@ -1,5 +1,7 @@
 ---
 title: Node.js调试利器 ———— mustCall
+tags: ["code", "nodejs"]
+date: "2020-01-06"
 ---
 
 如果你稍微看一下 `Node.js` 官方项目的测试文件，你会发现一个很好用的断言函数。

@@ -1,7 +1,7 @@
 ---
 title: 为 Node.js 贡献你的力量 ———— 调试代码
-tags: ["code","javascript"]
-date: "2020-03-15"
+tags: ["code", "nodejs"]
+date: "2020-04-6"
 ---
 
 `Node.js` 作为一个世界级的项目，能为它贡献源代码当然是很开心的事情。
