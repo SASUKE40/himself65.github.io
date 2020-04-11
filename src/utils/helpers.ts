@@ -1,7 +1,9 @@
-import type { StockProps } from '../components/Stock'
 import moment, { Moment } from 'moment'
 
-type Rutabaga = Pick<StockProps, 'data'>['data'][0]
+type Rutabaga = {
+  name: string
+  value: number
+}
 
 export const renderRutabagas = (
   data: [number, number][], date: string): Rutabaga[] =>
