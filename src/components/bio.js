@@ -55,8 +55,8 @@ const Bio = ({ children = null }) => {
       />
       {children ||
       <p>
-        Written by <strong>{author}</strong>, who contributing to open source,
-        and working from school.
+        Written by <strong>{author}</strong>, node.js collaborator,
+        undergraduate, and working from school now.
         {' '}
         <br/>
         <span>You can follow him on </span>
